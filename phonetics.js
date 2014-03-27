@@ -40,7 +40,7 @@ $.generateWord  = function() {
     else {
     	$wordDiv = $("div.phonWord");
         $wordDiv.empty();
-    	$s = $.generatePhon(word);
+    	$s = 'Phonétisation: ' + $.generatePhon(word);
         $wordDiv.empty();
         $wordDiv.append($s);
     }
@@ -50,15 +50,16 @@ $.generatePhon = function(word) {
     var phoned = '';
     var pos = 0;
     while (pos < word.length) {
-        var toCut = Math.min(5, word.length-pos);
+        var toCut = {val:0};
+        toCut.val = Math.min(5, word.length-pos);
         var testSuccess = false;
-        while (toCut > 0) {
+        while (toCut.val > 0) {
             for (var i=0;i<NB_PHON;i++) {
                 for (var j=0;j<NB_TRAN;j++) {
                     if ($.strCompare(phon[i][1+j], word, pos, toCut)) {
                         testSuccess = true;
                         phoned += ' ' + phon[i][0];
-                        pos += toCut;
+                        pos += toCut.val;
                         break;
                     }
                 }
@@ -66,11 +67,11 @@ $.generatePhon = function(word) {
                     break;
             }
             if (testSuccess)
-                toCut = -1;
+                toCut.val = -1;
             else 
-                toCut--;
+                toCut.val--;
         }
-        if (toCut == 0) {
+        if (toCut.val == 0) {
             phoned += ' !' + word[pos] + '?';
             pos++;
         }
@@ -78,10 +79,50 @@ $.generatePhon = function(word) {
     return phoned;
 }
 
-$.strCompare = function(phonem, word, pos, len) {
-    for (var i=0;i<len;i++) {
-        if (word[i+pos] != phonem[i])
-            return false;
+$.strCompare = function(rule, word, pos, len) {
+    if (rule == '')
+        return false;
+    var ruleSize = [0, 0, 0];
+    ruleSize = $.ruleLength(rule);
+    if (word.length < (pos+ruleSize[1]))
+        return false;
+    if (rule.length < len.val)
+        return false;
+    var test = true;
+    var shift = 0;
+    var negative = false;
+    for (var i=0;i<ruleSize[0];i++) {
+        if (rule[i] == '!') {
+            negative = true;
+            i++;
+        }
+        if (rule[i] == '-') {
+            test = test && (isVowel(word, pos-ruleSize[0]+i)!=negative);
+        }
+        else if (rule[i] == '~') {
+            test = test && (isConsonant(word, pos-ruleSize[0]+i)!=negative);
+        }
+        negative = false;
     }
-    return true;
+    shift = ruleSize[0];
+    for (var i=0;i<ruleSize[1];i++)
+        if (word[pos+i] != rule[i+shift])
+                test = false;
+    shift = ruleSize[0] + ruleSize[1];
+    for (var i=0;i<ruleSize[2];i++) {
+        if (rule[i+shift] == '!') {
+            negative = true;
+            i++;
+        }
+        if (rule[i+shift] == '-') {
+            test = test && (isVowel(word, pos+i+ruleSize[1])!=negative);
+        }
+        else if (rule[i+shift] == '~') {
+            test = test && (isConsonant(word, pos+i+ruleSize[1])!=negative);
+        }
+        negative = false;
+    }
+    if (test)
+        len.val = ruleSize[1];
+    return test;
 }

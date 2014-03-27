@@ -1,37 +1,37 @@
 var phon = [
-['-',''],
-['a','a'],
-['eu','e'],
-['i','i'],
-['o','o'],
-['u','u'],
-['in','in'],
-['on','on'],
-['ou','ou'],
-['an','an'],
-['ai','ai'],
-['b','b'],
-['k','c'],
-['ch','ch'],
-['d','d'],
-['f','f'],
-['g','g'],
-['gn','gn'],
-['j','j'],
-['l','l'],
-['m','m'],
-['n','n'],
-['p','p'],
-['r','r'],
-['s','s'],
-['t','t'],
-['v','v'],
-['x','x'],
-['z','z'],
+['-','d[','h','p[','p[','t[','ESt[','s[','x['],
+['a','a','Oi','aNN','','','',''],
+['eu','e','eu','oe!N','','','',''],
+['i','i','y','ill','','','',''],
+['o','o','au','eau','oNN','','',''],
+['u','u','','','','','',''],
+['in','in!-','un!-','ain!-','ein!-','','',''],
+['on','on!-','omP','omB','','','',''],
+['ou','ou','oI','','','','',''],
+['an','an!-','en!-','','','','',''],
+['ai','ai','esT','e~~','[~es[','er[','',''],
+['b','b','','','','','',''],
+['k','c','k','q','qu','','',''],
+['ch','ch','sh','','','','',''],
+['d','d','','','','','',''],
+['f','f','ph','','','','',''],
+['g','g','gu','','','','',''],
+['gn','gn','','','','','',''],
+['j','j','gE','','','','',''],
+['l','l','ll','','','','',''],
+['m','m','mm','','','','',''],
+['n','n','nn','','','','',''],
+['p','p','pp','','','','',''],
+['r','r','rr','','','','',''],
+['s','s','ss','tION','sCA','cE','sc-','cI'],
+['t','t','tt','ESt-','','','',''],
+['v','v','w','','','','',''],
+['x','x','','','','','',''],
+['z','z','-s-','','','','',''],
 ];
 
 var NB_PHON = 29;
-var NB_TRAN = 1;
+var NB_TRAN = 7;
 
 $.generateWord  = function() {
      word = document.getElementById("wordForm").value;
@@ -97,10 +97,22 @@ $.strCompare = function(rule, word, pos, len) {
             i++;
         }
         if (rule[i] == '-') {
-            test = test && (isVowel(word, pos-ruleSize[0]+i)!=negative);
+            test = test && ($.isVowel(word, pos-ruleSize[0]+i)!=negative);
         }
         else if (rule[i] == '~') {
-            test = test && (isConsonant(word, pos-ruleSize[0]+i)!=negative);
+            test = test && ($.isConsonant(word, pos-ruleSize[0]+i)!=negative);
+        }
+        else if (rule[i] == '<') {
+            test = test && ($.doubleLetter(word, pos-ruleSize[0]+i)!=negative);
+        }
+        else if (rule[i] == '[') {
+            test = test && ($.endChar(word, pos-ruleSize[0]+i)!=negative);
+        }
+        else if (rule[i] == '*') {
+            test = test && ($.isLetter(word, pos-ruleSize[0]+i)!=negative);
+        }
+        else if ((rule.charCodeAt(i) > 64) && (rule.charCodeAt(i) < 91)) {
+            test = test && ($.checkLetter(word, rule.charCodeAt(i), pos-ruleSize[0]+i)!=negative);
         }
         negative = false;
     }
@@ -109,20 +121,118 @@ $.strCompare = function(rule, word, pos, len) {
         if (word[pos+i] != rule[i+shift])
                 test = false;
     shift = ruleSize[0] + ruleSize[1];
+    var tempShift = 0;
     for (var i=0;i<ruleSize[2];i++) {
         if (rule[i+shift] == '!') {
             negative = true;
             i++;
+            tempShift++;;
         }
         if (rule[i+shift] == '-') {
-            test = test && (isVowel(word, pos+i+ruleSize[1])!=negative);
+            test = test && ($.isVowel(word, pos+i+ruleSize[1]-tempShift)!=negative);
         }
         else if (rule[i+shift] == '~') {
-            test = test && (isConsonant(word, pos+i+ruleSize[1])!=negative);
+            test = test && ($.isConsonant(word, pos+i+ruleSize[1]-tempShift)!=negative);
+        }
+        else if (rule[i+shift] == '<') {
+            test = test && ($.doubleLetter(word, pos+i+ruleSize[1]-tempShift)!=negative);
+        }
+        else if (rule[i+shift] == '[') {
+            test = test && ($.endChar(word, pos+i+ruleSize[1]-tempShift)!=negative);
+        }
+        else if (rule[i+shift] == '*') {
+            test = test && ($.isLetter(word, pos+i+ruleSize[1]-tempShift)!=negative);
+        }
+        else if ((rule.charCodeAt(i+shift) > 64) && (rule.charCodeAt(i+shift) < 91)) {
+            test = test && ($.checkLetter(word, rule.charCodeAt(i+shift), pos+ruleSize[1]+i-tempShift)!=negative);
         }
         negative = false;
     }
     if (test)
         len.val = ruleSize[1];
     return test;
+}
+
+$.ruleLength = function(rule) {
+    var count = [0, 0, 0];
+    var firstRulePassed = false;
+    for (var i=0;i<rule.length;i++) {
+        if ($.isLetter(rule, i)) {
+            count[1]++;
+            firstRulePassed = true;
+        }
+        else if (!firstRulePassed)
+            count[0]++;
+    }
+    count[2] = rule.length - count[0] - count[1];
+    return count;
+}
+
+$.ruleLength = function(rule) {
+    var count = [0, 0, 0];
+    var firstRulePassed = false;
+    for (var i=0;i<rule.length;i++) {
+        if ($.isLetter(rule, i)) {
+            count[1]++;
+            firstRulePassed = true;
+        }
+        else if (!firstRulePassed)
+            count[0]++;
+    }
+    count[2] = rule.length - count[0] - count[1];
+    return count;
+}
+
+$.isLetter = function(word, pos) {
+    var letters = 'abcdefghijklmnopqrstuvwxyz';
+    for (var i=0;i<26;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isVowel = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var letters = 'aeiouy';
+    for (var i=0;i<6;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isConsonant = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var consonant = "bcdfghjklmnpqrstvwxz";
+    for (var i=0;i<20;i++)
+        if (word[pos] == consonant[i])
+            return true;
+    return false;
+}
+
+$.checkLetter = function(word, letter, pos) {
+    if (word.length <= pos)
+        return false;
+    if (word.charCodeAt(pos) == letter+32)
+        return true;
+    return false;
+}
+
+$.doubleLetter = function(word, pos) {
+    if (pos == 0)
+        return false;
+    if (word.length <= pos)
+        return false;
+    if (word[pos] == word[pos-1])
+        return true;
+    return false;
+}
+
+$.endChar = function(word, pos) {
+    if (pos >= word.length)
+        return true;
+    if (!$.isLetter(word, pos))
+        return true;
+    return false;
 }

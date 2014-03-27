@@ -33,18 +33,43 @@ var phon = [
 var NB_PHON = 29;
 var NB_TRAN = 7;
 
-$.generateWord  = function() {
-     word = document.getElementById("wordForm").value;
-    if (word === null)
-        document.location = "404.html";
-    else {
-    	$wordDiv = $("div.phonWord");
-        $wordDiv.empty();
-    	$s = 'Phonétisation: ' + $.generatePhon(word);
-        $wordDiv.empty();
-        $wordDiv.append($s);
-    }
-};
+var NUM = (function() {
+    var private = {
+        '0' : '0',
+        '1' : '1',
+        '2' : '2',
+        '3' : '3',
+        '4' : '4',
+        '5' : '5',
+        '6' : '6',
+        '7' : '7',
+        '8' : '8',
+        '9' : '9',
+        '10' : 'a',
+        '11' : 'b',
+        '12' : 'c',
+        '13' : 'd',
+        '14' : 'e',
+        '15' : 'f',
+        '16' : 'g',
+        '17' : 'h',
+        '18' : 'i',
+        '19' : 'j',
+        '20' : 'k',
+        '21' : 'l',
+        '22' : 'm',
+        '23' : 'n',
+        '24' : 'o',
+        '25' : 'p',
+        '26' : 'q',
+        '27' : 'r',
+        '28' : 's',
+        '29' : 't',
+    };
+    return {
+        get: function(name) { return private[name]; }
+    };
+})();
 
 $.generatePhon = function(word) {
     var phoned = '';
@@ -58,7 +83,10 @@ $.generatePhon = function(word) {
                 for (var j=0;j<NB_TRAN;j++) {
                     if ($.strCompare(phon[i][1+j], word, pos, toCut)) {
                         testSuccess = true;
-                        phoned += ' ' + phon[i][0];
+                        //phoned += ' ' + phon[i][0];
+                        if (i>0)
+                            //phoned += NUM.get(i);
+                            phoned += phon[i][0] + '#';
                         pos += toCut.val;
                         break;
                     }
@@ -71,10 +99,10 @@ $.generatePhon = function(word) {
             else 
                 toCut.val--;
         }
-        if (toCut.val == 0) {
+        /*if (toCut.val == 0) {
             phoned += ' !' + word[pos] + '?';
             pos++;
-        }
+        }*/
     }
     return phoned;
 }
@@ -151,88 +179,4 @@ $.strCompare = function(rule, word, pos, len) {
     if (test)
         len.val = ruleSize[1];
     return test;
-}
-
-$.ruleLength = function(rule) {
-    var count = [0, 0, 0];
-    var firstRulePassed = false;
-    for (var i=0;i<rule.length;i++) {
-        if ($.isLetter(rule, i)) {
-            count[1]++;
-            firstRulePassed = true;
-        }
-        else if (!firstRulePassed)
-            count[0]++;
-    }
-    count[2] = rule.length - count[0] - count[1];
-    return count;
-}
-
-$.ruleLength = function(rule) {
-    var count = [0, 0, 0];
-    var firstRulePassed = false;
-    for (var i=0;i<rule.length;i++) {
-        if ($.isLetter(rule, i)) {
-            count[1]++;
-            firstRulePassed = true;
-        }
-        else if (!firstRulePassed)
-            count[0]++;
-    }
-    count[2] = rule.length - count[0] - count[1];
-    return count;
-}
-
-$.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyz';
-    for (var i=0;i<26;i++)
-        if (word[pos] == letters[i])
-            return true;
-    return false;
-}
-
-$.isVowel = function(word, pos) {
-    if (word.length <= pos)
-        return false;
-    var letters = 'aeiouy';
-    for (var i=0;i<6;i++)
-        if (word[pos] == letters[i])
-            return true;
-    return false;
-}
-
-$.isConsonant = function(word, pos) {
-    if (word.length <= pos)
-        return false;
-    var consonant = "bcdfghjklmnpqrstvwxz";
-    for (var i=0;i<20;i++)
-        if (word[pos] == consonant[i])
-            return true;
-    return false;
-}
-
-$.checkLetter = function(word, letter, pos) {
-    if (word.length <= pos)
-        return false;
-    if (word.charCodeAt(pos) == letter+32)
-        return true;
-    return false;
-}
-
-$.doubleLetter = function(word, pos) {
-    if (pos == 0)
-        return false;
-    if (word.length <= pos)
-        return false;
-    if (word[pos] == word[pos-1])
-        return true;
-    return false;
-}
-
-$.endChar = function(word, pos) {
-    if (pos >= word.length)
-        return true;
-    if (!$.isLetter(word, pos))
-        return true;
-    return false;
 }

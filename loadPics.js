@@ -26,7 +26,6 @@ $.wordWithPics  = function() {
     	for (var i=0;i<id.length;i++) {
             var picId = 0;
             var testChar = (id.charAt(i) < 10) && (id.charAt(i) > 0);
-            //testChar = testChar || ((id.charCodeAt(i) > 96) && (id.charCodeAt(i) < 123));
     		if (testChar)
                 picId = id.charAt(i);
     		$s = '<img id="'+ID.get(picId)+i+'" src="pics/' + picId;

@@ -1,6 +1,7 @@
 var WORDS = (function() {
     var private = {
-        '-' : 'No_sign',
+        '|' : 'No_sign',
+        '-' : 'mute',
         'ia' : 'yak',
         'cha' : 'chat',
         'ba' : 'bas',
@@ -31,14 +32,27 @@ $.generatePics = function(){
 }
 
 $.groupPhon = function(word) {
-	for (var i=0;i<word.match(/#/g).length;i++) {
-		var sep1 = 0;
-		var sep2 = word.indexOf('#',sep1+1);
-		var sep3 = word.indexOf('#',sep2+1);
-		var sep4 = word.indexOf('#',sep3+1);
-		var w1 = word.slice(sep1,sep2);
-		var w2 = word.slice(sep2+1,sep3);
-		var w3 = word.slice(sep3+1,sep4);
-		return w1+w2+w3;
-	}
+    var reg = new RegExp("[#]+", "g");
+    var splits = word.split(reg);
+    var s = '';
+    for (var i=0;i<splits.length-1;i++) {
+        var toTest = 3;
+        var test = '';
+        while (toTest > 0) {
+            test = '';
+            for (var k=0;k<toTest;k++)
+                test += splits[i+k];
+            if (WORDS.get(test) == undefined)
+                toTest--;
+            else {
+                i += toTest-1;
+                toTest = 0;
+            }
+        }
+        if (WORDS.get(test) == undefined)
+            test = '|';
+        test = WORDS.get(test);
+        s += test + " ";
+    }
+    return s;
 }

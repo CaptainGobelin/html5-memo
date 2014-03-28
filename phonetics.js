@@ -84,7 +84,7 @@ $.generatePhon = function(word) {
                     if ($.strCompare(phon[i][1+j], word, pos, toCut)) {
                         testSuccess = true;
                         //phoned += ' ' + phon[i][0];
-                        if (i>0)
+                        //if (i>0)
                             //phoned += NUM.get(i);
                             phoned += phon[i][0] + '#';
                         pos += toCut.val;

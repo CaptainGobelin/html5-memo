@@ -17,20 +17,29 @@ var ID = (function() {
 })();
 
 $.wordWithPics  = function() {
-    id = document.getElementById("wordForm").value;
-    if (id === null)
+    word = document.getElementById("wordForm").value;
+    if (word === null)
         document.location = "404.html";
     else {
-    	$picsDiv = $("div.picsDiv");
+        $picsDiv = $("div.picsDiv");
         $picsDiv.empty();
-    	for (var i=0;i<id.length;i++) {
-            var picId = 0;
-            var testChar = (id.charAt(i) < 10) && (id.charAt(i) > 0);
-    		if (testChar)
-                picId = id.charAt(i);
-    		$s = '<img id="'+ID.get(picId)+i+'" src="pics/' + picId;
-    		$s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+picId+','+i+')">';
-    		$picsDiv.append($s);
+        var phonned = $.generatePhon(word);
+        //$picsDiv.append("Phonétisation: "+phonned);
+        phonned = $.groupPhon(phonned);
+        var reg = new RegExp("[ ]+", "g");
+        var splits = phonned.split(reg);
+    	for (var i=0;i<splits.length-1;i++) {
+            if (splits[i] != "mute") {
+                $s = '<img id="img_'+i+'" src="pics/' + splits[i];
+                $s += '.svg" height="100px" width="100px">';
+                /*var picId = 0;
+                var testChar = (id.charAt(i) < 10) && (id.charAt(i) > 0);
+        		if (testChar)
+                    picId = id.charAt(i);
+        		$s = '<img id="'+ID.get(picId)+i+'" src="pics/' + picId;
+        		$s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+picId+','+i+')">';*/
+        		$picsDiv.append($s);
+            }
     	}
     }
 };

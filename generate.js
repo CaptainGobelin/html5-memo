@@ -11,6 +11,10 @@ var WORDS = (function() {
         'fan' : 'faon',
         'ach' : 'hache',
         'bi' : 'bille',
+        'ra' : 'rat',
+        'san' : 'sang',
+        'pa' : 'pas',
+        'ka' : 'canne',
     };
     return {
         get: function(name) { return private[name]; }

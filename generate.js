@@ -26,7 +26,7 @@ var WORDS = (function() {
                 if (k == index)
                     return private[e];
             }
-            return 'No_sign';
+            return private['|'];
         }
     };
 })();

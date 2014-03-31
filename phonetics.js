@@ -83,9 +83,6 @@ $.generatePhon = function(word) {
                 for (var j=0;j<NB_TRAN;j++) {
                     if ($.strCompare(phon[i][1+j], word, pos, toCut)) {
                         testSuccess = true;
-                        //phoned += ' ' + phon[i][0];
-                        //if (i>0)
-                            //phoned += NUM.get(i);
                             phoned += phon[i][0] + '#';
                         pos += toCut.val;
                         break;
@@ -99,10 +96,6 @@ $.generatePhon = function(word) {
             else 
                 toCut.val--;
         }
-        /*if (toCut.val == 0) {
-            phoned += ' !' + word[pos] + '?';
-            pos++;
-        }*/
     }
     return phoned;
 }

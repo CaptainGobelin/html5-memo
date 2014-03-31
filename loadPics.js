@@ -24,7 +24,6 @@ $.wordWithPics  = function() {
         $picsDiv = $("div.picsDiv");
         $picsDiv.empty();
         var phonned = $.generatePhon(word);
-        //$picsDiv.append("Phonétisation: "+phonned);
         phonned = $.groupPhon(phonned);
         var reg = new RegExp("[ ]+", "g");
         var splits = phonned.split(reg);
@@ -32,12 +31,6 @@ $.wordWithPics  = function() {
             if (splits[i] != "mute") {
                 $s = '<img id="img_'+i+'" src="pics/' + splits[i];
                 $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
-                /*var picId = 0;
-                var testChar = (id.charAt(i) < 10) && (id.charAt(i) > 0);
-        		if (testChar)
-                    picId = id.charAt(i);
-        		$s = '<img id="'+ID.get(picId)+i+'" src="pics/' + picId;
-        		$s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+picId+','+i+')">';*/
         		$picsDiv.append($s);
             }
     	}
@@ -47,12 +40,6 @@ $.wordWithPics  = function() {
 $.showPicsList = function(id) {
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    /*$s = "Images disponibles: ";
-    for (var i=1;i<10;i++) {
-        $s += '<img id="'+ID.get(i)+'_list " src="pics/' + i;
-        $s += '.svg" type="image/svg+xml" height="100px" width="100px"';
-        $s += 'onClick="$.changePic('+id+','+i+','+num+')">';
-    }*/
     $s = "Liste images: "
     var k = 0;
     for (var img in WORDS.all()) {

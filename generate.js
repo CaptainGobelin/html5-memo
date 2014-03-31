@@ -17,7 +17,17 @@ var WORDS = (function() {
         'ka' : 'canne',
     };
     return {
-        get: function(name) { return private[name]; }
+        get: function(name) { return private[name]; },
+        all: function() { return private; },
+        getFromIndex: function(index) {
+            var k = 0;;
+            for (var e in private) {
+                k++;
+                if (k == index)
+                    return private[e];
+            }
+            return 'No_sign';
+        }
     };
 })();
 

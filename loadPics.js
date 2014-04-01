@@ -1,21 +1,3 @@
-var ID = (function() {
-    var private = {
-        '0' : 'No_sign',
-        '1' : 'yak',
-        '2' : 'chat',
-        '3' : 'bas',
-        '4' : 'las',
-        '5' : 'mat',
-        '6' : 'gant',
-        '7' : 'faon',
-        '8' : 'hache',
-        '9' : 'bille',
-    };
-    return {
-        get: function(name) { return private[name]; }
-    };
-})();
-
 $.wordWithPics  = function() {
     word = document.getElementById("wordForm").value;
     if (word === null)
@@ -24,23 +6,69 @@ $.wordWithPics  = function() {
         $picsDiv = $("div.picsDiv");
         $picsDiv.empty();
         var phonned = $.generatePhon(word);
-        phonned = $.groupPhon(phonned);
+        $meltedSplits = $.getPhonSplits(phonned);
+        var meltedPhon = $.groupPhon(phonned);
         var reg = new RegExp("[ ]+", "g");
-        var splits = phonned.split(reg);
-    	for (var i=0;i<splits.length-1;i++) {
-            if (splits[i] != "mute") {
-                $s = '<img id="img_'+i+'" src="pics/' + splits[i];
+        $splits = meltedPhon.split(reg);
+    	for (var i=0;i<$splits.length-1;i++) {
+            if ($splits[i] != "mute") {
+                $s = '<img id="img_'+i+'" src="pics/' + $splits[i];
                 $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
         		$picsDiv.append($s);
             }
     	}
+        $.showPhon(phonned);
     }
 };
+
+$.picsWithPhon = function () {
+    picsDiv = $("div.picsDiv");
+    $picsDiv.empty();
+    var meltedPhon = $.groupPhonFromSplits();
+    var reg = new RegExp("[ ]+", "g");
+    $splits = meltedPhon.split(reg);
+    for (var i=0;i<$splits.length-1;i++) {
+        if ($splits[i] != "mute") {
+            $s = '<img id="img_'+i+'" src="pics/' + $splits[i];
+            $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
+            $picsDiv.append($s);
+        }
+    }
+}
+
+$.showPhon = function(phonned) {
+    $phonDiv = $("div.phonDiv");
+    $phonDiv.empty();
+    var div = "Phonétisation: ";
+    for (var i=0;i<$meltedSplits.length-1;i++) {
+        div += '<a class="phon_'+i+'" onClick="$.showPhonList('+i+')">'+$meltedSplits[i]+'</>';
+    }
+    $phonDiv.append(div);
+}
+
+$.showPhonList = function(id) {
+    $listDiv = $("div.listDiv");
+    $listDiv.empty();
+    $s = "Liste phonèmes: ";
+    for (var i=0;i<NB_PHON;i++) {
+        $s += '<a class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</a>';
+    }
+    $listDiv.append($s);
+}
+
+$.changePhon = function(id, phono) {
+    $phonA = $('a.phon_'+id);
+    $phonA.empty();
+    $phonA.append(phon[phono][0]);
+    $meltedSplits[id] = phon[phono][0];
+    $.picsWithPhon();
+    $.hidePicsList();
+}
 
 $.showPicsList = function(id) {
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s = "Liste images: "
+    $s = "Liste images: ";
     var k = 0;
     for (var img in WORDS.all()) {
         k++;

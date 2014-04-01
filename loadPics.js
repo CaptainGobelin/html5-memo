@@ -3,30 +3,26 @@ $.wordWithPics  = function() {
     if (word === null)
         document.location = "404.html";
     else {
-        $picsDiv = $("div.picsDiv");
-        $picsDiv.empty();
         var phonned = $.generatePhon(word);
         $meltedSplits = $.getPhonSplits(phonned);
         var meltedPhon = $.groupPhon(phonned);
         var reg = new RegExp("[ ]+", "g");
         $splits = meltedPhon.split(reg);
-    	for (var i=0;i<$splits.length-1;i++) {
-            if ($splits[i] != "mute") {
-                $s = '<img id="img_'+i+'" src="pics/' + $splits[i];
-                $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
-        		$picsDiv.append($s);
-            }
-    	}
+        privateGetPics();
         $.showPhon(phonned);
     }
 };
 
 $.picsWithPhon = function () {
-    picsDiv = $("div.picsDiv");
-    $picsDiv.empty();
     var meltedPhon = $.groupPhonFromSplits();
     var reg = new RegExp("[ ]+", "g");
     $splits = meltedPhon.split(reg);
+    privateGetPics();
+}
+
+function privateGetPics() {
+    $picsDiv = $("div.picsDiv");
+    $picsDiv.empty();
     for (var i=0;i<$splits.length-1;i++) {
         if ($splits[i] != "mute") {
             $s = '<img id="img_'+i+'" src="pics/' + $splits[i];

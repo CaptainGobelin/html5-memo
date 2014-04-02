@@ -14,7 +14,7 @@ var WORDS = (function() {
         'ra' : 'rat',
         'san' : 'sang',
         'pa' : 'pas',
-        'ka' : 'canne',
+        'oua' : 'oie',
     };
     return {
         get: function(name) { return private[name]; },

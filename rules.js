@@ -81,3 +81,11 @@ $.endChar = function(word, pos) {
         return true;
     return false;
 }
+
+$.checkPlural = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    if (word[pos] == 's')
+        return true;
+    return false;
+}

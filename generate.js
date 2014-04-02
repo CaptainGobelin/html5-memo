@@ -2,19 +2,26 @@ var WORDS = (function() {
     var private = {
         '|' : 'No_sign',
         '-' : 'mute',
-        'ia' : 'yak',
-        'cha' : 'chat',
-        'ba' : 'bas',
-        'la' : 'las',
-        'ma' : 'mat',
-        'gan' : 'gant',
-        'fan' : 'faon',
-        'ach' : 'hache',
-        'bi' : 'bille',
-        'ra' : 'rat',
-        'san' : 'sang',
-        'pa' : 'pas',
-        'oua' : 'oie',
+        'cha' : 'PhonemesDessins2-01',
+        'ba' : 'PhonemesDessins2-02',
+        'la' : 'PhonemesDessins2-03',
+        'ma' : 'PhonemesDessins2-04',
+        'ia' : 'PhonemesDessins2-05',
+        'gan' : 'PhonemesDessins2-06',
+        'fan' : 'PhonemesDessins2-07',
+        'ach' : 'PhonemesDessins2-08',
+        'bi' : 'PhonemesDessins2-09',
+        'pa' : 'PhonemesDessins2-11',
+        'ra' : 'PhonemesDessins2-13',
+        'san' : 'PhonemesDessins2-14',
+        'oua' : 'PhonemesDessins2-15',
+        'ban' : 'PhonemesDessins2-16',
+        'chan' : 'PhonemesDessins2-17',
+        'dai' : 'PhonemesDessins2-18',
+        'ai' : 'PhonemesDessins2-19',
+        'si' : 'PhonemesDessins2-20',
+        'dan' : 'PhonemesDessins2-21',
+        'beu' : 'PhonemesDessins2-22',
     };
     return {
         get: function(name) { return private[name]; },
@@ -70,6 +77,8 @@ function privateGroupPhon(splits) {
                 toTest = 0;
             }
         }
+        if (test[0] == '?')
+            continue;
         if (WORDS.get(test) == undefined)
             test = '|';
         test = WORDS.get(test);

@@ -1,5 +1,6 @@
 $.wordWithPics  = function() {
     word = document.getElementById("wordForm").value;
+    word = word.toLowerCase();
     if (word === null)
         document.location = "404.html";
     else {
@@ -25,11 +26,12 @@ function privateGetPics() {
     $picsDiv.empty();
     for (var i=0;i<$splits.length-1;i++) {
         if ($splits[i] != "mute") {
-            $s = '<img id="img_'+i+'" src="pics/' + $splits[i];
+            $s = '<img id="img_'+i+'" class="shadow" src="pics/' + $splits[i];
             $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
             $picsDiv.append($s);
         }
     }
+    $.hidePicsList();
 }
 
 $.showPhon = function(phonned) {
@@ -62,6 +64,7 @@ $.changePhon = function(id, phono) {
 }
 
 $.showPicsList = function(id) {
+    document.getElementById('img_'+id).setAttribute("class", "choosen");
     $listDiv = $("div.listDiv");
     $listDiv.empty();
     $s = "Liste images: ";
@@ -70,7 +73,7 @@ $.showPicsList = function(id) {
         k++;
         if (k < 3)
             continue;
-        $s += '<img id=img_list_"'+k+' src="pics/' + WORDS.get(img);
+        $s += '<img id=img_list_"'+k+' class="shadow" src="pics/' + WORDS.get(img);
         $s += '.svg" type="image/svg+xml" height="100px" width="100px"';
         $s += ' onClick="$.changePic('+id+','+k+')">';
     }
@@ -80,6 +83,7 @@ $.showPicsList = function(id) {
 $.changePic = function(id, image) {
     var newSrc = 'pics/' + WORDS.getFromIndex(image) + '.svg';
     document.getElementById('img_'+id).src = newSrc;
+    document.getElementById('img_'+id).setAttribute("class", "shadow");
     $.hidePicsList();
 }
 

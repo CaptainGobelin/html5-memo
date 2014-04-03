@@ -29,8 +29,8 @@ $.ruleLength = function(rule) {
 }
 
 $.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyz';
-    for (var i=0;i<26;i++)
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëà';
+    for (var i=0;i<31;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -39,8 +39,8 @@ $.isLetter = function(word, pos) {
 $.isVowel = function(word, pos) {
     if (word.length <= pos)
         return false;
-    var letters = 'aeiouy';
-    for (var i=0;i<6;i++)
+    var letters = 'aeiouyéèêëà';
+    for (var i=0;i<11;i++)
         if (word[pos] == letters[i])
             return true;
     return false;

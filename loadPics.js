@@ -55,14 +55,24 @@ function pirvateRestorePicsClass() {
 
 $.showPhonList = function(id) {
     pirvateRestorePicsClass();
+    $s = '<p><button onClick=$.addPhon('+(id-1)+')><-Ajouter</button>';
+    $s += '<button onClick=$.removePhon('+id+')>Supprimer</button>';
+    $s += '<button onClick=$.addPhon('+(id+1)+')>Ajouter-></button></p>';
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s = "<p>Liste phonèmes:</p><p>";
+    $s += "<p>Liste phonèmes:</p><p>";
     for (var i=0;i<NB_PHON;i++) {
         $s += '<button class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</button>';
     }
     $s += '</p>';
     $listDiv.append($s);
+}
+
+$.addPhon = function(id) {
+    /*for (var i=$meltedSplits.length-1;i>id;i++)
+        $meltedSplits[i] = $meltedSplits[i-1];
+    $meltedSplits[id] = '-';
+    $.picsWithPhon();*/
 }
 
 $.changePhon = function(id, phono) {

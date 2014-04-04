@@ -68,8 +68,13 @@ function privateGroupPhon(splits) {
 		var test = '';
 		while (toTest > 0) {
 			test = '';
-			for (var k=0;k<toTest;k++)
+			for (var k=0;k<toTest;k++) {
+				if (splits[i+k] == undefined)
+					continue;
+				if (splits[i+k].indexOf('?') > -1)
+					continue;
 				test += splits[i+k];
+			}
 			if (WORDS.get(test) == undefined)
 				toTest--;
 			else {

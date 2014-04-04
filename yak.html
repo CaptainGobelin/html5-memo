@@ -19,9 +19,15 @@
 	</head>
  
 	<body>
-		<label id="login_avs" for="word">Mot:</label>
-        <input id="wordForm" type="text" name="id" value="" size="16"/>
-        <input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics()"/>
+		<p>
+			<label id="login_avs" for="word">Mot à phonétiser:</label>
+		</p>
+		<p>
+        	<input id="wordForm" class="wordForm" type="text" name="id" value="" size="16"/>
+    	</p>
+    	<p>
+        	<input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics()"/>
+        </p>
 		<div class="picsDiv"></div>
 		<div class="phonDiv"></div>
 		<div class="listDiv"></div>

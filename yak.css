@@ -1,3 +1,85 @@
+body{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	top:0;
+	background-image: url(./sysPics/bg.png);
+	background-repeat: repeat;
+}
+
+p{
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-size:20pt;
+	color:#da620b;
+}
+
+input, label { 
+	font-size:20pt;
+	margin-left: 10px;
+	text-align: center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+    color: #da620b;
+}
+
+input {
+	font-size:15pt;
+	padding: 9px;
+    border: solid 1px #E5E5E5;
+    outline: 0;
+	width: 200px;
+    max-width: 80%;
+    background: #FFFFFF url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+.wordForm {
+	width: 400px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus { 
+    border-color: #C9C9C9; 
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+.form label { 
+    margin-left: 10px; 
+    color: #898989; 
+    display: block;
+}
+
+button {
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-size:16pt;
+	color: #da620b;
+	border:1px solid #d5d5d5;
+	background-color:white;
+	text-align:center;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+button:hover {
+	background-color:#da620b;
+	color:white;
+}
+
+.picsDiv, .phonDiv, .listDiv {
+	font-size:20pt;
+	margin-left: 10%;
+	width: 80%;
+ 	text-align: center; 
+}
+
 .shadow {
     -webkit-filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
             filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
@@ -9,4 +91,15 @@
   from {-webkit-transform: scale(1,1) }
   50% {-webkit-transform: scale(1.1,1.1)}
   to {-webkit-transform: scale(1,1) }
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('./fonts/BebasNeue-webfont.eot');
+    src: url('./fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/BebasNeue-webfont.woff') format('woff'),
+         url('./fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('./fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }

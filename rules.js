@@ -13,24 +13,9 @@ $.ruleLength = function(rule) {
     return count;
 }
 
-$.ruleLength = function(rule) {
-    var count = [0, 0, 0];
-    var firstRulePassed = false;
-    for (var i=0;i<rule.length;i++) {
-        if ($.isLetter(rule, i)) {
-            count[1]++;
-            firstRulePassed = true;
-        }
-        else if (!firstRulePassed)
-            count[0]++;
-    }
-    count[2] = rule.length - count[0] - count[1];
-    return count;
-}
-
 $.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëà';
-    for (var i=0;i<31;i++)
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùç';
+    for (var i=0;i<38;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -39,8 +24,8 @@ $.isLetter = function(word, pos) {
 $.isVowel = function(word, pos) {
     if (word.length <= pos)
         return false;
-    var letters = 'aeiouyéèêëà';
-    for (var i=0;i<11;i++)
+    var letters = 'aeiouyéèêëàâîïôöù';
+    for (var i=0;i<17;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -49,8 +34,8 @@ $.isVowel = function(word, pos) {
 $.isConsonant = function(word, pos) {
     if (word.length <= pos)
         return false;
-    var consonant = "bcdfghjklmnpqrstvwxz";
-    for (var i=0;i<20;i++)
+    var consonant = "bcdfghjklmnpqrstvwxzç";
+    for (var i=0;i<21;i++)
         if (word[pos] == consonant[i])
             return true;
     return false;
@@ -87,5 +72,45 @@ $.checkPlural = function(word, pos) {
         return false;
     if (word[pos] == 's')
         return true;
+    return false;
+}
+
+$.isAccE = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var letters = 'eéèêë';
+    for (var i=0;i<5;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isAccI = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var letters = 'iîï';
+    for (var i=0;i<3;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isAccO = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var letters = 'oôö';
+    for (var i=0;i<3;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isAccU = function(word, pos) {
+    if (word.length <= pos)
+        return false;
+    var letters = 'uù';
+    for (var i=0;i<2;i++)
+        if (word[pos] == letters[i])
+            return true;
     return false;
 }

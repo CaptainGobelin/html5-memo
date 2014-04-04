@@ -37,25 +37,36 @@ function privateGetPics() {
 $.showPhon = function(phonned) {
     $phonDiv = $("div.phonDiv");
     $phonDiv.empty();
-    var div = "Phonétisation: ";
+    var div = "<p>Phonétisation:</p><p>";
     for (var i=0;i<$meltedSplits.length-1;i++) {
-        div += '<a class="phon_'+i+'" onClick="$.showPhonList('+i+')">'+$meltedSplits[i]+'</>';
+        div += '<button class="phon_'+i+'" onClick="$.showPhonList('+i+')">'+$meltedSplits[i]+'</button>';
     }
+    div += '</p>';
     $phonDiv.append(div);
 }
 
+function pirvateRestorePicsClass() {
+    for (var i=0;i<$splits.length-1;i++){
+        doc = document.getElementById('img_'+i);
+        if (doc != null)
+            doc.setAttribute("class", "shadow");
+    }
+}
+
 $.showPhonList = function(id) {
+    pirvateRestorePicsClass();
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s = "Liste phonèmes: ";
+    $s = "<p>Liste phonèmes:</p><p>";
     for (var i=0;i<NB_PHON;i++) {
-        $s += '<a class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</a>';
+        $s += '<button class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</button>';
     }
+    $s += '</p>';
     $listDiv.append($s);
 }
 
 $.changePhon = function(id, phono) {
-    $phonA = $('a.phon_'+id);
+    $phonA = $('button.phon_'+id);
     $phonA.empty();
     $phonA.append(phon[phono][0]);
     $meltedSplits[id] = phon[phono][0];
@@ -64,10 +75,11 @@ $.changePhon = function(id, phono) {
 }
 
 $.showPicsList = function(id) {
+    pirvateRestorePicsClass();
     document.getElementById('img_'+id).setAttribute("class", "choosen");
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s = "Liste images: ";
+    $s = "<p>Liste images:</p><p>";
     var k = 0;
     for (var img in WORDS.all()) {
         k++;
@@ -77,6 +89,7 @@ $.showPicsList = function(id) {
         $s += '.svg" type="image/svg+xml" height="100px" width="100px"';
         $s += ' onClick="$.changePic('+id+','+k+')">';
     }
+    $s += '</p>';
     $listDiv.append($s);
 }
 

@@ -14,8 +14,8 @@ $.ruleLength = function(rule) {
 }
 
 $.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùç';
-    for (var i=0;i<38;i++)
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç';
+    for (var i=0;i<39;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -24,8 +24,8 @@ $.isLetter = function(word, pos) {
 $.isVowel = function(word, pos) {
     if (word.length <= pos)
         return false;
-    var letters = 'aeiouyéèêëàâîïôöù';
-    for (var i=0;i<17;i++)
+    var letters = 'aeiouyéèêëàâîïôöùü';
+    for (var i=0;i<18;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -108,8 +108,8 @@ $.isAccO = function(word, pos) {
 $.isAccU = function(word, pos) {
     if (word.length <= pos)
         return false;
-    var letters = 'uù';
-    for (var i=0;i<2;i++)
+    var letters = 'uùü';
+    for (var i=0;i<3;i++)
         if (word[pos] == letters[i])
             return true;
     return false;

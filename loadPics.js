@@ -55,7 +55,7 @@ function pirvateRestorePicsClass() {
 
 $.showPhonList = function(id) {
     pirvateRestorePicsClass();
-    $s = '<p><button onClick=$.addPhon('+(id-1)+')><-Ajouter</button>';
+    $s = '<p><button onClick=$.addPhon('+(id)+')><-Ajouter</button>';
     $s += '<button onClick=$.removePhon('+id+')>Supprimer</button>';
     $s += '<button onClick=$.addPhon('+(id+1)+')>Ajouter-></button></p>';
     $listDiv = $("div.listDiv");
@@ -69,10 +69,17 @@ $.showPhonList = function(id) {
 }
 
 $.addPhon = function(id) {
-    /*for (var i=$meltedSplits.length-1;i>id;i++)
+    for (var i=$meltedSplits.length;i>id;i--)
         $meltedSplits[i] = $meltedSplits[i-1];
     $meltedSplits[id] = '-';
-    $.picsWithPhon();*/
+    $.showPhon();
+    $.picsWithPhon();
+}
+
+$.removePhon = function(id) {
+    $meltedSplits.splice(id,1);
+    $.showPhon();
+    $.picsWithPhon();
 }
 
 $.changePhon = function(id, phono) {

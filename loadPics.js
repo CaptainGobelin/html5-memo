@@ -69,9 +69,7 @@ $.showPhonList = function(id) {
 }
 
 $.addPhon = function(id) {
-    for (var i=$meltedSplits.length;i>id;i--)
-        $meltedSplits[i] = $meltedSplits[i-1];
-    $meltedSplits[id] = '-';
+    $meltedSplits.splice(id,0,'-');
     $.showPhon();
     $.picsWithPhon();
 }

@@ -12,14 +12,25 @@
 
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
 		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="popUp.js"></script>
 	</head>
  
 	<body>
-		<h1>Memo de Passe</h1>
+		<!--<h1>Memo de Passe</h1>
 		<p class="center"><input type="submit" value="Jouer" name="menuPlayButton" onClick='document.location = "levels.html";'/></p>
 		<p class="center"><input type="submit" value="Création" name="menuCreateButton" onClick='document.location = "yak.html";'/></p>
 		<p class="center"><input type="submit" value="Options" name="menuOptionsButton" onClick=""/></p>
-		<p class="center"><input type="submit" value="Quitter" name="menuExitButton" onClick=""/></p>
+		<p class="center"><input type="submit" value="Quitter" name="menuExitButton" onClick=""/></p>-->
+		<div class="" id="popUpSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
+		</div>
+		<p class="" id="popUpContainer">
+    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openPopUp();">
+    		</p>
+    	</p>
+    	<script type="text/javascript">
+    		$.openMenuBar();
+    		$.openPopUp();
+    	</script>
 	</body>
  
 </html>

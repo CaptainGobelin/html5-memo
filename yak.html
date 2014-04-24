@@ -13,6 +13,7 @@
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="utils.js"></script>
+		<script type="text/javascript" src="popUp.js"></script>
 		<script type="text/javascript" src="generate.js"></script>
 		<script type="text/javascript" src="rules.js"></script>
 		<script type="text/javascript" src="phonetics.js"></script>
@@ -20,18 +21,24 @@
 	</head>
  
 	<body>
-		<p class="center">
-			<label id="login_avs" for="word">Mot à phonétiser:</label>
-		</p>
-		<p class="center">
-        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+		<div class="" id="popUpSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
+			<p class="center">
+				<label id="login_avs" for="word">Mot à phonétiser:</label>
+			</p>
+			<p class="center">
+	        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+	    	</p>
+	    	<p class="center">
+	        	<input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics();"/>
+	        </p>
+			<div class="picsDiv"></div>
+			<div class="phonDiv"></div>
+			<div class="listDiv"></div>
+		</div>
+		<p class="" id="popUpContainer">
+    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openPopUp();">
+    		</p>
     	</p>
-    	<p class="center">
-        	<input type="submit" value="Générer" name="generateButton" onClick="$.test()"/>
-        </p>
-		<div class="picsDiv"></div>
-		<div class="phonDiv"></div>
-		<div class="listDiv"></div>
 	</body>
  
 </html>

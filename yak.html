@@ -20,14 +20,14 @@
 	</head>
  
 	<body>
-		<p>
+		<p class="center">
 			<label id="login_avs" for="word">Mot à phonétiser:</label>
 		</p>
-		<p>
+		<p class="center">
         	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
     	</p>
-    	<p>
-        	<input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics()"/>
+    	<p class="center">
+        	<input type="submit" value="Générer" name="generateButton" onClick="$.test()"/>
         </p>
 		<div class="picsDiv"></div>
 		<div class="phonDiv"></div>

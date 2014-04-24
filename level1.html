@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+ 
+	<head>
+		<meta charset="utf-8">
+		<title>Mémo de Passe</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="yak.css" />
+
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="popUp.js"></script>
+	</head>
+ 
+	<body onresize="$.resizePopUp()">
+		<h1>Niveau 1</h1>
+		<p class="center">Rébus:</p>
+		<div class="picsDiv">
+			<img id="img_0" class="shadow" src="pics/PhonemesDessins2-13.svg" height="100px" width="100px">
+			<img id="img_0" class="shadow" src="pics/PhonemesDessins2-01.svg" height="100px" width="100px">
+		</div>
+		<p class="center">
+			<label for="word">Mot:</label>
+		</p>
+		<p class="center">
+        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+    	</p>
+    	<p class="center">
+        	<input type="submit" value="Répondre" name="generateButton" onClick="$.openPopUp()"/>
+        </p>
+        <div class="" id="popUpSuccess" style="opacity:0;"></div>
+        <p class="" id="popUpContainer">
+    	<img class="" id="popUpSuccessContent" style="opacity:0;"/>
+    	</p>
+	</body>
+ 
+</html>

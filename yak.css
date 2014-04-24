@@ -7,36 +7,48 @@ body {
 	background-repeat: repeat;
 }
 
+h1, h2, h3, h4, h5, h6{
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+	color: #cbcaca;
+}
+
+h1{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size:50pt;
+}
+
 p {
 	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
 	font-size:20pt;
 	color:#da620b;
+	text-align: center;
 }
 
 input, label { 
 	font-size:20pt;
-	margin-left: 10px;
 	text-align: center;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
-    color: #da620b;
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	color: #da620b;
 }
 
 input {
 	font-size:15pt;
 	padding: 9px;
-    border: solid 1px #E5E5E5;
-    outline: 0;
+	border: solid 1px #E5E5E5;
+	outline: 0;
 	width: 200px;
-    max-width: 80%;
-    background: #FFFFFF url('bg_form.png') left top repeat-x;
-    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
-    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
-    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	max-width: 80%;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 }
 
 .wordForm {
@@ -45,14 +57,14 @@ input {
 
 input:hover, textarea:hover,
 input:focus, textarea:focus { 
-    border-color: #C9C9C9; 
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	border-color: #C9C9C9; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
 }
 
 .form label { 
-    margin-left: 10px; 
-    color: #898989; 
-    display: block;
+	margin-left: 10px; 
+	color: #898989; 
+	display: block;
 }
 
 button {
@@ -63,9 +75,9 @@ button {
 	background-color:white;
 	text-align:center;
 	background: #FFFFFF url('bg_form.png') left top repeat-x;
-    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 }
 
 button:hover {
@@ -73,16 +85,16 @@ button:hover {
 	color:white;
 }
 
-.picsDiv, .phonDiv, .listDiv {
+.picsDiv, .phonDiv, .listDiv, .center {
 	font-size:20pt;
 	margin-left: 10%;
 	width: 80%;
- 	text-align: center; 
+	text-align: center; 
 }
 
 .shadow {
-    -webkit-filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
-            filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
+	-webkit-filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
+			filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
 }
 
 .choosen {-webkit-animation: myAnim 1s infinite; }
@@ -94,12 +106,63 @@ button:hover {
 }
 
 @font-face {
-    font-family: 'BebasNeueRegular';
-    src: url('./fonts/BebasNeue-webfont.eot');
-    src: url('./fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/BebasNeue-webfont.woff') format('woff'),
-         url('./fonts/BebasNeue-webfont.ttf') format('truetype'),
-         url('./fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'BebasNeueRegular';
+	src: url('./fonts/BebasNeue-webfont.eot');
+	src: url('./fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/BebasNeue-webfont.woff') format('woff'),
+		 url('./fonts/BebasNeue-webfont.ttf') format('truetype'),
+		 url('./fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.popUpBg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	background-color:black;
+	z-index: 10;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	text-align: center;
+}
+
+.popUpContent {
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-size:16pt;
+	color: #da620b;
+	border:1px solid #d5d5d5;
+	background-color:white;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	height: 300px;
+	width: 400px;
+	max-height: 80%;
+	max-width: 80%;
+	position: relative;
+	background-color:white;
+	z-index: 11;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+}
+
+.centerXY {
+	position: fixed;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 11;
+}
+
+.centerXY, #popUpSuccessContent {
+	display: inline-block;
+	vertical-align: middle;
 }

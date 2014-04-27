@@ -1,10 +1,5 @@
 $.openPopUp = function() {
-	var doc = document.getElementById('popUpSuccess');
-	if (doc != null) {
-		doc.setAttribute("class", "popUpBg");
-		doc.setAttribute("style", '-webkit-filter: blur(1px);');
-	}
-	doc = document.getElementById('popUpSuccessContent');
+	var doc = document.getElementById('popUpSuccessContent');
 	if (doc != null) {
 		doc.setAttribute("class", "popUpContent");
 		doc.setAttribute("style", "opacity:1;");
@@ -16,12 +11,7 @@ $.openPopUp = function() {
 }
 
 $.closePopUp = function() {
-	var doc = document.getElementById('popUpSuccess');
-	if (doc != null) {
-		doc.setAttribute("class", "");
-		doc.setAttribute("style", "-webkit-filter: blur(0px);");
-	}
-	doc = document.getElementById('popUpSuccessContent');
+	var doc = document.getElementById('popUpSuccessContent');
 	if (doc != null) {
 		doc.setAttribute("class", "");
 		doc.setAttribute("style", "opacity:0;");
@@ -50,6 +40,7 @@ $.openMenuBar = function() {
     s += '<p><input type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
     s += '<p><input type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     $menuBar.append(s);
+    $.addBlur();
 }
 
 $.closeMenuBar = function() {
@@ -58,4 +49,5 @@ $.closeMenuBar = function() {
 	doc.setAttribute('onClick', '$.openMenuBar();$.openPopUp();');
 	$menuBar = $("p.leftMenuClose");
     $menuBar.empty();
+    $.clearBlur();
 }

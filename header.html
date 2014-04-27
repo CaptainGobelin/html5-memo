@@ -24,25 +24,3 @@
 	<body>
 		<!--#config timefmt="%A" --> <!--#echo var="DATE_LOCAL" -->
 		<div class="" id="popUpSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
-
-			<p class="center">
-				<label id="login_avs" for="word">Mot à phonétiser:</label>
-			</p>
-			<p class="center">
-	        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
-	    	</p>
-	    	<p class="center">
-	        	<input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics();"/>
-	        </p>
-			<div class="picsDiv"></div>
-			<div class="phonDiv"></div>
-			<div class="listDiv"></div>
-
-</div>
-		<p class="" id="popUpContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openPopUp();">
-    		</p>
-    	</p>
-	</body>
- 
-</html>

@@ -17,7 +17,7 @@
 	</head>
  
 	<body onresize="$.resizePopUp()">
-		<div class="" id="popUpSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
+		<div class="" id="menuSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
 			<h1>Niveau 1</h1>
 			<p class="center">Rébus:</p>
 			<div class="picsDiv">
@@ -31,14 +31,14 @@
 	        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
 	    	</p>
 	    	<p class="center">
-	        	<input type="submit" value="Répondre" name="generateButton" onClick="$.openPopUp()"/>
+	        	<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>
 	        </p>
     	</div>
     	<!--<p class="" id="popUpContainer">
     		<img class="" id="popUpSuccessContent" style="opacity:0;"/>
     	</p>-->
-    	<p class="" id="popUpContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openPopUp();">
+    	<p class="" id="menuContainer">
+    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
     		</p>
     	</p>
 	</body>

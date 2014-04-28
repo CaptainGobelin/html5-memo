@@ -29,25 +29,3 @@ $.resizePopUp = function() {
 	var doc = document.getElementById('popUpContainer');
 	doc.setAttribute("style", 'margin-top:'+(h-newHPop)/2+'px;height:'+newHPop+'px;');
 }
-
-$.openMenuBar = function() {
-	var doc = document.getElementById('menuBar');
-	doc.setAttribute('class', 'leftMenuOpen');
-	doc.setAttribute('onClick', '$.closeMenuBar();$.closePopUp();');
-	$menuBar = $("p.leftMenuOpen");
-    $menuBar.empty();
-    var s = "<p>Menu</p>";
-    s += '<p><input type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
-    s += '<p><input type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
-    $menuBar.append(s);
-    $.addBlur();
-}
-
-$.closeMenuBar = function() {
-	var doc = document.getElementById('menuBar');
-	doc.setAttribute('class', 'leftMenuClose');
-	doc.setAttribute('onClick', '$.openMenuBar();$.openPopUp();');
-	$menuBar = $("p.leftMenuClose");
-    $menuBar.empty();
-    $.clearBlur();
-}

@@ -93,11 +93,18 @@ button:hover {
 }
 
 .shadow {
+	width: 100px;
+	height: 100px;
 	-webkit-filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
 			filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
 }
 
-.choosen {-webkit-animation: myAnim 1s infinite; }
+.choosen {
+	width: 100px;
+	height: 100px;
+	-webkit-animation: myAnim 1s infinite;
+}
+
 @-webkit-keyframes myAnim
 {
   from {-webkit-transform: scale(1,1) }

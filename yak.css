@@ -24,24 +24,25 @@ h1{
 
 p {
 	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
-	font-size:20pt;
+	font-size:100%;
 	color:#da620b;
 	text-align: center;
 }
 
 input, label { 
-	font-size:20pt;
+	font-size:100%;
 	text-align: center;
 	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
 	color: #da620b;
 }
 
 input {
-	font-size:15pt;
-	padding: 9px;
+	font-size:100%;
+	padding: 0%;
 	border: solid 1px #E5E5E5;
 	outline: 0;
-	width: 200px;
+	width: 30%;
+	height: 100%;
 	max-width: 80%;
 	background: #FFFFFF url('bg_form.png') left top repeat-x;
 	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
@@ -49,6 +50,10 @@ input {
 	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+.menuInput {
+	width: 80%;
 }
 
 .wordForm {
@@ -86,10 +91,17 @@ button:hover {
 }
 
 .picsDiv, .phonDiv, .listDiv, .center {
-	font-size:20pt;
+	font-size:100%;
 	margin-left: 10%;
 	width: 80%;
 	text-align: center; 
+}
+
+.center {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 
 .shadow {

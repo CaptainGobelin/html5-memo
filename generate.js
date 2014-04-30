@@ -6,7 +6,7 @@ var WORDS = (function() {
 		'[b][a]' 	: 'PhonemesDessins2-02',
 		'[l][a]' 	: 'PhonemesDessins2-03',
 		'[m][a]' 	: 'PhonemesDessins2-04',
-		'[i][a]' 	: 'PhonemesDessins2-05',
+		'[i][a][k]'	: 'PhonemesDessins2-05',
 		'[g][an]' 	: 'PhonemesDessins2-06',
 		'[f][an]' 	: 'PhonemesDessins2-07',
 		'[a][ch]' 	: 'PhonemesDessins2-08',

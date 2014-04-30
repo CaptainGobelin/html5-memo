@@ -21,8 +21,8 @@ $.openMenuBar = function() {
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
     var s = "<p>Menu</p>";
-    s += '<p><input type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
-    s += '<p><input type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
+    s += '<p class="center centerMenu"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
+    s += '<p class="center centerMenu"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     $menuBar.append(s);
     $.addBlur();
 }

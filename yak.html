@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="yak.css" />
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="utils.js"></script>
+		<script type="text/javascript" src="window.js"></script>
 		<script type="text/javascript" src="menuBar.js"></script>
 		<script type="text/javascript" src="popUp.js"></script>
 		<script type="text/javascript" src="generate.js"></script>
@@ -19,7 +20,7 @@
 		<script type="text/javascript" src="loadPics.js"></script>
 	</head>
  
-	<body>
+	<body onresize="$.resizeWindow()">
 		<div class="" id="menuSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
 
 			<p class="center">
@@ -35,11 +36,13 @@
 			<div class="phonDiv"></div>
 			<div class="listDiv"></div>
 
-</div>
+		</div>
 		<p class="" id="menuContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
-    		</p>
+    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
     	</p>
+    	<script type="text/javascript">
+    		$.resizeWindow();
+    	</script>
 	</body>
  
 </html>

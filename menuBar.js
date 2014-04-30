@@ -20,11 +20,12 @@ $.openMenuBar = function() {
 	doc.setAttribute('onClick', '$.closeMenuBar();$.closeMenuBg();');
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
-    var s = "<p>Menu</p>";
-    s += '<p class="center centerMenu"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
-    s += '<p class="center centerMenu"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
+    var s = "<p class='center'>Menu</p>";
+    s += '<p class="center"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
+    s += '<p class="center"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     $menuBar.append(s);
     $.addBlur();
+    $.resizeWindow();
 }
 
 $.closeMenuBar = function() {

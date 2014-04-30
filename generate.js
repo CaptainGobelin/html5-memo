@@ -64,7 +64,7 @@ $.groupPhonFromSplits = function() {
 function privateGroupPhon(splits) {
 	var s = '';
 	for (var i=0;i<splits.length-1;i++) {
-		var toTest = 3;
+		var toTest = 6;
 		var test = '';
 		while (toTest > 0) {
 			test = '';

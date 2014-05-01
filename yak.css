@@ -225,7 +225,7 @@ button:hover {
 	width: 7%;
 	top: 0px;
 	left: 0px;
-	background-color:white;
+	background-color:red;
 	z-index: 11;
 	opacity: 1;
 	-webkit-transition: 0.5s ease;
@@ -239,7 +239,7 @@ button:hover {
 	width: 25%;
 	top: 0px;
 	left: 0px;
-	background-color:white;
+	background-color:red;
 	z-index: 11;
 	opacity: 1;
 	-webkit-transition: 0.5s ease;

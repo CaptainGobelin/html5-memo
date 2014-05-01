@@ -37,12 +37,13 @@ function privateGetPics() {
 $.showPhon = function(phonned) {
     $phonDiv = $("div.phonDiv");
     $phonDiv.empty();
-    var div = "<p>Phonétisation:</p><p>";
+    var div = '<p class="center">Phonétisation:</p><p class="center">';
     for (var i=0;i<$meltedSplits.length-1;i++) {
         div += '<button class="phon_'+i+'" onClick="$.showPhonList('+i+')">'+$meltedSplits[i]+'</button>';
     }
     div += '</p>';
     $phonDiv.append(div);
+    $.resizeWindow();
 }
 
 function pirvateRestorePicsClass() {
@@ -55,17 +56,18 @@ function pirvateRestorePicsClass() {
 
 $.showPhonList = function(id) {
     pirvateRestorePicsClass();
-    $s = '<p><button onClick=$.addPhon('+(id)+')><-Ajouter</button>';
+    $s = '<p class="center"><button onClick=$.addPhon('+(id)+')><-Ajouter</button>';
     $s += '<button onClick=$.removePhon('+id+')>Supprimer</button>';
     $s += '<button onClick=$.addPhon('+(id+1)+')>Ajouter-></button></p>';
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s += "<p>Liste phonèmes:</p><p>";
+    $s += '<p class="center">Liste phonèmes:</p><p class="center">';
     for (var i=0;i<NB_PHON;i++) {
         $s += '<button class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</button>';
     }
     $s += '</p>';
     $listDiv.append($s);
+    $.resizeWindow();
 }
 
 $.addPhon = function(id) {
@@ -94,7 +96,7 @@ $.showPicsList = function(id) {
     document.getElementById('img_'+id).setAttribute("class", "choosen");
     $listDiv = $("div.listDiv");
     $listDiv.empty();
-    $s = "<p>Liste images:</p><p>";
+    $s = '<p class="center">Liste images:</p><p class="center">';
     var k = 0;
     for (var img in WORDS.all()) {
         k++;
@@ -106,6 +108,7 @@ $.showPicsList = function(id) {
     }
     $s += '</p>';
     $listDiv.append($s);
+    $.resizeWindow();
 }
 
 $.changePic = function(id, image) {

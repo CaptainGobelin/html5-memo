@@ -62,7 +62,7 @@ $.showPhonList = function(id) {
     $listDiv = $("div.listDiv");
     $listDiv.empty();
     $s += '<p class="center">Liste phonèmes:</p><p class="center">';
-    for (var i=0;i<NB_PHON;i++) {
+    for (var i=0;i<NB_PHON-1;i++) {
         $s += '<button class="phon_list_'+i+'" onClick=$.changePhon('+id+','+i+')>'+phon[i][0]+'</button>';
     }
     $s += '</p>';

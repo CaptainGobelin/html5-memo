@@ -74,7 +74,8 @@ input:focus, textarea:focus {
 
 button {
 	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
-	font-size:16pt;
+	width: 1%;
+	font-size:100%;
 	color: #da620b;
 	border:1px solid #d5d5d5;
 	background-color:white;
@@ -115,6 +116,7 @@ button:hover {
 	width: 100px;
 	height: 100px;
 	-webkit-animation: myAnim 1s infinite;
+	-moz-animation: myAnimMoz 1s infinite;
 }
 
 @-webkit-keyframes myAnim
@@ -122,6 +124,13 @@ button:hover {
   from {-webkit-transform: scale(1,1) }
   50% {-webkit-transform: scale(1.1,1.1)}
   to {-webkit-transform: scale(1,1) }
+}
+
+@-moz-keyframes myAnimMoz
+{
+  from {-moz-transform: scale(1,1) }
+  50% {-moz-transform: scale(1.1,1.1)}
+  to {-moz-transform: scale(1,1) }
 }
 
 @font-face {
@@ -157,12 +166,12 @@ button:hover {
 
 #popUpSuccess {
 	-webkit-transition: opacity 0.5s ease-in-out;
-	margin-left: 10%;
+	margin-left: 7%;
 }
 
 #menuSuccess {
 	-webkit-transition: -webkit-filter 0.5s;
-	margin-left: 10%;
+	margin-left: 7%;
 }
 
 .popUpContent {
@@ -246,7 +255,7 @@ button:hover {
 	-moz-transition: 0.5s ease;
 }
 
-@media handheld {
+@media (orientation:portrait) {
 	.leftMenuOpen {
 		width: 100%;
 	}

@@ -26,8 +26,8 @@ function privateGetPics() {
     $picsDiv.empty();
     for (var i=0;i<$splits.length-1;i++) {
         if ($splits[i] != "mute") {
-            $s = '<img id="img_'+i+'" class="shadow test" src="pics/' + $splits[i];
-            $s += '.svg" height="100px" width="100px" onClick="$.showPicsList('+i+')">';
+            $s = '<img id="img_'+i+'" class="shadow pic" src="pics/' + $splits[i];
+            $s += '.svg" style="height:200px;width:200px;" onClick="$.showPicsList('+i+')">';
             $picsDiv.append($s);
         }
     }

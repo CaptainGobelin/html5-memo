@@ -14,8 +14,8 @@ $.ruleLength = function(rule) {
 }
 
 $.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç';
-    for (var i=0;i<39;i++)
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç.$';
+    for (var i=0;i<41;i++)
         if (word[pos] == letters[i])
             return true;
     return false;

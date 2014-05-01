@@ -20,7 +20,7 @@ $.openMenuBar = function() {
 	doc.setAttribute('onClick', '$.closeMenuBar();$.closeMenuBg();');
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
-    var s = "<p class='center'>Menu</p>";
+    var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="width:100%;"></p>';
     s += '<p class="center"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
     s += '<p class="center"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     $menuBar.append(s);

@@ -225,7 +225,7 @@ button:hover {
 	width: 7%;
 	top: 0px;
 	left: 0px;
-	background-color:red;
+	background-color:#aa2d22;
 	z-index: 11;
 	opacity: 1;
 	-webkit-transition: 0.5s ease;
@@ -239,9 +239,15 @@ button:hover {
 	width: 25%;
 	top: 0px;
 	left: 0px;
-	background-color:red;
+	background-color:#aa2d22;
 	z-index: 11;
 	opacity: 1;
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
+}
+
+@media handheld {
+	.leftMenuOpen {
+		width: 50%;
+	}
 }

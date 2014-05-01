@@ -57,7 +57,7 @@ input {
 }
 
 .wordForm {
-	width: 400px;
+	width: 500px;
 }
 
 input:hover, textarea:hover,
@@ -248,6 +248,6 @@ button:hover {
 
 @media handheld {
 	.leftMenuOpen {
-		width: 50%;
+		width: 100%;
 	}
 }

@@ -8,7 +8,7 @@ var WORDS = (function() {
 		'[b][o][l]'	: 'PhonemesDessins-TraitMimi2-04',
 		'[d][ai]'	: 'PhonemesDessins-TraitMimi2-06',
 		'[n][i]'	: 'PhonemesDessins-TraitMimi2-07',
-		'[e]'		: 'PhonemesDessins-TraitMimi2-10',
+		'[eu]'		: 'PhonemesDessins-TraitMimi2-10',
 		'[m][a]'	: 'PhonemesDessins-TraitMimi2-11',
 		'[r][a]'	: 'PhonemesDessins-TraitMimi2-12',
 		'[b][an]'	: 'PhonemesDessins-TraitMimi2-13',

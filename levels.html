@@ -10,18 +10,33 @@
 
 		<link rel="stylesheet" href="yak.css" />
 
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
 		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="utils.js"></script>
+		<script type="text/javascript" src="window.js"></script>
+		<script type="text/javascript" src="menuBar.js"></script>
+		<script type="text/javascript" src="popUp.js"></script>
+		<script type="text/javascript" src="generate.js"></script>
+		<script type="text/javascript" src="rules.js"></script>
+		<script type="text/javascript" src="phonetics.js"></script>
+		<script type="text/javascript" src="loadPics.js"></script>
 	</head>
  
-	<body>
-		<h1>Memo de Passe</h1>
-		<p class="center">
-			<input type="submit" value="Niveau 1" name="level1Button" onClick='document.location = "level1.html";'/>
-			<input type="submit" value="Niveau 2" name="level2Button"/>
-			<input type="submit" value="Niveau 3" name="level3Button" onClick=""/>
-			<input type="submit" value="Niveau 4" name="level4Button" onClick=""/>
-		</p>
+	<body onresize="$.resizeWindow()">
+		<div class="" id="menuSuccess" style"filter: url(noblur.svg#blur);-webkit-filter: blur(0px);">
+			<h1>Memo de Passe</h1>
+			<p class="center">
+				<input type="submit" value="Niveau 1" name="level1Button" onClick='document.location = "level1.html";'/>
+				<input type="submit" value="Niveau 2" name="level2Button"/>
+				<input type="submit" value="Niveau 3" name="level3Button" onClick=""/>
+				<input type="submit" value="Niveau 4" name="level4Button" onClick=""/>
+			</p>
+		</div>
+		<p class="" id="menuContainer">
+    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
+    	</p>
+    	<script type="text/javascript">
+    		$.resizeWindow();
+    	</script>
 	</body>
  
 </html>

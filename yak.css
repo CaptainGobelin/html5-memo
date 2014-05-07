@@ -3,8 +3,8 @@ body {
 	margin:0px;
 	padding:0px;
 	top:0;
-	/*background-image: url(./sysPics/bg.png);
-	background-repeat: repeat;*/
+	background-image: url(./sysPics/bg.png);
+	background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -262,5 +262,33 @@ button:hover {
 	.leftMenuOpen {
 		width: 100%;
 		background-size: 50%;
+	}
+}
+
+.tipPanel {
+	position: absolute;
+	margin: 0px;
+	height: 34%;
+	width: 20%;
+	top: 6%;
+	left: 78%;
+	background-color:#faffd0;
+	border: solid 3px #000000;
+	box-sizing: border-box;
+	z-index: 11;
+	opacity: 1;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	color: #da620b;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 1100px) {
+	.tipPanel {
+		height: 18%;
+		width: 93%;
+		top: 82%;
+		left: 7%;
 	}
 }

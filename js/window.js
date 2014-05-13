@@ -33,8 +33,8 @@ $.resizeTipPanel = function() {
 			var f;
 			do {
 				k--;
-				f = k*1.7*w/150;
-			} while ((f > (h/k)) && (k >= 2));
+				f = k*1.6*w/160;
+			} while ((f > (h/k)) && (k >= 1));
 			item.setAttribute("style", 'height:'+(k*f-2)+'px;top:'+($(window).height()-k*f+2)+'px;font-size: '+f+'px;');
 		}
 	}

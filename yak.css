@@ -90,14 +90,14 @@ button:hover {
 	color:white;
 }
 
-.picsDiv, .phonDiv, .listDiv, .center {
+.picsDiv, .phonDiv, .listDiv, .center, .centerMenu {
 	font-size:100%;
 	margin-left: 10%;
 	width: 80%;
 	text-align: center; 
 }
 
-.center {
+.center, .centerMenu {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 1%;

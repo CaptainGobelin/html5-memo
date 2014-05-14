@@ -15,6 +15,12 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style",'height:'+(9*h/100)+'px;');
 	}
+	h *= 0.15;
+	d = document.getElementsByClassName('centerMenu');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'height:'+(9*h/10)+'px;font-size: '+(50*h/100)+'px;');
+	}
 	$.resizeTipPanel();
 }
 

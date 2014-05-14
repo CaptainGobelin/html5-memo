@@ -18,6 +18,7 @@ var WORDS = (function() {
 		'[k][e]'	: 'PhonemesDessins-TraitMimi2-17',
 		'[r][ai]'	: 'PhonemesDessins-TraitMimi2-18',
 		'[r][o][b][i][n][ai]'	: 'PhonemesDessins-TraitMimi2-02',
+		'[b][a][t][o]'	: 'PhonemesDessins-TraitMimi2-11',
 	};
 	return {
 		get: function(name) { return private[name]; },

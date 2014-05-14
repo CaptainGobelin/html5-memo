@@ -30,18 +30,18 @@ $.resizeTipPanel = function() {
 		var item = d[i];
 		if (1100 < $(window).width()) {
 			h = $(window).width()/5;
-			item.setAttribute("style", 'height:'+(6*h/12+6)+'px;font-size: '+(h/12)+'px;');
+			item.setAttribute("style", 'height:'+(8*h/12+6)+'px;font-size: '+(h/12)+'px;');
 		}
 		else {
 			var w = $(window).width()*0.93;
-			h = $(window).height()*0.18;
+			h = $(window).height()*0.16;
 			var k = 10;
 			var f;
 			do {
 				k--;
-				f = k*1.6*w/160;
-			} while ((f > (h/k)) && (k >= 1));
-			item.setAttribute("style", 'height:'+(k*f-2)+'px;top:'+($(window).height()-k*f+2)+'px;font-size: '+f+'px;');
+				f = w/((140/(k-1))*0.60);
+			} while ((f > (h/k)) && (k >= 2));
+			item.setAttribute("style", 'height:'+(k*f-2)+'px;top:'+($(window).height()-k*f-4)+'px;font-size: '+f+'px;');
 		}
 	}
 }

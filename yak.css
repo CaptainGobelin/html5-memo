@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	padding:0px;
 	margin:0px;
 	color: #cbcaca;
@@ -23,7 +23,7 @@ h1{
 }
 
 p {
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size:100%;
 	color:#da620b;
 	text-align: center;
@@ -32,7 +32,7 @@ p {
 input, label { 
 	font-size:100%;
 	text-align: center;
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	color: #da620b;
 }
 
@@ -73,7 +73,7 @@ input:focus, textarea:focus {
 }
 
 button {
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size:100%;
 	color: #da620b;
 	border:1px solid #d5d5d5;
@@ -174,7 +174,7 @@ button:hover {
 }
 
 .popUpContent {
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size:16pt;
 	color: #da620b;
 	border:1px solid #d5d5d5;
@@ -266,6 +266,7 @@ button:hover {
 }
 
 .tipPanel {
+	border-radius: 15px;
 	position: absolute;
 	margin: 0px;
 	height: 34%;
@@ -273,13 +274,13 @@ button:hover {
 	top: 6%;
 	left: 78%;
 	background-color:#faffd0;
-	border: solid 3px #000000;
+	border: solid 2.5px #000000;
 	box-sizing: border-box;
 	z-index: 11;
 	opacity: 1;
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
-	font-family: 'BebasNeueRegular',Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	color: #da620b;
 	overflow: hidden;
 }
@@ -287,8 +288,8 @@ button:hover {
 @media screen and (max-width: 1100px) {
 	.tipPanel {
 		height: 18%;
-		width: 95%;
-		top: 82%;
-		left: 5%;
+		width: 93%;
+		top: 80%;
+		left: 6%;
 	}
 }

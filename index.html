@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
- 
+
 	<head>
 		<meta charset="utf-8">
 		<title>Mémo de Passe</title>
@@ -19,19 +19,36 @@
 		<script type="text/javascript" src="js/rules.js"></script>
 		<script type="text/javascript" src="js/phonetics.js"></script>
 		<script type="text/javascript" src="js/loadPics.js"></script>
+		<script type="text/javascript" src="js/loadLevel.js"></script>
+		<script type="text/javascript" src="js/intro.js"></script>
 	</head>
  
 	<body onresize="$.resizeWindow()">
-		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
+		<div class="introCache">
+			<p class="center">
+				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.enterApp();}" class="wordForm" type="text" name="id" value="" size="16"/>
+			</p>
 		</div>
-		<p class="" id="menuContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
-    	</p>
-    	<script type="text/javascript">
-    		$.resizeWindow();
-    		$.openMenuBar();
-    		$.openPopUp();
-    	</script>
+		<div class="introBack"></div>
+			<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
+				<p class="center"><div class="picsDiv"></div></p>
+				<p class="center">
+					<label for="word">Mot:</label>
+				</p>
+				<p class="center">
+					<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+				</p>
+				<p class="center">
+					<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>
+				</p>
+			</div>
+			<p class="" id="menuContainer">
+				<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
+			</p>
+		<script type="text/javascript">
+			$.resizeWindow();
+			$.loadRandomLevel();
+		</script>
 	</body>
  
 </html>

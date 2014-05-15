@@ -7,7 +7,7 @@ $.enterApp = function() {
 	d = document.getElementsByClassName('introCache');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i]; 
-		item.setAttribute('style', '-webkit-transform: scale(25,25);');
+		item.setAttribute('style', '-webkit-transform: scale(25,25);-moz-transform: scale(25,25);');
 	}
 	window.setInterval(function() {
     	var element = document.getElementsByClassName("introCache");

@@ -15,6 +15,13 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style",'height:'+(9*h/100)+'px;');
 	}
+	var h2 = $(window).height();
+	var w = Math.max($(window).height(),$(window).width());
+	d = document.getElementsByClassName('inputIntro');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'top:'+(45*h2/100)+'px;height:'+w/26+'px;');
+	}
 	h *= 0.15;
 	d = document.getElementsByClassName('centerMenu');
 	for (var i=0;i<d.length;++i) {

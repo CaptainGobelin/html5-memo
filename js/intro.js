@@ -14,5 +14,5 @@ $.enterApp = function() {
 		element[0].parentNode.removeChild(element[0]);
 		element = document.getElementsByClassName("introBack");
 		element[0].parentNode.removeChild(element[0]);
-    }, 1000);
+    }, 3000);
 }

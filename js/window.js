@@ -22,6 +22,13 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style", 'top:'+(45*h2/100)+'px;height:'+w/26+'px;');
 	}
+	var w = $(window).width();
+	d = document.getElementsByClassName('wordLabel');
+	for (var i=0;i<d.length;++i) {
+		var d2 = document.getElementById('wordForm');
+		var item = d[i];  
+		item.setAttribute("style", 'margin-left:'+((0.95*0.8*w)-d2.offsetWidth)/2+'px;');
+	}
 	h *= 0.15;
 	d = document.getElementsByClassName('centerMenu');
 	for (var i=0;i<d.length;++i) {

@@ -1,10 +1,16 @@
+html { 
+  background: url(./sysPics/FondecSynaptique.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
 	width:100%;
+	height:100%;
 	margin:0px;
 	padding:0px;
-	top:0;
-	background-image: url(./sysPics/bg.png);
-	background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -29,27 +35,29 @@ p {
 	text-align: center;
 }
 
-input, label { 
-	font-size:100%;
-	text-align: center;
+label { 
+	font-size:35%;
 	font-family: 'Ubuntu', sans-serif;
-	color: #da620b;
+	color: #000000;
+	display: block;
+	text-align: left;
 }
 
 input {
-	font-size:100%;
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:60%;
 	padding: 0%;
-	border: solid 1px #E5E5E5;
+	border: solid 2px #000000;
 	outline: 0;
 	width: 30%;
 	height: 100%;
 	max-width: 80%;
-	background: #FFFFFF url('bg_form.png') left top repeat-x;
-	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
-	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
 	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	border-radius: 15px;
+	background-color: #DDDBC2;
 }
 
 .menuInput {
@@ -62,7 +70,7 @@ input {
 
 input:hover, textarea:hover,
 input:focus, textarea:focus { 
-	border-color: #C9C9C9; 
+	border-color: #222222; 
 	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
 }
 
@@ -299,12 +307,12 @@ button:hover {
 	width: 100%;
 	height: 100%;
 	z-index: 21;
-	BACKGROUND-IMAGE: url("sysPics/CacheLogo.svg");
+	BACKGROUND-IMAGE: url("sysPics/CacheLogo2.svg");
 	background-repeat: no-repeat;
  	background-position : 50% 50%;
  	background-size: cover;
- 	-webkit-transition: 3s ease-in-out;
-	-moz-transition: 3s ease-in-out;
+ 	-webkit-transition: 2s ease-in-out;
+	-moz-transition: 2s ease-in-out;
 }
 
 .introBack {
@@ -314,8 +322,8 @@ button:hover {
 	z-index: 20;
 	background-color: white;
 	opacity: 1;
-	-webkit-transition: opacity 2.5s ease-in-out;
-	-moz-transition: opacity 2.5s ease-in-out;
+	-webkit-transition: opacity 1.5s ease-in-out;
+	-moz-transition: opacity 1.5s ease-in-out;
 }
 
 .inputIntro {

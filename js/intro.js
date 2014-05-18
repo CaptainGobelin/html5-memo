@@ -10,9 +10,12 @@ $.enterApp = function() {
 		item.setAttribute('style', '-webkit-transform: scale(25,25);-moz-transform: scale(25,25);');
 	}
 	window.setInterval(function() {
+    	$.resizeWindow();
+    }, 100);
+	window.setInterval(function() {
     	var element = document.getElementsByClassName("introCache");
 		element[0].parentNode.removeChild(element[0]);
 		element = document.getElementsByClassName("introBack");
 		element[0].parentNode.removeChild(element[0]);
-    }, 3000);
+    }, 2000);
 }

@@ -30,18 +30,16 @@
 			</p>
 		</div>
 		<div class="introBack"></div>
-			<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
-				<p class="center"><div class="picsDiv"></div></p>
-				<p class="center">
-					<label for="word">Mot:</label>
-				</p>
-				<p class="center">
-					<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
-				</p>
-				<p class="center">
-					<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>
-				</p>
-			</div>
+		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
+			<p class="center"><div class="picsDiv"></div></p>
+			<p class="center">
+				<label for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>
+				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+			</p>
+			<p class="center">
+				<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>
+			</p>
+		</div>
 			<p class="" id="menuContainer">
 				<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
 			</p>

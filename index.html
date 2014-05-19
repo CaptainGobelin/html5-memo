@@ -26,13 +26,20 @@
 	<body onresize="$.resizeWindow()">
 		<div class="introCache">
 			<p class="center">
-				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.enterApp();}" class="inputIntro" type="text" name="id" value="" size="16"/>
+				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.enterApp();}" class="inputIntro" type="password" name="id" value="" size="16" autofocus="autofocus"/>
 			</p>
+			<!--<video src='sysPics/IntroMemoRVBetALPHA.mp4' id='intro'></video>-->
 		</div>
-		<div class="introBack"></div>
+		<div class="introBack">
+			<!--<video id="video" style="display: none;" autoplay>
+				<source src="sysPics/IntroMemoRVBetALPHA.mp4" type='video/mp4;codecs="avc1.42E01E"'>
+			</video> 
+			<canvas width="1920px" height="3840px" id="buffer"></canvas>
+			<canvas width="1920px" height="1920px" id="input" style="display: block;"></canvas>-->
+		</div>
 		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
 			<p class="center"><div class="picsDiv"></div></p>
-			<p class="center">
+			<p class="centerInput">
 				<label for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>
 				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
 			</p>

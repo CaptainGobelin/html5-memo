@@ -26,7 +26,8 @@
 	<body onresize="$.resizeWindow()">
 		<div class="introCache">
 			<p class="center">
-				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.enterApp();}" class="inputIntro" type="password" name="id" value="" size="16" autofocus="autofocus"/>
+				<input type="button" class="arrowButton arrowButtonIntro" onClick="$.enterApp();"/>
+				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.enterApp();}" class="inputIntro inputDefault" type="password" name="id" value="" size="16" autofocus="autofocus"/>
 			</p>
 			<!--<video src='sysPics/IntroMemoRVBetALPHA.mp4' id='intro'></video>-->
 		</div>
@@ -41,7 +42,7 @@
 			<p class="center"><div class="picsDiv"></div></p>
 			<p class="centerInput">
 				<label for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>
-				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm" type="text" name="id" value="" size="16"/>
+				<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>
 			</p>
 			<p class="center">
 				<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>

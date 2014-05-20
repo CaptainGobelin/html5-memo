@@ -25,7 +25,12 @@ $.resizeWindow = function() {
 	d = document.getElementsByClassName('inputIntro');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'top:'+(45*h2/100)+'px;height:'+w/26+'px;');
+		item.setAttribute("style", 'margin-left:'+(w/16)+'px;height:'+w/26+'px;');
+	}
+	d = document.getElementsByClassName('arrowButtonIntro');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'margin-left:'+(w/16)+'px;');
 	}
 	/*var w = $(window).width();
 	d = document.getElementsByClassName('wordLabel');

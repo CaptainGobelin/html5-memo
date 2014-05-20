@@ -43,7 +43,7 @@ label {
 	text-align: left;
 }
 
-input {
+.inputDefault {
 	text-align: left;
 	font-family: 'Ubuntu', sans-serif;
 	font-size:60%;
@@ -71,8 +71,8 @@ input {
 
 input:hover, textarea:hover,
 input:focus, textarea:focus { 
-	border-color: #222222; 
-	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	/*border-color: #222222; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;*/
 }
 
 .form label { 
@@ -82,7 +82,7 @@ input:focus, textarea:focus {
 }
 
 button {
-	font-family: 'Ubuntu', sans-serif;
+	/*font-family: 'Ubuntu', sans-serif;
 	font-size:100%;
 	color: #da620b;
 	border:1px solid #d5d5d5;
@@ -91,12 +91,12 @@ button {
 	background: #FFFFFF url('bg_form.png') left top repeat-x;
 	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;*/
 }
 
 button:hover {
-	background-color:#da620b;
-	color:white;
+	/*background-color:#da620b;
+	color:white;*/
 }
 
 .picsDiv, .phonDiv, .listDiv, .center, .centerMenu {
@@ -346,5 +346,25 @@ button:hover {
 	width: 20%;
 	height: 5%;
 	z-index: 20;
-	left: 54%;
+	left: 50%;
+	top: 47%;
+}
+
+.arrowButton {
+	position: absolute;
+	width: 5%;
+	height: 10%;
+	z-index: 20;
+	left: 67%;
+	top: 42%;
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	BACKGROUND-IMAGE: url("sysPics/ArrowSubmit.svg");
+	background-repeat: no-repeat;
+ 	background-size: 100% 100%;
+ 	z-index: 21;
+}
+
+.arrowButton:hover {
+	border-color: rgba(0, 0, 0, 0);
 }

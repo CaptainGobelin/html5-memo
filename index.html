@@ -45,9 +45,11 @@
 		<script type="text/javascript">
 			$.resizeWindow();
 			var c = $.getCookie("intro");
-			if (c != "true") {
+			if (c == "true") {
 				$.loadForm();
 				$.loadRandomLevel();
+			}
+			else {
 				$.setCookie("intro", "true", 1);
 			}
 		</script>

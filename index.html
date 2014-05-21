@@ -37,7 +37,6 @@
 			<p class="centerInput">
 			</p>
 			<p class="center buttonAnswer">
-				<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>
 			</p>
 		</div>
 			<p class="" id="menuContainer">
@@ -45,12 +44,13 @@
 			</p>
 		<script type="text/javascript">
 			$.resizeWindow();
-			$.setCookie("intro", "true", 1);
 			var c = $.getCookie("intro");
 			if (c != "true") {
 				$.loadForm();
 				$.loadRandomLevel();
 			}
+			else
+				$.setCookie("intro", "true", 1);
 		</script>
 	</body>
  

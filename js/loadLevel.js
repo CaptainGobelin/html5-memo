@@ -4,6 +4,10 @@ $.loadForm = function() {
 	var s = '<label for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>';
 	s += '<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>';
 	$form.append(s);
+	$button = $("p.buttonAnswer");
+	$button.empty();
+	s = '<input type="submit" value="Répondre" name="generateButton" onClick="$.openMenuBg()"/>';
+	$button.append(s);
 }
 
 $.loadRandomLevel = function() {

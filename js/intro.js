@@ -13,10 +13,11 @@ $.enterApp = function() {
 	/*indow.setInterval(function() {
 		$.resizeWindow();
 	}, 100);*/
-	window.setInterval(function() {
+	var t = window.setInterval(function() {
 		var element = document.getElementsByClassName("introCache");
 		element[0].parentNode.removeChild(element[0]);
 		element = document.getElementsByClassName("introBack");
 		element[0].parentNode.removeChild(element[0]);
+		clearInterval(t);
 	}, 2000);
 }

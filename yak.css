@@ -4,6 +4,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -62,9 +63,9 @@ label {
 
 .menuInput {
 	height: 100%;
-	width: 80%;
+	width: 90%;
 	font-family: 'Ubuntu', sans-serif;
-	font-size:60%;
+	font-size:70%;
 	color: white;
 	background-color: rgba(0, 0, 0, 0);
 	border-color: rgba(0, 0, 0, 0);
@@ -395,6 +396,10 @@ button:hover {
 
 .arrowButton:hover {
 	border-color: rgba(0, 0, 0, 0);
+}
+
+.logoMenu {
+	width: 90%;
 }
 
 .menuButtons {

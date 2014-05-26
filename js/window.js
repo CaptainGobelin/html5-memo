@@ -15,11 +15,11 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style",'width:'+(22*h/100)+'px;height:'+(22*h/100)+'px;');
 	}
-	d = document.getElementsByClassName('logoMenu');
+	/*d = document.getElementsByClassName('logoMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		item.setAttribute("style",'height:'+(9*h/100)+'px;');
-	}
+	}*/
 	var h2 = $(window).height();
 	var w = Math.max($(window).height(),$(window).width());
 	d = document.getElementsByClassName('inputIntro');
@@ -43,17 +43,17 @@ $.resizeWindow = function() {
 	d = document.getElementsByClassName('centerMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(1.3*h/10)+'px;font-size: '+(16*h/100)+'px;');
+		item.setAttribute("style", 'height:'+(2*h/10)+'px;font-size: '+(20*h/100)+'px;');
 	}
 	d = document.getElementsByClassName('leftMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(1.1*h/10)+'px;font-size: '+(8*h/100)+'px;');
+		item.setAttribute("style", 'height:'+(1.5*h/10)+'px;font-size: '+(15*h/100)+'px;');
 	}
 	d = document.getElementsByClassName('colorButton');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'width:'+(1.1*h/10)+'px;');
+		item.setAttribute("style", 'width:'+(1.5*h/10)+'px;');
 	}
 	$.resizeTipPanel();
 	$.menuColor();

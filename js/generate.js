@@ -62,6 +62,7 @@ var WORDS = (function() {
 		'[p][ou][in]'	: 'PhonemesDessins-TraitMimi3_Poing',
 		'[k][eu]'	: 'PhonemesDessins-TraitMimi3_Queue',
 		'[k][i][eu]'	: 'PhonemesDessins-TraitMimi3_Quille',
+		'[k][i]'	: 'PhonemesDessins-TraitMimi3_Quille',
 		'[r][ai]'	: 'PhonemesDessins-TraitMimi3_Raie',
 		'[r][a]'	: 'PhonemesDessins-TraitMimi3_Rat',
 		'[r][i]'	: 'PhonemesDessins-TraitMimi3_Riz',

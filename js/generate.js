@@ -14,6 +14,7 @@ var WORDS = (function() {
 		'[b][o][l]'	: 'PhonemesDessins-TraitMimi3_Bol',
 		'[b][u][s]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
 		'[k][a][r]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
+		'[b][u]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
 		'[ch][an]'	: 'PhonemesDessins-TraitMimi3_ChantCui',
 		'[k][u][i]'	: 'PhonemesDessins-TraitMimi3_ChantCui',
 		'[ch][a]'	: 'PhonemesDessins-TraitMimi3_Chat',

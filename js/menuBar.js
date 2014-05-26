@@ -17,15 +17,22 @@ $.clearBlur = function() {
 $.openMenuBar = function() {
 	var doc = document.getElementById('menuBar');
 	doc.setAttribute('class', 'leftMenuOpen');
-	doc.setAttribute('onClick', '$.closeMenuBar();$.closeMenuBg();');
+	doc.setAttribute('onClick', '');
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
     var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="width:100%;"></p>';
+    s += '<p class="menuButtons">';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
+    s += '<p class="centerMenu"><input class="menuInput" name="menuCreateButton"/></p>';
+    s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
+    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="A propos" name="menuCreateButton"/></p>';
+    s += '</p>';
     $menuBar.append(s);
     $.addBlur();
     $.resizeWindow();
+    doc = document.getElementById('menuSuccess');
+    doc.setAttribute('onClick', '$.closeOptionsBar();$.closeMenuBar();$.closeMenuBg();');
 }
 
 $.closeMenuBar = function() {
@@ -35,6 +42,39 @@ $.closeMenuBar = function() {
 	$menuBar = $("p.leftMenuClose");
     $menuBar.empty();
     $.clearBlur();
+    doc = document.getElementById('menuSuccess');
+    doc.setAttribute('onClick', '');
+}
+
+$.openOptionsBar = function() {
+	var doc = document.getElementById("optionsBar");
+	doc.setAttribute('class', 'optionsBarOpen');
+	$optionsBar = $("p.optionsBarOpen");
+	$optionsBar.empty();
+	var s = '<p class="leftMenu">Couleur favorite:</p>';
+	s += '<p class="leftMenu">';
+	s += '<input type="button" class="colorButton colorRed" onClick=\'$.setCookie("color","red",1);\'/>';
+	s += '<input type="button" class="colorButton colorOrange" onClick=\'$.setCookie("color","orange",1);\'/>';
+	s += '<input type="button" class="colorButton colorYellow" onClick=\'$.setCookie("color","yellow",1);\'/>';
+	s += '<input type="button" class="colorButton colorGreen" onClick=\'$.setCookie("color","green",1);\'/>';
+	s += '<input type="button" class="colorButton colorBlue" onClick=\'$.setCookie("color","blue",1);\'/>';
+	s += '<input type="button" class="colorButton colorPurple" onClick=\'$.setCookie("color","purple",1);\'/>';
+	s += '<input type="button" class="colorButton colorGrey" onClick=\'$.setCookie("color","grey",1);\'/>';
+	s += '<input type="button" class="colorButton colorWhite" onClick=\'$.setCookie("color","white",1);\'/>';
+	s += '</p>';
+	$optionsBar.append(s);
+	doc = document.getElementById('Options');
+	doc.setAttribute('onClick', '$.closeOptionsBar()');
+	$.resizeWindow();
+}
+
+$.closeOptionsBar = function() {
+	var doc = document.getElementById("optionsBar");
+	doc.setAttribute('class', 'leftMenuClose');
+	$optionsBar = $("p#optionsBar");
+	$optionsBar.empty();
+	doc = document.getElementById('Options');
+	doc.setAttribute('onClick', '$.openOptionsBar()');
 }
 
 $.openMenuBg = function() {

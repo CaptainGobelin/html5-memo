@@ -39,11 +39,21 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style", 'margin-left:'+((0.95*0.8*w)-d2.offsetWidth)/2+'px;');
 	}*/
-	h *= 0.15;
+	h = $(window).width()*0.15;
 	d = document.getElementsByClassName('centerMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(9*h/10)+'px;font-size: '+(50*h/100)+'px;');
+		item.setAttribute("style", 'height:'+(1.3*h/10)+'px;font-size: '+(16*h/100)+'px;');
+	}
+	d = document.getElementsByClassName('leftMenu');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'height:'+(1.1*h/10)+'px;font-size: '+(8*h/100)+'px;');
+	}
+	d = document.getElementsByClassName('colorButton');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'width:'+(1.1*h/10)+'px;');
 	}
 	$.resizeTipPanel();
 }

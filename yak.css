@@ -61,7 +61,16 @@ label {
 }
 
 .menuInput {
+	height: 100%;
 	width: 80%;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:60%;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	background-repeat: no-repeat;
+ 	background-size: 100% 100%;
+ 	text-align: right;
 }
 
 .wordForm {
@@ -179,11 +188,10 @@ button:hover {
 }
 
 .menuBg {
-	z-index: 10;
+	z-index: 12;
 	text-align: center;
 	filter: url(sysPics/blur.svg#blur);
 	-webkit-filter: blur(1px);
-	pointer-events: none;
 }
 
 #popUpSuccess {
@@ -194,6 +202,7 @@ button:hover {
 #menuSuccess {
 	-webkit-transition: -webkit-filter 0.5s;
 	margin-left: 7%;
+	height: auto;
 }
 
 .popUpContent {
@@ -275,10 +284,30 @@ button:hover {
 	opacity: 1;
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
-	/*BACKGROUND-IMAGE: url("sysPics/LogoSerrure.svg");
-	background-repeat: no-repeat;
- 	background-position : 50% 0%;
- 	background-size: 80%;*/
+}
+
+.optionsBarOpen {
+	position: fixed;
+	margin: 0px;
+	height: 90%;
+	width: 30%;
+	top: 0px;
+	left: 0px;
+	background-color:#aa2d22;
+	color: white;
+	z-index: 10;
+	opacity: 1;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	text-align: left;
+	padding-left: 15%;
+	padding-top: 10%;
+}
+
+.leftMenu {
+	margin: 0%;
+	text-align: left;
+	color: white;
 }
 
 @media (orientation:portrait) {
@@ -366,4 +395,56 @@ button:hover {
 
 .arrowButton:hover {
 	border-color: rgba(0, 0, 0, 0);
+}
+
+.menuButtons {
+	height: 6%;
+}
+
+.white {
+	position: absolute;
+	left: 58%;
+	top: 44%;
+	color: white;
+}
+
+.colorButton {
+	height: 100%;
+	width: auto;
+	border: solid 2.5px #000000;
+	background-color: white;
+	border-radius: 8px;
+	margin-right: 8px;
+}
+
+.colorRed {
+	background-color: #aa2d22;
+}
+
+.colorOrange {
+	background-color: #f06025
+}
+
+.colorYellow {
+	background-color: #ffd318
+}
+
+.colorGreen {
+	background-color: #348b5d
+}
+
+.colorBlue {
+	background-color: #2167a7
+}
+
+.colorPurple {
+	background-color: #6a347f
+}
+
+.colorGrey {
+	background-color: #4e5565
+}
+
+.colorWhite {
+	background-color: white
 }

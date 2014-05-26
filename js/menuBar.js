@@ -70,7 +70,7 @@ $.openOptionsBar = function() {
 
 $.closeOptionsBar = function() {
 	var doc = document.getElementById("optionsBar");
-	doc.setAttribute('class', 'leftMenuClose');
+	doc.setAttribute('class', 'leftMenuClose indexOptions');
 	$optionsBar = $("p#optionsBar");
 	$optionsBar.empty();
 	doc = document.getElementById('Options');

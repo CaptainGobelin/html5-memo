@@ -401,6 +401,10 @@ button:hover {
 	height: 6%;
 }
 
+.indexOptions {
+	z-index:10;
+}
+
 .white {
 	position: absolute;
 	left: 58%;
@@ -422,27 +426,27 @@ button:hover {
 }
 
 .colorOrange {
-	background-color: #f06025
+	background-color: #f06025;
 }
 
 .colorYellow {
-	background-color: #ffd318
+	background-color: #ffd318;
 }
 
 .colorGreen {
-	background-color: #348b5d
+	background-color: #348b5d;
 }
 
 .colorBlue {
-	background-color: #2167a7
+	background-color: #2167a7;
 }
 
 .colorPurple {
-	background-color: #6a347f
+	background-color: #6a347f;
 }
 
 .colorGrey {
-	background-color: #4e5565
+	background-color: #4e5565;
 }
 
 .colorWhite {

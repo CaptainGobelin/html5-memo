@@ -56,6 +56,7 @@ $.resizeWindow = function() {
 		item.setAttribute("style", 'width:'+(1.1*h/10)+'px;');
 	}
 	$.resizeTipPanel();
+	$.menuColor();
 }
 
 $.resizeTipPanel = function() {
@@ -77,5 +78,16 @@ $.resizeTipPanel = function() {
 			} while ((f > (h/k)) && (k >= 2));
 			item.setAttribute("style", 'height:'+(k*f-2)+'px;top:'+($(window).height()-k*f-4)+'px;font-size: '+f+'px;');
 		}
+	}
+}
+
+$.menuColor = function() {
+	var color = $.getCookie("color");
+	if (color == "false")
+		color = "#aa2d22";
+	var d = document.getElementsByClassName('leftMenuClose');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute('style', 'background-color:'+color+';');
 	}
 }

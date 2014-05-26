@@ -95,7 +95,7 @@ $.menuColor = function() {
 		var item = d[i];  
 		item.setAttribute('style', 'background-color:'+color+';');
 	}
-	d = document.getElementsByClassName('OptionsBarOpen');
+	d = document.getElementsByClassName('optionsBarOpen');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		item.setAttribute('style', 'background-color:'+color+';');

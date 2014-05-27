@@ -460,7 +460,7 @@ button:hover {
 	background-color: rgba(0,0,0,0);
 }
 
-.buttonSelected {
+#buttonSelected {
 	BACKGROUND-IMAGE: url("sysPics/TickSelected.svg");
 	background-repeat: no-repeat;
  	background-size: 100% 100%;

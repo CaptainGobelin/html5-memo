@@ -55,13 +55,13 @@ $.openOptionsBar = function() {
 	$optionsBar.empty();
 	var s = '<p class="leftMenu">Couleur favorite:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorRed '+$.isSelected('red')+'" onClick=\'$.setCookie("color","#aa2d22",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorOrange '+$.isSelected()+'" onClick=\'$.setCookie("color","#f06025",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorYellow '+$.isSelected()+'" onClick=\'$.setCookie("color","#ffd318",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorGreen '+$.isSelected()+'" onClick=\'$.setCookie("color","#348b5d",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorBlue '+$.isSelected()+'" onClick=\'$.setCookie("color","#2167a7",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorPurple '+$.isSelected()+'" onClick=\'$.setCookie("color","#6a347f",1);$.resizeWindow();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorGrey '+$.isSelected()+'" onClick=\'$.setCookie("color","#4e5565",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorRed" onClick=\'$.setCookie("color","#aa2d22",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorOrange" onClick=\'$.setCookie("color","#f06025",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorYellow" onClick=\'$.setCookie("color","#ffd318",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorGreen" onClick=\'$.setCookie("color","#348b5d",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorBlue" onClick=\'$.setCookie("color","#2167a7",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorPurple" onClick=\'$.setCookie("color","#6a347f",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorGrey" onClick=\'$.setCookie("color","#4e5565",1);$.resizeWindow();\'/>';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Aide de Cléofée:</p>';
@@ -117,8 +117,13 @@ $.closeMenuBg = function() {
 }
 
 $.isSelected = function(button) {
+	var doc = document.getElementById('buttonSelected');
+	d.setAttribute('id', '');
 	var color = $.getCookie("color");
-	if ((color == "#aa2d22") && (button == "red"))
-		return "buttonSelected";
+	if ((color == "#aa2d22") && (button == "red")) {
+		var d = document.getElementsByClassName()[0];
+		d.setAttribute('id', 'buttonSelected');
+		return;
+	}
 	return "";
 }

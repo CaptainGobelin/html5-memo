@@ -5,7 +5,7 @@ var WORDS = (function() {
 		'[ai][l]'	: 'PhonemesDessins-TraitMimi3_Aile',
 		'[ou][t]'	: 'PhonemesDessins-TraitMimi3_Aout',
 		'[a][r]'	: 'PhonemesDessins-TraitMimi3_Art',
-		'[b][a][g][ai][ŧ]'	: 'PhonemesDessins-TraitMimi3_Baguettes',
+		'[b][a][g][ai][t]'	: 'PhonemesDessins-TraitMimi3_Baguettes',
 		'[b][an]'	: 'PhonemesDessins-TraitMimi3_Banc',
 		'[b][a]'	: 'PhonemesDessins-TraitMimi3_Bas',
 		'[b][ai]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
@@ -74,8 +74,6 @@ var WORDS = (function() {
 		'[t][ou][a]'	: 'PhonemesDessins-TraitMimi3_Toit',
 		'[t][r][ou][a]'	: 'PhonemesDessins-TraitMimi3_Troie',
 		'[in]'	: 'PhonemesDessins-TraitMimi3_Un'
-
-
 	};
 	return {
 		get: function(name) { return private[name]; },

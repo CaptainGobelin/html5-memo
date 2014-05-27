@@ -28,7 +28,7 @@ $.openMenuBar = function() {
     s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="A propos" name="menuCreateButton"/></p>';
     s += '<p class="centerMenu"><input class="menuInput" name="menuCreateButton"/></p>';
-    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'document.location = "index.html";\'/></p>';
+    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';
     s += '</p>';
     $menuBar.append(s);
     $.addBlur();

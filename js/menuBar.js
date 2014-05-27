@@ -83,6 +83,7 @@ $.openOptionsBar = function() {
 	doc = document.getElementById('Options');
 	doc.setAttribute('onClick', '$.closeOptionsBar()');
 	$.resizeWindow();
+	$.isSelected();
 }
 
 $.closeOptionsBar = function() {
@@ -116,11 +117,11 @@ $.closeMenuBg = function() {
 		doc.setAttribute("class", "");
 }
 
-$.isSelected = function(button) {
+$.isSelected = function() {
 	var doc = document.getElementById('buttonSelected');
 	d.setAttribute('id', '');
 	var color = $.getCookie("color");
-	if ((color == "#aa2d22") && (button == "red")) {
+	if (color == "#aa2d22") {
 		var d = document.getElementsByClassName()[0];
 		d.setAttribute('id', 'buttonSelected');
 		return;

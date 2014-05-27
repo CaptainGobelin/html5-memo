@@ -32,6 +32,11 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style", 'margin-left:'+(w/16)+'px;');
 	}
+	d = document.getElementsByClassName('wordLabel');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'font-size:'+(h2/50)+'px;');
+	}
 	/*var w = $(window).width();
 	d = document.getElementsByClassName('wordLabel');
 	for (var i=0;i<d.length;++i) {

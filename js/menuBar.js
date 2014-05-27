@@ -24,10 +24,10 @@ $.openMenuBar = function() {
     s += '<p class="menuButtons">';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
-    s += '<p class="centerMenu"><input class="menuInput" name="menuCreateButton"/></p>';
+    s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="A propos" name="menuCreateButton"/></p>';
-    s += '<p class="centerMenu"><input class="menuInput" name="menuCreateButton"/></p>';
+    s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';
     s += '</p>';
     $menuBar.append(s);
@@ -62,6 +62,22 @@ $.openOptionsBar = function() {
 	s += '<input type="button" value=" " class="colorButton colorBlue" onClick=\'$.setCookie("color","#2167a7",1);$.resizeWindow();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorPurple" onClick=\'$.setCookie("color","#6a347f",1);$.resizeWindow();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorGrey" onClick=\'$.setCookie("color","#4e5565",1);$.resizeWindow();\'/>';
+	s += '</p>';
+	s += '<p class="leftMenu"></p>';
+	s += '<p class="leftMenu">Aide de Cléofée:</p>';
+	s += '<p class="leftMenu">';
+	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","false",1);\'/> oui';
+	s += '</p>';
+	s += '<p class="leftMenu">'
+	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","true",1);\'/> non';
+	s += '</p>';
+	s += '<p class="leftMenu"></p>';
+	s += '<p class="leftMenu">Menu création:</p>';
+	s += '<p class="leftMenu">';
+	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","false",1);\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
+	s += '</p>';
+	s += '<p class="leftMenu">'
+	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","true",1);\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
 	s += '</p>';
 	$optionsBar.append(s);
 	doc = document.getElementById('Options');

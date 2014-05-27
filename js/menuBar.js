@@ -119,7 +119,8 @@ $.closeMenuBg = function() {
 
 $.isSelected = function() {
 	var doc = document.getElementById('buttonSelected');
-	d.setAttribute('id', '');
+	if (doc != null)
+		doc.setAttribute('id', '');
 	var color = $.getCookie("color");
 	if (color == "#aa2d22") {
 		var d = document.getElementsByClassName()[0];

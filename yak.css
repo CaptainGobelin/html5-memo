@@ -419,6 +419,7 @@ button:hover {
 }
 
 .colorButton {
+	-webkit-appearance: none;
 	height: 100%;
 	width: auto;
 	border: solid 2.5px #000000;

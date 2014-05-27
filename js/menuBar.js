@@ -55,7 +55,7 @@ $.openOptionsBar = function() {
 	$optionsBar.empty();
 	var s = '<p class="leftMenu">Couleur favorite:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorRed" onClick=\'$.setCookie("color","#aa2d22",1);$.resizeWindow();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorRed" id="buttonSelected" onClick=\'$.setCookie("color","#aa2d22",1);$.resizeWindow();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorOrange" onClick=\'$.setCookie("color","#f06025",1);$.resizeWindow();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorYellow" onClick=\'$.setCookie("color","#ffd318",1);$.resizeWindow();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorGreen" onClick=\'$.setCookie("color","#348b5d",1);$.resizeWindow();\'/>';
@@ -126,5 +126,4 @@ $.isSelected = function() {
 		d.setAttribute('id', 'buttonSelected');
 		return;
 	}
-	return "";
 }

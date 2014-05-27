@@ -127,6 +127,11 @@ $.isSelected = function() {
 		d.setAttribute('id', 'buttonSelected');
 		return;
 	}
+	if (color == "false") {
+		var d = document.getElementsByClassName('colorRed')[0];
+		d.setAttribute('id', 'buttonSelected');
+		return;
+	}
 	if (color == "#f06025") {
 		var d = document.getElementsByClassName('colorOrange')[0];
 		d.setAttribute('id', 'buttonSelected');

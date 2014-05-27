@@ -123,7 +123,7 @@ $.isSelected = function() {
 		doc.setAttribute('id', '');
 	var color = $.getCookie("color");
 	if (color == "#aa2d22") {
-		var d = document.getElementsByClassName()[0];
+		var d = document.getElementsByClassName('colorRed')[0];
 		d.setAttribute('id', 'buttonSelected');
 		return;
 	}

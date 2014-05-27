@@ -66,18 +66,18 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Aide de Cléofée:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","false",1);\'/> oui';
+	s += '<input type="button" value=" " class="colorButton colorNone button1" id="buttonSelected" onClick=\'$.setCookie("intro","false",1);\'/> oui';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","true",1);\'/> non';
+	s += '<input type="button" value=" " class="colorButton colorNone button2" onClick=\'$.setCookie("intro","true",1);\'/> non';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","false",1);\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("intro","false",1);\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone" onClick=\'$.setCookie("intro","true",1);\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNonebutton4" onClick=\'$.setCookie("intro","true",1);\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
 	s += '</p>';
 	$optionsBar.append(s);
 	doc = document.getElementById('Options');
@@ -118,9 +118,22 @@ $.closeMenuBg = function() {
 }
 
 $.isSelected = function() {
-	var doc = document.getElementById('buttonSelected');
-	if (doc != null)
-		doc.setAttribute('id', '');
+	for (var i=0;i<3;i++) {
+		var doc = document.getElementById('buttonSelected');
+		if (doc != null)
+			doc.setAttribute('id', '');
+	}
+	var intro = $.getCookie("intro");
+	if (intro == "true") {
+		var d = document.getElementsByClassName('button1')[0];
+		d.setAttribute('id', 'buttonSelected');
+		return;
+	}
+	if (intro == "false") {
+		var d = document.getElementsByClassName('button2')[0];
+		d.setAttribute('id', 'buttonSelected');
+		return;
+	}
 	var color = $.getCookie("color");
 	if (color == "#aa2d22") {
 		var d = document.getElementsByClassName('colorRed')[0];

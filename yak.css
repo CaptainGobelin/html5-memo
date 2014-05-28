@@ -519,3 +519,20 @@ button:hover {
   80% {-webkit-transform: translate(0, -15px) scale(1,1);}
   to {-webkit-transform: translate(0, -20px) scale(1,1);}
 }
+
+.toColor {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:bold;
+}
+
+.cleoTip {
+	position: absolute;
+	top: 10%;
+	right: 20%;
+	color: black;
+	border: solid 2.5px #000000;
+	background-color: #e5e1d3;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}

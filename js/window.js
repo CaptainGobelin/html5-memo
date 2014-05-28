@@ -94,4 +94,9 @@ $.menuColor = function() {
 		var item = d[i];  
 		item.setAttribute('style', 'background-color:'+color+';');
 	}
+	d = document.getElementsByClassName('toColor');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute('style', 'color:'+color+';');
+	}
 }

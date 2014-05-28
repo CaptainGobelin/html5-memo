@@ -74,7 +74,25 @@ var WORDS = (function() {
 		'[t][ou][a]'	: 'PhonemesDessins-TraitMimi3_Toit',
 		'[t][r][ou][a]'	: 'PhonemesDessins-TraitMimi3_Troie',
 		'[in]'	: 'PhonemesDessins-TraitMimi3_Un',
-		'[s][in][k]' : 'PhonemesDessins-TraitMimi3_Cinq'
+		'[s][in][k]' : 'PhonemesDessins-TraitMimi3_Cinq',
+		'[n][eu][f]' : 'PhonemesDessins-TraitMimi3_Neuf',
+		'[k][a][t][r]' : 'PhonemesDessins-TraitMimi3_Quatre',
+		'[ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[j][ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[j][ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[t][ai]' : 'PhonemesDessins-TraitMimi3_The',
+		'[p][i][ai]' : 'PhonemesDessins-TraitMimi3_Pied',
+		'[eu][r]' : 'PhonemesDessins-TraitMimi3_Heure',
+		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure',
+		'[n][eu]' : 'PhonemesDessins-TraitMimi3_Noeud',
+		'[p][l][i]' : 'PhonemesDessins-TraitMimi3_Pli',
+		'[r][on]' : 'PhonemesDessins-TraitMimi3_Rond',
+		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
+		'[eu][i]' : 'PhonemesDessins-TraitMimi3_Oeil',
+		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
+		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume'
+		
 	};
 	return {
 		get: function(name) { return private[name]; },

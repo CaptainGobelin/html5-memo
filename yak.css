@@ -422,17 +422,9 @@ button:hover {
 	-webkit-appearance: none;
 	min-width: 0px;
 	height: 100%;
-	width: auto;
-	border: solid 2.5px #000000;
+	border: solid 0.5px #000000;
 	background-color: white;
-	border-radius: 8px;
 	margin-right: 8px;
-}
-
-@media screen {
-	.colorButton {
-		margin-right: 0px;
-	}
 }
 
 .colorRed {

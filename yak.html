@@ -10,7 +10,9 @@
 
 		<link rel="stylesheet" href="yak.css" />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic,700' rel='stylesheet' type='text/css'>
+
 		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/cookies.js"></script>
 		<script type="text/javascript" src="js/window.js"></script>
 		<script type="text/javascript" src="js/menuBar.js"></script>
 		<script type="text/javascript" src="js/popUp.js"></script>
@@ -18,12 +20,13 @@
 		<script type="text/javascript" src="js/rules.js"></script>
 		<script type="text/javascript" src="js/phonetics.js"></script>
 		<script type="text/javascript" src="js/loadPics.js"></script>
+		<script type="text/javascript" src="js/loadLevel.js"></script>
 		<script type="text/javascript" src="js/checkPassword.js"></script>
+
 	</head>
  
 	<body onresize="$.resizeWindow();">
-		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
-
+		<div class="" id="menuSuccess">
 			<p class="center">
 				<label id="login_avs" for="word">Mot à phonétiser:</label>
 			</p>
@@ -39,8 +42,9 @@
 			<p id="tipPanel" class=""></p>
 		</div>
 		<p class="" id="menuContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
-    	</p>
+			<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
+			<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
+		</p>
     	<script type="text/javascript">
     		$.resizeWindow();
     	</script>

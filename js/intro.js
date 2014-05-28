@@ -18,6 +18,7 @@ $.enterApp = function() {
 		element[0].parentNode.removeChild(element[0]);
 		element = document.getElementsByClassName("introBack");
 		element[0].parentNode.removeChild(element[0]);
+		$.resizeWindow();
 		clearInterval(t);
 	}, 2000);
 }

@@ -191,7 +191,6 @@ button:hover {
 .menuBg {
 	z-index: 12;
 	text-align: center;
-	filter: url(sysPics/blur.svg#blur);
 	-webkit-filter: grayscale(100%)
 }
 

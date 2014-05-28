@@ -10,6 +10,16 @@ $.enterApp = function() {
 		//item.setAttribute('autoplay', '');
 		item.setAttribute('style', '-webkit-transform: scale(25,25);-moz-transform: scale(25,25);');
 	}
+	var c = $.getCookie("intro");
+	//TODO invert true/false
+	if (c == "true") {
+		$.loadForm();
+		$.loadRandomLevel();
+	}
+	else {
+		$.setCookie("intro", "true", 1);
+		$.loadCleofee(document.getElementById("wordForm").value);
+	}
 	var t1 = window.setInterval(function() {
 		$.resizeWindow();
 		clearInterval(t1);

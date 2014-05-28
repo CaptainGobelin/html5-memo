@@ -66,10 +66,10 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Aide de Cléofée:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone button1" id="buttonSelected" onClick=\'$.setCookie("intro","false",1);\'/> oui';
+	s += '<input type="button" value=" " class="colorButton colorNone button1" id="buttonSelected" onClick=\'$.setCookie("intro","false",1);$.isSelected();\'/> oui';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone button2" onClick=\'$.setCookie("intro","true",1);\'/> non';
+	s += '<input type="button" value=" " class="colorButton colorNone button2" onClick=\'$.setCookie("intro","true",1);$.isSelected();\'/> non';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';
@@ -125,11 +125,11 @@ $.isSelected = function() {
 	}
 	var intro = $.getCookie("intro");
 	if (intro == "true") {
-		var d = document.getElementsByClassName('button1')[0];
+		var d = document.getElementsByClassName('button2')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	else {
-		var d = document.getElementsByClassName('button2')[0];
+		var d = document.getElementsByClassName('button1')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	var color = $.getCookie("color");

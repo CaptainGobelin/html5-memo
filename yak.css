@@ -488,6 +488,7 @@ button:hover {
 	height: 80%;
 	width: 15.5%;
 	z-index: 10;
+	-webkit-animation: linear levit 5s infinite;
 }
 
 #cleoEye {
@@ -497,4 +498,24 @@ button:hover {
 	height: 6%;
 	width: 6%;
 	z-index: 11;
+	-webkit-animation: linear blink 5s infinite;
+}
+
+@-webkit-keyframes levit {
+	from {-webkit-transform: translate(0, -20px);}
+	20% {-webkit-transform: translate(0, -15px);}
+	50% {-webkit-transform: translate(0, 0px);}
+	80% {-webkit-transform: translate(0, -15px);}
+	to {-webkit-transform: translate(0, -20px);}
+}
+
+@-webkit-keyframes blink {
+  from {-webkit-transform: translate(0, -20px) scale(1,1);}
+  8% {-webkit-transform: translate(0, -17.3px) scale(1,1);}
+  10% {-webkit-transform: translate(0, -16.7px) scale(1,0);}
+  12% {-webkit-transform: translate(0, -16px) scale(1,1);}
+  20% {-webkit-transform: translate(0, -15px) scale(1,1);}
+  50% {-webkit-transform: translate(0, 0px) scale(1,1);}
+  80% {-webkit-transform: translate(0, -15px) scale(1,1);}
+  to {-webkit-transform: translate(0, -20px) scale(1,1);}
 }

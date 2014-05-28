@@ -429,6 +429,12 @@ button:hover {
 	margin-right: 8px;
 }
 
+@media screen {
+	.colorButton {
+		margin-right: 0px;
+	}
+}
+
 .colorRed {
 	background-color: #aa2d22;
 }

@@ -7,6 +7,11 @@ html {
   font-family: 'Ubuntu', sans-serif;
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
 	width:100%;
 	height:100%;
@@ -202,7 +207,7 @@ button:hover {
 #menuSuccess {
 	-webkit-transition: -webkit-filter 0.5s;
 	margin-left: 7%;
-	height: auto;
+	height: 100%;
 }
 
 .popUpContent {

@@ -473,3 +473,10 @@ button:hover {
 	background-repeat: no-repeat;
  	background-size: 100% 100%;
 }
+
+.cleofee {
+	position: absolute;
+	height: 100%;
+	margin-left: 7%;
+	width: 93%;
+}

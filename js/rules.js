@@ -72,6 +72,8 @@ $.checkPlural = function(word, pos) {
         return false;
     if (word[pos] == 's')
         return true;
+    if (word[pos] == '$')
+        return true;
     return false;
 }
 

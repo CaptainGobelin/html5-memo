@@ -2,7 +2,7 @@ $.addBlur = function() {
 	var doc = document.getElementById('menuSuccess');
 	if (doc != null) {
 		doc.setAttribute("class", "menuBg");
-		doc.setAttribute("style", '-webkit-filter: blur(1px);');
+		doc.setAttribute("style", '-webkit-filter: grayscale(100%)');
 	}
 }
 
@@ -10,7 +10,7 @@ $.clearBlur = function() {
 	var doc = document.getElementById('menuSuccess');
 	if (doc != null) {
 		doc.setAttribute("class", "");
-		doc.setAttribute("style", "-webkit-filter: blur(0px);");
+		doc.setAttribute("style", "-webkit-filter: grayscale(0%)");
 	}
 }
 

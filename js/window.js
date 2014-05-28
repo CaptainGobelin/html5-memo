@@ -47,7 +47,7 @@ $.resizeWindow = function() {
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];
 		var myH = item.offsetHeight;
-		item.setAttribute("style", 'width:'+myH+'px;border-radius:'+myH/3+'px;');
+		item.setAttribute("style", 'width:'+myH+'px !IMPORTANT;border-radius:'+myH/3+'px;');
 	}
 	$.resizeTipPanel();
 	$.menuColor();

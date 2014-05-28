@@ -192,7 +192,7 @@ button:hover {
 	z-index: 12;
 	text-align: center;
 	filter: url(sysPics/blur.svg#blur);
-	-webkit-filter: blur(1px);
+	-webkit-filter: grayscale(100%)
 }
 
 #popUpSuccess {

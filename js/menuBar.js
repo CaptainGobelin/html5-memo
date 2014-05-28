@@ -74,10 +74,10 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("intro","false",1);\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("showPwd","true",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("intro","true",1);\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("showPwd","false",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
 	s += '</p>';
 	$optionsBar.append(s);
 	doc = document.getElementById('Options');
@@ -132,45 +132,46 @@ $.isSelected = function() {
 		var d = document.getElementsByClassName('button1')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
+	var show = $.getCookie("showPwd");
+	if (intro == "true") {
+		var d = document.getElementsByClassName('button4')[0];
+		d.setAttribute('id', 'buttonSelected');
+	}
+	else {
+		var d = document.getElementsByClassName('button3')[0];
+		d.setAttribute('id', 'buttonSelected');
+	}
 	var color = $.getCookie("color");
 	if (color == "#aa2d22") {
 		var d = document.getElementsByClassName('colorRed')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "false") {
-		var d = document.getElementsByClassName('colorRed')[0];
-		d.setAttribute('id', 'buttonSelected');
-		return;
-	}
-	if (color == "#f06025") {
+	else if (color == "#f06025") {
 		var d = document.getElementsByClassName('colorOrange')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "#ffd318") {
+	else if (color == "#ffd318") {
 		var d = document.getElementsByClassName('colorYellow')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "#348b5d") {
+	else if (color == "#348b5d") {
 		var d = document.getElementsByClassName('colorGreen')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "#2167a7") {
+	else if (color == "#2167a7") {
 		var d = document.getElementsByClassName('colorBlue')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "#6a347f") {
+	else if (color == "#6a347f") {
 		var d = document.getElementsByClassName('colorPurple')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
 	}
-	if (color == "#4e5565") {
+	else if (color == "#4e5565") {
 		var d = document.getElementsByClassName('colorGrey')[0];
 		d.setAttribute('id', 'buttonSelected');
-		return;
+	}
+	else {
+		var d = document.getElementsByClassName('colorRed')[0];
+		d.setAttribute('id', 'buttonSelected');
 	}
 }

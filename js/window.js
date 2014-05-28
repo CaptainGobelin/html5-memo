@@ -57,8 +57,9 @@ $.resizeWindow = function() {
 	}
 	d = document.getElementsByClassName('colorButton');
 	for (var i=0;i<d.length;++i) {
-		var item = d[i];  
-		item.setAttribute("style", 'width:'+(1.5*h/10)+'px;');
+		var item = d[i];
+		var myH = item.offsetHeight;
+		item.setAttribute("style", 'width:'+myH+'px;');
 	}
 	$.resizeTipPanel();
 	$.menuColor();

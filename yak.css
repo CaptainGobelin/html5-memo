@@ -422,7 +422,7 @@ button:hover {
 	-webkit-appearance: none;
 	min-width: 0px;
 	height: 100%;
-	border: solid 0.5px #000000;
+	border: solid 2.5px #000000;
 	background-color: white;
 	margin-right: 8px;
 }

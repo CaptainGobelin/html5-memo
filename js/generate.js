@@ -73,7 +73,8 @@ var WORDS = (function() {
 		'[t][ou][a][l]'	: 'PhonemesDessins-TraitMimi3_Toile',
 		'[t][ou][a]'	: 'PhonemesDessins-TraitMimi3_Toit',
 		'[t][r][ou][a]'	: 'PhonemesDessins-TraitMimi3_Troie',
-		'[in]'	: 'PhonemesDessins-TraitMimi3_Un'
+		'[in]'	: 'PhonemesDessins-TraitMimi3_Un',
+		'[s][in][k]' : 'PhonemesDessins-TraitMimi3_Cinq'
 	};
 	return {
 		get: function(name) { return private[name]; },

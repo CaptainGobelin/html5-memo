@@ -15,11 +15,6 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style",'width:'+(22*h/100)+'px;height:'+(22*h/100)+'px;');
 	}
-	/*d = document.getElementsByClassName('logoMenu');
-	for (var i=0;i<d.length;++i) {
-		var item = d[i];  
-		item.setAttribute("style",'height:'+(9*h/100)+'px;');
-	}*/
 	var h2 = $(window).height();
 	var w = Math.max($(window).height(),$(window).width());
 	d = document.getElementsByClassName('inputIntro');
@@ -37,13 +32,6 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style", 'font-size:'+(h2/50)+'px;');
 	}
-	/*var w = $(window).width();
-	d = document.getElementsByClassName('wordLabel');
-	for (var i=0;i<d.length;++i) {
-		var d2 = document.getElementById('wordForm');
-		var item = d[i];  
-		item.setAttribute("style", 'margin-left:'+((0.95*0.8*w)-d2.offsetWidth)/2+'px;');
-	}*/
 	h = $(window).width()*0.15;
 	d = document.getElementsByClassName('centerMenu');
 	for (var i=0;i<d.length;++i) {
@@ -59,7 +47,7 @@ $.resizeWindow = function() {
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];
 		var myH = item.offsetHeight;
-		item.setAttribute("style", 'width:'+myH+'px;');
+		item.setAttribute("style", 'width:'+myH+'px;border-radius:'+myH/3+'px;');
 	}
 	$.resizeTipPanel();
 	$.menuColor();

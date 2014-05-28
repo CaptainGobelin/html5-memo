@@ -133,7 +133,7 @@ $.isSelected = function() {
 		d.setAttribute('id', 'buttonSelected');
 	}
 	var show = $.getCookie("showPwd");
-	if (intro == "true") {
+	if (show == "true") {
 		var d = document.getElementsByClassName('button4')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}

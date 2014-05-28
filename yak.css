@@ -474,9 +474,27 @@ button:hover {
  	background-size: 100% 100%;
 }
 
-.cleofee {
+.cleoDiv {
 	position: absolute;
 	height: 100%;
 	margin-left: 7%;
 	width: 93%;
+}
+
+#cleoImg {
+	position: absolute;
+	top: -10%;
+	left: 80%;
+	height: 80%;
+	width: 15.5%;
+	z-index: 10;
+}
+
+#cleoEye {
+	position: absolute;
+	top: 27%;
+	left: 84.75%;
+	height: 6%;
+	width: 6%;
+	z-index: 11;
 }

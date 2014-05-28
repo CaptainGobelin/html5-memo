@@ -23,6 +23,7 @@
 		<script type="text/javascript" src="js/loadPics.js"></script>
 		<script type="text/javascript" src="js/loadLevel.js"></script>
 		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/cleofee.js"></script>
 	</head>
  
 	<body onresize="$.resizeWindow()">
@@ -35,7 +36,8 @@
 		</div>
 		<div class="introBack">
 		</div>
-		<div class="cleofee"></div>
+		<div class="cleoDiv">
+		</div>
 		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
 			<p class="center"><div class="picsDiv"></div></p>
 			<p class="centerInput">
@@ -50,13 +52,15 @@
 		<script type="text/javascript">
 			$.resizeWindow();
 			var c = $.getCookie("intro");
-			//if (c == "true") {
+			//TODO invert true/false
+			if (c == "true") {
 				$.loadForm();
 				$.loadRandomLevel();
-			/*}
+			}
 			else {
 				$.setCookie("intro", "true", 1);
-			}*/
+				$.loadCleofee();
+			}
 		</script>
 	</body>
  

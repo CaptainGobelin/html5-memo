@@ -134,11 +134,11 @@ $.isSelected = function() {
 	}
 	var show = $.getCookie("showPwd");
 	if (show == "true") {
-		var d = document.getElementsByClassName('button4')[0];
+		var d = document.getElementsByClassName('button3')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	else {
-		var d = document.getElementsByClassName('button3')[0];
+		var d = document.getElementsByClassName('button4')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	var color = $.getCookie("color");

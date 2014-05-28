@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="yak.css" />
 
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/cookies.js"></script>
 		<script type="text/javascript" src="js/window.js"></script>
 		<script type="text/javascript" src="js/menuBar.js"></script>
 		<script type="text/javascript" src="js/popUp.js"></script>
@@ -19,24 +19,27 @@
 		<script type="text/javascript" src="js/rules.js"></script>
 		<script type="text/javascript" src="js/phonetics.js"></script>
 		<script type="text/javascript" src="js/loadPics.js"></script>
+		<script type="text/javascript" src="js/loadLevel.js"></script>
+		<script type="text/javascript" src="js/intro.js"></script>
 	</head>
  
 	<body onresize="$.resizeWindow()">
 		<div class="" id="menuSuccess" style"filter: url(sysPics/noblur.svg#blur);-webkit-filter: blur(0px);">
-			<h1>Memo de Passe</h1>
-			<p class="center">
-				<input type="submit" value="Niveau 1" name="level1Button" onClick='document.location = "level1.html";'/>
-				<input type="submit" value="Niveau 2" name="level2Button"/>
-				<input type="submit" value="Niveau 3" name="level3Button" onClick=""/>
-				<input type="submit" value="Niveau 4" name="level4Button" onClick=""/>
+			<p class="center"><div class="picsDiv"></div></p>
+			<p class="centerInput">
+			</p>
+			<p class="center buttonAnswer">
 			</p>
 		</div>
-		<p class="" id="menuContainer">
-    		<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
-    	</p>
-    	<script type="text/javascript">
-    		$.resizeWindow();
-    	</script>
+			<p class="" id="menuContainer">
+				<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
+				<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
+			</p>
+		<script type="text/javascript">
+			$.loadForm();
+			$.loadRandomLevel();
+			$.resizeWindow();
+		</script>
 	</body>
  
 </html>

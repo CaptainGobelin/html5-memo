@@ -527,12 +527,24 @@ button:hover {
 
 .cleoTip {
 	position: absolute;
-	top: 10%;
-	right: 20%;
+	top: 15%;
+	left: 5%;
+	width: 58%;
 	color: black;
 	border: solid 2.5px #000000;
 	background-color: #e5e1d3;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	border-radius: 15px;
+	font-size: 20px;
+	padding-right: 10%;
+	padding-left: 2%;
+	text-align: left;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.cleoButton {
+	z-index: 10;
 }

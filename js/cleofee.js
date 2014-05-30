@@ -3,9 +3,12 @@ $.loadCleofee = function(pwd) {
 	$cleoDiv.empty();
 	var s = '<img id="cleoImg" class="shadow" src="sysPics/CleofeeOeilCentre-vide.svg"/>';
 	s += '<img id="cleoEye" src="sysPics/OeilOuvertCleofee.svg">';
-	s += '<input type="button" class="arrowButton" onClick="$.loadSpeech1(\''+pwd+'\');"/>';
+	s += '<input type="button" class="arrowButton cleoButton" onClick="$.loadSpeech1(\''+pwd+'\');"/>';
 	s += '<p class="cleoTip">';
-	s += 'Bonjour, je m\'appelle Cléofée.';
+	s += 'Bonjour, je m\'appelle Cléofée.<br/><br/>';
+	s += 'Vous venez d’arriver dans un lieu de méditation.</br>';
+	s += 'Un lieu où l’on forge des <a class="toColor">mots de passe uniques</a> ';
+	s += 'et ingénieux, comme des clés.';
 	s += '</p>';
 	$cleoDiv.append(s);
 }

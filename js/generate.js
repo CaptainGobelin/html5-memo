@@ -91,7 +91,8 @@ var WORDS = (function() {
 		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
 		'[eu][i]' : 'PhonemesDessins-TraitMimi3_Oeil',
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
-		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume'
+		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume',
+		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace'
 		
 	};
 	return {

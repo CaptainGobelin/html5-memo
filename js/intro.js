@@ -1,4 +1,6 @@
 $.enterApp = function() {
+	if ($('#wordForm').val() == "")
+		return;
 	var d = document.getElementsByClassName('introBack');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i]; 
@@ -17,7 +19,6 @@ $.enterApp = function() {
 		$.loadRandomLevel();
 	}
 	else {
-		$.setCookie("intro", "true", 1);
 		$.loadCleofee(document.getElementById("wordForm").value);
 	}
 	var t1 = window.setInterval(function() {

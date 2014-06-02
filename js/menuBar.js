@@ -20,13 +20,23 @@ $.openMenuBar = function() {
 	doc.setAttribute('onClick', '');
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
-    var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="width:100%;"></p>';
+    var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="margin-top:20%;width:100%;"></p>';
+    s += window.location.pathname.toString();
     s += '<p class="menuButtons">';
-    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
-    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
+    s += '<p class="centerMenu">';
+    if (window.location == 'index.html')
+    	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:22%;height:auto;">';
+    s += '<input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
+    s += '<p class="centerMenu">';
+    if (document.location == 'yak.html')
+    	s+= '';
+    s += '<input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
-    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="A propos" name="menuCreateButton"/></p>';
+    s += '<p class="centerMenu">';
+    if (document.location == 'about.html')
+    	s += '';
+    s += '<input class="menuInput" type="submit" value="A propos" name="menuCreateButton"/></p>';
     s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';
     s += '</p>';
@@ -39,10 +49,12 @@ $.openMenuBar = function() {
 
 $.closeMenuBar = function() {
 	var doc = document.getElementById('menuBar');
-	doc.setAttribute('class', 'leftMenuClose');
+	doc.setAttribute('class', 'leftMenuClose mainBar');
 	doc.setAttribute('onClick', '$.openMenuBar();$.openMenuBg();');
 	$menuBar = $("p.leftMenuClose");
     $menuBar.empty();
+    var s = '<img class="logoMenu" src="sysPics/Serrure.svg" style="margin-top:70%;width:40%;">';
+    $menuBar.append(s);
     $.clearBlur();
     doc = document.getElementById('menuSuccess');
     doc.setAttribute('onClick', '');

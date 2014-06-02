@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Mémo de Passe</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+
+		<link rel="stylesheet" href="yak.css" />
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic,700' rel='stylesheet' type='text/css'>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/cookies.js"></script>
+		<script type="text/javascript" src="js/window.js"></script>
+		<script type="text/javascript" src="js/menuBar.js"></script>
+		<script type="text/javascript" src="js/popUp.js"></script>
+		<script type="text/javascript" src="js/about.js"></script>
+	</head>
+ 
+	<body onresize="$.resizeWindow()">
+		<div class="" id="menuSuccess">
+			<div class="cleoDiv"></div>
+			<p class="center"><div class="picsDiv"></div></p>
+			<p class="centerInput">
+			</p>
+			<p class="center buttonAnswer">
+			</p>
+		</div>
+			<p class="" id="menuContainer">
+				<p class="leftMenuClose mainBar" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
+				<img class="logoMenu" src="sysPics/Serrure.svg" style="margin-top:70%;width:40%;">
+			</p>
+				<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
+			</p>
+		<script type="text/javascript">
+			$.resizeWindow();
+			$.loadCleofeeAbout();
+		</script>
+	</body>
+ 
+</html>

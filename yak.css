@@ -68,9 +68,9 @@ label {
 
 .menuInput {
 	height: 100%;
-	width: 78%;
+	width: 80%;
 	font-family: 'Ubuntu', sans-serif;
-	font-size:65%;
+	font-size:64%;
 	color: white;
 	background-color: rgba(0, 0, 0, 0);
 	border-color: rgba(0, 0, 0, 0);
@@ -592,4 +592,12 @@ button:hover {
 .symboleMenu {
 	position: absolute;
 	top: 50%;
+}
+
+.link {
+	font-size: 80%;
+}
+
+.italic {
+	font-style:italic
 }

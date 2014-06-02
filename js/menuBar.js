@@ -25,17 +25,17 @@ $.openMenuBar = function() {
     s += '<p class="menuButtons">';
     s += '<p class="centerMenu">';
     if ((page[page.length-1] == 'index.html') || (page[page.length-1] == '') || (page[page.length-1] == 'levels.html'))
-    	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:22%;height:auto;padding-bottom:2px;">';
+    	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;padding-bottom:2px;">';
     s += '<input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
     s += '<p class="centerMenu">';
     if (page[page.length-1] == 'yak.html')
-    	s+= '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:22%;height:auto;">';
+    	s+= '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;">';
     s += '<input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
     s += '<p class="centerMenu">';
     if (page[page.length-1] == 'about.html')
-    	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:22%;height:auto;">';
+    	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;">';
     s += '<input class="menuInput" type="submit" value="A propos" name="menuCreateButton" onClick=\'document.location = "about.html";\'/></p>';
     s += '<p class="centerMenu"></p>';
     s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';

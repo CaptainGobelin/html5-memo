@@ -484,7 +484,7 @@ button:hover {
  	background-size: 100% 100%;
 }
 
-.cleoDiv {
+.cleoDiv, .cleoInput {
 	position: absolute;
 	height: 100%;
 	margin-left: 7%;

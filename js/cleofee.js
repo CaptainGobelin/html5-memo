@@ -4,9 +4,6 @@ $.loadCleofee = function(pwd) {
 	var s = '<img id="cleoImg" class="shadow" src="sysPics/CleofeeOeilCentre-vide.svg"/>';
 	s += '<img id="cleoEye" src="sysPics/OeilOuvertCleofee.svg">';
 	s += '<img id="littleArrow" src="sysPics/FlecheBulle.svg">';
-	s += '<input type="button" id="dismiss" class="arrowButton cleoButton" onClick="$.setCookie(\'intro\', \'true\', 1);document.location = \'levels.html\';"/>';
-	s += '<input type="button" id="prev" class="arrowButton cleoButton" onClick="document.location = \'index.html\';"/>';
-	s += '<input type="button" id="next" class="arrowButton cleoButton" onClick="$.loadSpeech1(\''+pwd+'\');"/>';
 	s += '<p class="cleoTip">';
 	s += 'Bonjour, je m\'appelle Cléofée.<br/><br/>';
 	s += 'Vous venez d’arriver dans un lieu de méditation.</br>';
@@ -14,6 +11,12 @@ $.loadCleofee = function(pwd) {
 	s += 'et ingénieux, comme des clés.';
 	s += '</p>';
 	$cleoDiv.append(s);
+	$cleoInput = $("div.cleoInput");
+	$cleoInput.empty();
+	s = '<input type="button" id="dismiss" class="arrowButton cleoButton" onClick="$.setCookie(\'intro\', \'true\', 1);document.location = \'levels.html\';"/>';
+	s += '<input type="button" id="prev" class="arrowButton cleoButton" onClick="document.location = \'index.html\';"/>';
+	s += '<input type="button" id="next" class="arrowButton cleoButton" onClick="$.loadSpeech1(\''+pwd+'\');"/>';
+	$cleoInput.append(s);
 	$.menuColor();
 }
 

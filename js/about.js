@@ -475,7 +475,7 @@ $.loadSecure5 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors1 = function() {
+$.loadAuthors1 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Cette application est le travail de diplôme de ';
@@ -492,7 +492,7 @@ $.loadAuhtors1 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors2 = function() {
+$.loadAuthors2 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = '<a class="toColor">Camille Rattoni</a> a fourni le travail de recherche pour la ';
@@ -511,7 +511,7 @@ $.loadAuhtors2 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors3 = function() {
+$.loadAuthors3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = '<a class="toColor">Jérémy Morel</a> a fait chauffer ses méninges pour réaliser ';
@@ -529,7 +529,7 @@ $.loadAuhtors3 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors4 = function() {
+$.loadAuthors4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous avons beaucoup apprécié cette <a class="toColor">collaboration</a> enrichissante ';
@@ -544,7 +544,7 @@ $.loadAuhtors4 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors5 = function() {
+$.loadAuthors5 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous <a class="toColor">remercions</a> chaleureusement les <a class="toColor">directions</a> de nos deux ';
@@ -560,7 +560,7 @@ $.loadAuhtors5 = function() {
 	$.menuColor();
 }
 
-$.loadAuhtors6 = function() {
+$.loadAuthors6 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous <a class="toColor">remercions</a> également nos <a class="toColor">professeurs</a>, nos <a class="toColor">familles</a> ';

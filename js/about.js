@@ -117,7 +117,6 @@ $.loadVersus6 = function() {
 	s += 'plaît, le travail ne s’arrête pas là! En effet, <a class="toColor">il ne faut ';
 	s += 'surtout pas utiliser le même pour toutes vos ';
 	s += 'applications</a>. Car même si votre mot de passe est fort, ';
-	s += 'de 3 mots a pratiquement la même solidité qu’un seul mot ';
 	s += 'la sécurité n’est pas de votre seul ressort, il arrive aussi ';
 	s += 'parfois que les pirates les plus habiles parviennent ';
 	s += 'à voler le mot de passe directement à la société qui détient ';
@@ -564,7 +563,7 @@ $.loadAuthors6 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous <a class="toColor">remercions</a> également nos <a class="toColor">professeurs</a>, nos <a class="toColor">familles</a> ';
-	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">outenus</a> tout au long de ce projet, ';
+	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">soutenus</a> tout au long de ce projet, ';
 	s += 'qui ont enduré des heures de <a class="toColor">beta testing</a> pour nous, donné ';
 	s += 'leurs <a class="toColor">avis</a>, exprimé leurs <a class="toColor">interrogations</a> et proposé ';
 	s += 'leurs <a class="toColor">idées</a>, et même été sources d’<a class="toColor">inspiration</a> à leur insu!';

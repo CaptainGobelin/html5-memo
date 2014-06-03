@@ -41,7 +41,7 @@ $.resizeWindow = function() {
 	d = document.getElementsByClassName('leftMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(1.5*h/10)+'px;font-size: '+(15*h/100)+'px;');
+		item.setAttribute("style", 'height:'+(0.4*h2/10)+'px;font-size: '+(3.5*h2/100)+'px;');
 	}
 	d = document.getElementsByClassName('colorButton');
 	for (var i=0;i<d.length;++i) {
@@ -92,7 +92,7 @@ $.menuColor = function() {
 	d = document.getElementsByClassName('optionsBarOpen');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute('style', 'background-color:'+color+';');
+		item.setAttribute('style', 'background-color:'+color+';padding-top:'+$(window).height()*0.1+'px;');
 	}
 	d = document.getElementsByClassName('toColor');
 	for (var i=0;i<d.length;++i) {

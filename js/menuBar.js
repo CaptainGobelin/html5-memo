@@ -2,7 +2,12 @@ $.addBlur = function() {
 	var doc = document.getElementById('menuSuccess');
 	if (doc != null) {
 		doc.setAttribute("class", "menuBg");
-		doc.setAttribute("style", '-webkit-filter: grayscale(100%)');
+		doc.setAttribute("style", '-webkit-filter: grayscale(100%);');
+	}
+	var doc = document.getElementById('opacityFilter');
+	if (doc != null) {
+		doc.setAttribute("class", "menuBg");
+		doc.setAttribute("style", 'opacity:0.1;');
 	}
 }
 
@@ -10,7 +15,12 @@ $.clearBlur = function() {
 	var doc = document.getElementById('menuSuccess');
 	if (doc != null) {
 		doc.setAttribute("class", "");
-		doc.setAttribute("style", "-webkit-filter: grayscale(0%)");
+		doc.setAttribute("style", "-webkit-filter: grayscale(0%);");
+	}
+	var doc = document.getElementById('opacityFilter');
+	if (doc != null) {
+		doc.setAttribute("class", "");
+		doc.setAttribute("style", "opacity:0;");
 	}
 }
 

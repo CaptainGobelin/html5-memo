@@ -40,6 +40,26 @@
 		<script type="text/javascript">
 			$.resizeWindow();
 			$.loadCleofeeAbout();
+			idleTime = 0;
+			$(document).ready(function () {
+			    var idleInterval = setInterval(timerIncrement, 60000);
+			    $(this).mousemove(function (e) {
+			        idleTime = 0;
+			    });
+			    $(this).keypress(function (e) {
+			        idleTime = 0;
+			    });
+			});
+
+			function timerIncrement() {
+				/*if ($.getCookie("stopTimer") == "true")
+					idleTime = 0;*/
+			    idleTime = idleTime + 1;
+			    if (idleTime > 9) {
+			    	$.deleteCookies();
+			        window.location = 'index.html';
+			    }
+			}
 		</script>
 	</body>
  

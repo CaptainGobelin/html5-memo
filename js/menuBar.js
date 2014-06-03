@@ -138,7 +138,7 @@ $.closeMenuBg = function() {
 }
 
 $.isSelected = function() {
-	for (var i=0;i<3;i++) {
+	for (var i=0;i<4;i++) {
 		var doc = document.getElementById('buttonSelected');
 		if (doc != null)
 			doc.setAttribute('id', '');

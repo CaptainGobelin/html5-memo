@@ -67,10 +67,10 @@
 			});
 
 			function timerIncrement() {
-				if ($.getCookie("stopTimer") == "true")
-					idleTime = 0;
+				/*if ($.getCookie("stopTimer") == "true")
+					idleTime = 0;*/
 			    idleTime = idleTime + 1;
-			    if (idleTime > 1) {
+			    if (idleTime > 9) {
 			    	$.deleteCookies();
 			        window.location = 'index.html';
 			    }

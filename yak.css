@@ -68,7 +68,9 @@ label {
 
 .menuInput {
 	height: 100%;
-	width: 83%;
+	width: 80%;
+	padding: 0%;
+	padding-right: 7%;
 	font-family: 'Ubuntu', sans-serif;
 	font-size:64%;
 	color: white;

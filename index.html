@@ -70,7 +70,7 @@
 				if ($.getCookie("stopTimer") == "true")
 					idleTime = 0;
 			    idleTime = idleTime + 1;
-			    if (idleTime > 9) {
+			    if (idleTime > 1) {
 			    	$.deleteCookies();
 			        window.location = 'index.html';
 			    }

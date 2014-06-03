@@ -26,7 +26,6 @@
 		<script type="text/javascript" src="js/intro.js"></script>
 		<script type="text/javascript" src="js/checkPassword.js"></script>
 		<script type="text/javascript" src="js/cleofee.js"></script>
-		<script type="text/javascript" src="js/timer.js"></script>
 	</head>
  
 	<body onresize="$.resizeWindow()">
@@ -55,8 +54,27 @@
 				<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
 			</p>
 		<script type="text/javascript">
-			$.startTimer();
 			$.resizeWindow();
+			idleTime = 0;
+			$(document).ready(function () {
+			    var idleInterval = setInterval(timerIncrement, 60000);
+			    $(this).mousemove(function (e) {
+			        idleTime = 0;
+			    });
+			    $(this).keypress(function (e) {
+			        idleTime = 0;
+			    });
+			});
+
+			function timerIncrement() {
+				if ($.getCookie("stopTimer") == "true")
+					idleTime = 0;
+			    idleTime = idleTime + 1;
+			    if (idleTime > 9) {
+			    	$.deleteCookies();
+			        window.location = 'index.html';
+			    }
+			}
 		</script>
 	</body>
  

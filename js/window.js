@@ -10,11 +10,6 @@ $.resizeWindow = function() {
 		var item = d[i];  
 		item.setAttribute("style", 'height:'+(9*h/100)+'px;font-size: '+(7*h/100)+'px;');
 	}
-	d = document.getElementsByClassName('pic');
-	for (var i=0;i<d.length;++i) {
-		var item = d[i];  
-		item.setAttribute("style",'width:'+(22*h/100)+'px;height:'+(22*h/100)+'px;');
-	}
 	var h2 = $(window).height();
 	var w = Math.max($(window).height(),$(window).width());
 	d = document.getElementsByClassName('inputIntro');
@@ -48,6 +43,34 @@ $.resizeWindow = function() {
 		var item = d[i];
 		var myH = item.offsetHeight;
 		item.setAttribute("style", 'width:'+myH+'px !IMPORTANT;border-radius:'+myH/3+'px;');
+	}
+	var w2 = $(window).width();
+	d = document.getElementsByClassName('pic');
+	var n = 0;
+	var t = d.length;
+	var suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
+	var act = 0;
+	var r = 16/9;
+	do {
+		n++;
+		act = suiv;
+		suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
+	} while (Math.abs(suiv-r) < Math.abs(act-r));
+	if (t%n == 1)
+		n++;
+	var newH = Math.floor(0.5*h2/(Math.floor(0.99+(t/n))));
+	var newW = Math.floor((8/9)*h2/n);
+	var newS = Math.min(newW, newH);
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		item.setAttribute("style",'width:auto;height:'+newS+'px;test:'+n+','+t+','+newH+';');
+	}
+	d = document.getElementsByClassName('picsDiv');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		var margin = w2*0.1+((w2*0.76-(newS*n))/2);
+		var marginT = ((newH-newS)*Math.floor(0.99+(t/n)))/2;
+		item.setAttribute("style", 'margin-left:'+margin+'px;width:'+(newS*n)+'px;margin-top:'+marginT+'px;height:'+(0.5*h2-marginT)+'px;');
 	}
 	$.resizeTipPanel();
 	$.menuColor();

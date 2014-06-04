@@ -2,7 +2,7 @@ $.loadForm = function() {
 	$form = $("p.centerInput");
 	$form.empty();
 	var s = '<label for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>';
-	s += '<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>';
+	s += '<input id="wordForm" onkeyup="$.wordWithPics();" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>';
 	$form.append(s);
 	$button = $("p.buttonAnswer");
 	$button.empty();
@@ -23,8 +23,8 @@ $.loadRandomLevel = function() {
 $.loadLevelOne = function () {
 	$picsDiv = $("div.picsDiv");
 	$picsDiv.empty();
-	var s = '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Mat.svg" height="100px" width="100px">';
-	s+= '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Riz.svg" height="100px" width="100px">';
-	s+= '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Eau.svg" height="100px" width="100px">';
+	var s = '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Mat.svg">';
+	s+= '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Riz.svg">';
+	s+= '<img id="img_0" class="shadow" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	$picsDiv.append(s);
 }

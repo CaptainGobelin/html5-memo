@@ -70,7 +70,7 @@ label {
 	height: 100%;
 	width: 80%;
 	padding: 0%;
-	padding-right: 7%;
+	padding-right: 5%;
 	font-family: 'Ubuntu', sans-serif;
 	font-size:64%;
 	color: white;
@@ -130,6 +130,12 @@ button:hover {
 
 .centerMenu {
 	text-align: right;
+}
+
+.lessMargin {
+	margin-right: 10%;
+	margin-left: 5%;
+	width: 85%;
 }
 
 .centerInput {

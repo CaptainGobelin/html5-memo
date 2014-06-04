@@ -33,22 +33,22 @@ $.openMenuBar = function() {
     var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="margin-top:20%;width:100%;"></p>';
     var page = window.location.toString().split(new RegExp("[/]+", "g"));
     s += '<p class="menuButtons">';
-    s += '<p class="centerMenu">';
+    s += '<p class="centerMenu lessMargin">';
     if ((page[page.length-1] == 'index.html') || (page[page.length-1] == '') || (page[page.length-1] == 'levels.html'))
     	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;padding-bottom:2px;">';
     s += '<input class="menuInput" type="submit" value="Jouer" name="menuPlayButton" onClick=\'document.location = "levels.html";\'/></p>';
-    s += '<p class="centerMenu">';
+    s += '<p class="centerMenu lessMargin">';
     if (page[page.length-1] == 'yak.html')
     	s+= '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;">';
     s += '<input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
-    s += '<p class="centerMenu"></p>';
-    s += '<p class="centerMenu"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
-    s += '<p class="centerMenu">';
+    s += '<p class="centerMenu lessMargin"></p>';
+    s += '<p class="centerMenu lessMargin"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
+    s += '<p class="centerMenu lessMargin">';
     if (page[page.length-1] == 'about.html')
     	s += '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;">';
     s += '<input class="menuInput" type="submit" value="A propos" name="menuCreateButton" onClick=\'document.location = "about.html";\'/></p>';
     s += '<p class="centerMenu"></p>';
-    s += '<p class="centerMenu"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';
+    s += '<p class="centerMenu lessMargin"><input class="menuInput" type="submit" value="Quitter" name="menuCreateButton" onClick=\'$.deleteCookies();document.location = "index.html";\'/></p>';
     s += '</p>';
     $menuBar.append(s);
     $.addBlur();

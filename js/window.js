@@ -36,7 +36,7 @@ $.resizeWindow = function() {
 	d = document.getElementsByClassName('leftMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(0.4*h2/10)+'px;font-size: '+(3.5*h2/100)+'px;');
+		item.setAttribute("style", 'height:'+(0.65*2*h/10)+'px;font-size: '+(0.64*20*h/100)+'px;');
 	}
 	d = document.getElementsByClassName('colorButton');
 	for (var i=0;i<d.length;++i) {
@@ -45,6 +45,11 @@ $.resizeWindow = function() {
 		item.setAttribute("style", 'width:'+myH+'px !IMPORTANT;border-radius:'+myH/3+'px;');
 	}
 	var w2 = $(window).width();
+	/*d = document.getElementsByClassName('tabVignettes');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		item.setAttribute("style", 'max-height:'+(h2*0.88)+'px;');
+	}*/
 	d = document.getElementsByClassName('pic');
 	var n = 0;
 	var t = d.length;
@@ -71,6 +76,23 @@ $.resizeWindow = function() {
 		var margin = w2*0.1+((w2*0.76-(newS*n))/2);
 		var marginT = ((newH-newS)*Math.floor(0.99+(t/n)))/2;
 		item.setAttribute("style", 'margin-left:'+margin+'px;width:'+(newS*n)+'px;margin-top:'+marginT+'px;height:'+(0.5*h2-marginT)+'px;');
+	}
+	d = document.getElementById('wordForm');
+	if (d != null) {
+		h = d.getBoundingClientRect();
+		d = document.getElementsByClassName('submitLevel');
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style", 'top:'+(h.top-item.offsetHeight/2)+'px;');
+		}
+		d = document.getElementById('wordForm');
+		h = d.getBoundingClientRect();
+		h2 =(d.offsetHeight/2);
+		d = document.getElementsByClassName('buttonLevel');
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;');
+		}
 	}
 	$.resizeTipPanel();
 	$.menuColor();
@@ -115,7 +137,7 @@ $.menuColor = function() {
 	d = document.getElementsByClassName('optionsBarOpen');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute('style', 'background-color:'+color+';padding-top:'+$(window).height()*0.1+'px;');
+		item.setAttribute('style', 'background-color:'+color+';padding-top:'+$(window).height()*0.15+'px;');
 	}
 	d = document.getElementsByClassName('toColor');
 	for (var i=0;i<d.length;++i) {

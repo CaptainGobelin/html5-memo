@@ -7,11 +7,11 @@ $.loadCleofeeAbout = function(pwd) {
 	s += '<p class="cleoTip">';
 	s += 'Je vois que vous apprécieriez d’en apprendre plus!<br/>';
 	s += '<a class="toColor">Quel sujet vous intéresse?</a><br/><br/>';
-	s += '• <a onClick="$.loadVersus1();">Créer un mot de passe fort : sécurité versus facilité</a><br/>';
-	s += '• <a onClick="$.loadRebus1();">Le rébus comme moyen mnémotechnique</a><br/>';
-	s += '• <a onClick="$.loadSecure1();">Déclaration de sécurité de vos données</a><br/>';
-	s += '• <a onClick="$.loadAuthors1();">À propos de auteurs et remerciements</a><br/>';
-	s += '• <a onClick="$.loadLinks1();">Bibliographie et liens</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadVersus1();">Créer un mot de passe fort : sécurité versus facilité</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadRebus1();">Le rébus comme moyen mnémotechnique</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadSecure1();">Déclaration de sécurité de vos données</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadAuthors1();">À propos de auteurs et remerciements</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadLinks1();">Bibliographie et liens</a><br/>';
 	s += '</p>';
 	$cleoDiv.append(s);
 	$cleoInput = $("div.cleoInput");

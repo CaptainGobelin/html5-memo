@@ -95,8 +95,8 @@ $.loadLevel4 = function () {
 	$picsDiv.empty();
 	var s = '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Geai.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Un.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_V.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Le.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Ve.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_L.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Haie.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_PasPied.svg">';
@@ -121,11 +121,11 @@ $.loadLevel5 = function () {
 $.loadLevel6 = function () {
 	$picsDiv = $("div.picsDiv");
 	$picsDiv.empty();
-	var s = '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Le.svg">';
+	var s = '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_L.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Heure.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Re.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_R.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Ze.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Z.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Pli.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Mai.svg">';
@@ -159,7 +159,7 @@ $.loadLevel8 = function () {
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Nez.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_ChantCui.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_De.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_D.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Aile.svg">';
 	$picsDiv.append(s);
 	$.loadForm('8');
@@ -181,7 +181,7 @@ $.loadLevel10 = function () {
 	$picsDiv.empty();
 	var s = '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Nid.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Con.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Te.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_T.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_PasPied.svg">';
 	$picsDiv.append(s);
 	$.loadForm('10');
@@ -195,7 +195,7 @@ $.loadLevel11 = function () {
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Pied.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Riz.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Go.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Le.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_L.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	$picsDiv.append(s);
 	$.loadForm('11');

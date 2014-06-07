@@ -52,7 +52,7 @@ label {
 .inputDefault {
 	text-align: left;
 	font-family: 'Ubuntu', sans-serif;
-	font-size:60%;
+	font-size:50%;
 	padding-left: 10px;
 	border: solid 2px #000000;
 	outline: 0;
@@ -670,6 +670,10 @@ button:hover {
 
 .italic {
 	font-style:italic
+}
+
+.underlined {
+	text-decoration:underline
 }
 
 .allLevelsBg {

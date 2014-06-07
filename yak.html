@@ -27,27 +27,43 @@
 	</head>
  
 	<body onresize="$.resizeWindow();">
+		<div id='opacityFilter'></div>
 		<div class="" id="menuSuccess">
-			<p class="center">
-				<label id="login_avs" for="word">Mot à phonétiser:</label>
-			</p>
-			<p class="center">
-	        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" onkeyup="$.checkSecurity();" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>
+			<p class="centerInput">
+				<label id="login_avs" for="word" style="font-style:italic;">Transcription du rébus:</label>
+	        	<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>
 	    	</p>
-	    	<p class="center">
-	        	<input type="submit" value="Générer" name="generateButton" onClick="$.wordWithPics();"/>
-	        </p>
+	    	<p></p>
 			<div class="picsDiv"></div>
-			<div class="phonDiv"></div>
-			<div class="listDiv"></div>
-			<p id="tipPanel" class=""></p>
 		</div>
 		<p class="" id="menuContainer">
-			<p class="leftMenuClose" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();"></p>
+			<p class="leftMenuClose mainBar" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
+			<img class="logoMenu" src="sysPics/Serrure.svg" style="margin-top:70%;width:40%;">
+		</p>
 			<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
 		</p>
     	<script type="text/javascript">
     		$.resizeWindow();
+    		idleTime = 0;
+			$(document).ready(function () {
+			    var idleInterval = setInterval(timerIncrement, 60000);
+			    $(this).mousemove(function (e) {
+			        idleTime = 0;
+			    });
+			    $(this).keypress(function (e) {
+			        idleTime = 0;
+			    });
+			});
+
+			function timerIncrement() {
+				/*if ($.getCookie("stopTimer") == "true")
+					idleTime = 0;*/
+			    idleTime = idleTime + 1;
+			    if (idleTime > 9) {
+			    	$.deleteCookies();
+			        window.location = 'index.html';
+			    }
+			}
     	</script>
 	</body>
  

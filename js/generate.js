@@ -9,16 +9,11 @@ var WORDS = (function() {
 		'[b][an]'	: 'PhonemesDessins-TraitMimi3_Banc',
 		'[b][a]'	: 'PhonemesDessins-TraitMimi3_Bas',
 		'[b][ai]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
-		'[b][ai][l]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
 		'[b][i][eu]'	: 'PhonemesDessins-TraitMimi3_Bille',
 		'[b][o][l]'	: 'PhonemesDessins-TraitMimi3_Bol',
 		'[b][u][s]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
-		'[k][a][r]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
-		'[b][u]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
 		'[ch][an]'	: 'PhonemesDessins-TraitMimi3_ChantCui',
-		'[k][u][i]'	: 'PhonemesDessins-TraitMimi3_ChantCui',
 		'[ch][a]'	: 'PhonemesDessins-TraitMimi3_Chat',
-		'[m][i][a][ou]'	: 'PhonemesDessins-TraitMimi3_Chat',
 		'[ch][o]'	: 'PhonemesDessins-TraitMimi3_Chaud',
 		'[k][o][l]'	: 'PhonemesDessins-TraitMimi3_Col',
 		'[k][o][l][an]'	: 'PhonemesDessins-TraitMimi3_CollantBas',
@@ -26,13 +21,10 @@ var WORDS = (function() {
 		'[k][o][k]'	: 'PhonemesDessins-TraitMimi3_Coque',
 		'[k][o][r]'	: 'PhonemesDessins-TraitMimi3_Cor',
 		'[k][ou]'	: 'PhonemesDessins-TraitMimi3_CouGirafe',
-		'[j][i][r][a][f]'	: 'PhonemesDessins-TraitMimi3_CouGirafe',
 		'[d][ai]'	: 'PhonemesDessins-TraitMimi3_De',
 		'[d][an]'	: 'PhonemesDessins-TraitMimi3_Dent',
 		'[d][eu]'	: 'PhonemesDessins-TraitMimi3_Deux',
 		'[d][i]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
-		'[b][l][a]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
-		'[m][o]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
 		'[d][on]'	: 'PhonemesDessins-TraitMimi3_Don',
 		'[d][o]'	: 'PhonemesDessins-TraitMimi3_Dos',
 		'[dos]'	: 'PhonemesDessins-TraitMimi3_Dos',
@@ -45,9 +37,7 @@ var WORDS = (function() {
 		'[ai]'	: 'PhonemesDessins-TraitMimi3_Haie',
 		'[ou]'	: 'PhonemesDessins-TraitMimi3_Houx',
 		'[u][i][t]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
-		'[u][i][t][r]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
 		'[l][a][r]'	: 'PhonemesDessins-TraitMimi3_Lard',
-		'[lard]'	: 'PhonemesDessins-TraitMimi3_Lard',
 		'[l][a][v]'	: 'PhonemesDessins-TraitMimi3_Lave',
 		'[m][ai]'	: 'PhonemesDessins-TraitMimi3_Mai',
 		'[m][in]'	: 'PhonemesDessins-TraitMimi3_Main',
@@ -61,7 +51,6 @@ var WORDS = (function() {
 		'[p][ou][in]'	: 'PhonemesDessins-TraitMimi3_Poing',
 		'[k][eu]'	: 'PhonemesDessins-TraitMimi3_Queue',
 		'[k][i][eu]'	: 'PhonemesDessins-TraitMimi3_Quille',
-		'[k][i]'	: 'PhonemesDessins-TraitMimi3_Quille',
 		'[r][ai]'	: 'PhonemesDessins-TraitMimi3_Raie',
 		'[r][a]'	: 'PhonemesDessins-TraitMimi3_Rat',
 		'[r][i]'	: 'PhonemesDessins-TraitMimi3_Riz',
@@ -77,9 +66,6 @@ var WORDS = (function() {
 		'[n][eu][f]' : 'PhonemesDessins-TraitMimi3_Neuf',
 		'[k][a][t][r]' : 'PhonemesDessins-TraitMimi3_Quatre',
 		'[ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
-		'[ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
-		'[j][ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
-		'[j][ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
 		'[t][ai]' : 'PhonemesDessins-TraitMimi3_The',
 		'[p][i][ai]' : 'PhonemesDessins-TraitMimi3_Pied',
 		'[eu][r]' : 'PhonemesDessins-TraitMimi3_Heure',
@@ -87,12 +73,26 @@ var WORDS = (function() {
 		'[n][eu]' : 'PhonemesDessins-TraitMimi3_Noeud',
 		'[p][l][i]' : 'PhonemesDessins-TraitMimi3_Pli',
 		'[r][on]' : 'PhonemesDessins-TraitMimi3_Rond',
-		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
 		'[eu][i]' : 'PhonemesDessins-TraitMimi3_Oeil',
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
+		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace',
+		'[b][ai][l]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
+		'[k][a][r]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
+		'[b][u]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
+		'[k][u][i]'	: 'PhonemesDessins-TraitMimi3_ChantCui',
+		'[m][i][a][ou]'	: 'PhonemesDessins-TraitMimi3_Chat',
+		'[j][i][r][a][f]'	: 'PhonemesDessins-TraitMimi3_CouGirafe',
+		'[b][l][a]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
+		'[m][o]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
+		'[u][i][t][r]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
+		'[lard]'	: 'PhonemesDessins-TraitMimi3_Lard',
+		'[k][i]'	: 'PhonemesDessins-TraitMimi3_Quille',
+		'[ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[j][ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[j][ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
+		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
 		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume',
-		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace'
-		
+
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -108,6 +108,8 @@ var WORDS = (function() {
 		}
 	};
 })();
+
+var NB_PICS = 74;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;
@@ -166,4 +168,14 @@ function privateGroupPhon(splits) {
 $.getPhonSplits = function(word) {
 	var reg = new RegExp("[#]+", "g");
 	return word.split(reg);
+}
+
+$.loadListPics = function(index) {
+	for (var i=0;i<10;i++) {
+		var d = document.getElementById('list_'+i);
+		var s = 'pics/';
+		s += WORDS.getFromIndex((index+3+i)%NB_PICS);
+		s += '.svg';
+		d.setAttribute("src", s);
+	}
 }

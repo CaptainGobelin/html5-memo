@@ -211,3 +211,30 @@ $.loadLevel12 = function () {
 	$.loadForm('12');
 	$.resizeWindow();
 }
+
+$.loadCacheVignettes = function() {
+	var i1 = new Image;
+	i1.src = 'sysPics/VignettesJouer/RebusLevelDesign_Mario.svg';
+	var i2 = new Image;
+	i2.src = 'sysPics/VignettesJouer/RebusLevelDesign_EtoileDesCieux.svg';
+	var i3 = new Image;
+	i3.src = 'sysPics/VignettesJouer/RebusLevelDesign_HTML5.svg';
+	var i4 = new Image;
+	i4.src = 'sysPics/VignettesJouer/RebusLevelDesign_JaiUnVeloEtPasToi.svg';
+	var i5 = new Image;
+	i5.src = 'sysPics/VignettesJouer/RebusLevelDesign_LaVieEstBelle.svg';
+	var i6 = new Image;
+	i6.src = 'sysPics/VignettesJouer/RebusLevelDesign_LeRoseauPlieMaisNeRomptPas.svg';
+	var i7 = new Image;
+	i7.src = 'sysPics/VignettesJouer/RebusLevelDesign_MaisOuEtDoncOrNiCar.svg';
+	var i8 = new Image;
+	i8.src = 'sysPics/VignettesJouer/RebusLevelDesign_DinerAuxChandelles.svg';
+	var i9 = new Image;
+	i9.src = 'sysPics/VignettesJouer/RebusLevelDesign_Reel.svg';
+	var i10 = new Image;
+	i10.src = 'sysPics/VignettesJouer/RebusLevelDesign_NyComptePas.svg';
+	var i11 = new Image;
+	i11.src = 'sysPics/VignettesJouer/RebusLevelDesign_PapierRigolo.svg';
+	var i12 = new Image;
+	i12.src = 'sysPics/VignettesJouer/RebusLevelDesign_Rebus.svg';
+}

@@ -27,7 +27,6 @@ var WORDS = (function() {
 		'[d][i]'	: 'PhonemesDessins-TraitMimi3_DitBlaMot',
 		'[d][on]'	: 'PhonemesDessins-TraitMimi3_Don',
 		'[d][o]'	: 'PhonemesDessins-TraitMimi3_Dos',
-		'[dos]'	: 'PhonemesDessins-TraitMimi3_Dos',
 		'[o]'	: 'PhonemesDessins-TraitMimi3_Eau',
 		'[f][r][ou][a]'	: 'PhonemesDessins-TraitMimi3_Froid',
 		'[g][an]'	: 'PhonemesDessins-TraitMimi3_Gant',
@@ -69,7 +68,6 @@ var WORDS = (function() {
 		'[t][ai]' : 'PhonemesDessins-TraitMimi3_The',
 		'[p][i][ai]' : 'PhonemesDessins-TraitMimi3_Pied',
 		'[eu][r]' : 'PhonemesDessins-TraitMimi3_Heure',
-		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure',
 		'[n][eu]' : 'PhonemesDessins-TraitMimi3_Noeud',
 		'[p][l][i]' : 'PhonemesDessins-TraitMimi3_Pli',
 		'[r][on]' : 'PhonemesDessins-TraitMimi3_Rond',
@@ -92,7 +90,8 @@ var WORDS = (function() {
 		'[j][ai][m][eu]' : 'PhonemesDessins-TraitMimi3_Aime',
 		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
 		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume',
-
+		'[dos]'	: 'PhonemesDessins-TraitMimi3_Dos',
+		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure'
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -109,7 +108,97 @@ var WORDS = (function() {
 	};
 })();
 
-var NB_PICS = 74;
+var WORDS_INFO = (function() {
+	var private = {
+		'[ai][l]'	: 'Aile',
+		'[ou][t]'	: 'Aout',
+		'[a][r]'	: 'Art',
+		'[b][a][g][ai][t]'	: 'Baguettes',
+		'[b][an]'	: 'Banc',
+		'[b][a]'	: 'Bas',
+		'[b][ai]'	: 'Beh',
+		'[b][i][eu]'	: 'Bille',
+		'[b][o][l]'	: 'Bol',
+		'[b][u][s]'	: 'Bus',
+		'[ch][an]'	: 'Chant',
+		'[ch][a]'	: 'Chat',
+		'[ch][o]'	: 'Chaud',
+		'[k][o][l]'	: 'Col',
+		'[k][o][l][an]'	: 'Collant',
+		'[k][on]'	: 'Con',
+		'[k][o][k]'	: 'Coque',
+		'[k][o][r]'	: 'Cor',
+		'[k][ou]'	: 'Cou',
+		'[d][ai]'	: 'Dé',
+		'[d][an]'	: 'Dent',
+		'[d][eu]'	: 'Deux',
+		'[d][i]'	: 'Dit',
+		'[d][on]'	: 'Don',
+		'[d][o]'	: 'Dos',
+		'[o]'	: 'Eau',
+		'[f][r][ou][a]'	: 'Froid',
+		'[g][an]'	: 'Gant',
+		'[j][ai]'	: 'Geai',
+		'[g][o]'	: 'Go',
+		'[a][ch]'	: 'Hache',
+		'[ai]'	: 'Haie',
+		'[ou]'	: 'Houx',
+		'[u][i][t]'	: 'Huit/Huitre',
+		'[l][a][r]'	: 'Lard',
+		'[l][a][v]'	: 'Lave',
+		'[m][ai]'	: 'Mai',
+		'[m][in]'	: 'Main',
+		'[m][a]'	: 'Mat',
+		'[n][ai]'	: 'Nez',
+		'[n][i]'	: 'Nid',
+		'[n][u][i]'	: 'Nuit',
+		'[eu]'	: 'Oeufs',
+		'[ou][a]'	: 'Oie',
+		'[p][a]'	: 'Pas',
+		'[p][ou][in]'	: 'Poing',
+		'[k][eu]'	: 'Queue',
+		'[k][i][eu]'	: 'Quille',
+		'[r][ai]'	: 'Raie',
+		'[r][a]'	: 'Rat',
+		'[r][i]'	: 'Riz',
+		'[s][an]'	: 'Sang',
+		'[s][i]'	: 'Scie',
+		'[s][o]'	: 'Seau',
+		'[s][ai][t]'	: 'Set',
+		'[t][ou][a][l]'	: 'Toile',
+		'[t][ou][a]'	: 'Toit',
+		'[t][r][ou][a]'	: 'Troie',
+		'[in]'	: 'Un',
+		'[s][in][k]' : 'Cinq',
+		'[n][eu][f]' : 'Neuf',
+		'[k][a][t][r]' : 'Quatre',
+		'[ai][m]' : 'Aime',
+		'[t][ai]' : 'The',
+		'[p][i][ai]' : 'Pied',
+		'[eu][r]' : 'Heure',
+		'[n][eu]' : 'Noeud',
+		'[p][l][i]' : 'Pli',
+		'[r][on]' : 'Rond',
+		'[eu][i]' : 'Oeil',
+		'[p][l][u][m]' : 'Plume',
+		'[ai][s][p][a][s]' : 'Espace'
+	};
+	return {
+		get: function(name) { return private[name]; },
+		all: function() { return private; },
+		getFromIndex: function(index) {
+			var k = 0;;
+			for (var e in private) {
+				k++;
+				if (k == index)
+					return private[e];
+			}
+			return private['|'];
+		}
+	};
+})();
+
+var NB_PICS = 72;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;
@@ -174,8 +263,18 @@ $.loadListPics = function(index) {
 	for (var i=0;i<10;i++) {
 		var d = document.getElementById('list_'+i);
 		var s = 'pics/';
-		s += WORDS.getFromIndex((index+3+i)%NB_PICS);
+		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
 		s += '.svg';
 		d.setAttribute("src", s);
+		d = document.getElementById('label_'+i);
+		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
+		d.innerHTML = s;
+		var p = index-9;
+		if (p < 2)
+			p = NB_PICS - p;
+		d = document.getElementById('prevPics');
+		d.setAttribute('onClick', '$.loadListPics('+p+');');
+		d = document.getElementById('nextPics');
+		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');');
 	}
 }

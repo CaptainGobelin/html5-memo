@@ -74,6 +74,7 @@ var WORDS = (function() {
 		'[eu][i]' : 'PhonemesDessins-TraitMimi3_Oeil',
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
 		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace',
+		'[i][a][k]' : 'PhonemesDessins-TraitMimi3_Yak',
 
 		'[a]' : 'PhonemesDessins-Lettres_a',
 		'[i]' : 'PhonemesDessins-Lettres_i',
@@ -98,6 +99,12 @@ var WORDS = (function() {
 		'[v]' : 'PhonemesDessins-Lettres_v',
 		'[x]' : 'PhonemesDessins-Lettres_x',
 		'[z]' : 'PhonemesDessins-Lettres_z',
+		'[ai][r]' : 'PhonemesDessins-Lettres_er',
+		'[k][a]' : 'PhonemesDessins-Lettres_ka',
+		'[p][ai]' : 'PhonemesDessins-Lettres_pai',
+		'[s][ai]' : 'PhonemesDessins-Lettres_sai',
+		'[v][ai]' : 'PhonemesDessins-Lettres_vai',
+		'[i][a]' : 'PhonemesDessins-Lettres_ya',
 
 		'[b][ai][l]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
 		'[k][a][r]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',

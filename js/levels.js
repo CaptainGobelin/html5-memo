@@ -1,6 +1,17 @@
 var LEVELS = (function() {
 	var private = {
-		'1' 		: 'mario'
+		'1' 		: 'mario',
+		'2' 		: 'étoile des cieux',
+		'3' 		: 'html5',
+		'4' 		: 'j\'ai un vélo et pas toi',
+		'5' 		: 'la vie est belle',
+		'6' 		: 'le roseau plie mais ne rompt pas',
+		'7' 		: 'mais où est donc or ni car',
+		'8' 		: 'dîner aux chandelles',
+		'9' 		: 'réel',
+		'10' 		: 'n\'y comptez pas',
+		'11' 		: 'papier rigolo',
+		'12' 		: 'rébus'
 	};
 	return {
 		get: function(level) { return private[level]; }

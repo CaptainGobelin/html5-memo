@@ -74,6 +74,31 @@ var WORDS = (function() {
 		'[eu][i]' : 'PhonemesDessins-TraitMimi3_Oeil',
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
 		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace',
+
+		'[a]' : 'PhonemesDessins-Lettres_a',
+		'[i]' : 'PhonemesDessins-Lettres_i',
+		'[u]' : 'PhonemesDessins-Lettres_u',
+		'[on]' : 'PhonemesDessins-Lettres_on',
+		'[an]' : 'PhonemesDessins-Lettres_an',
+		'[b]' : 'PhonemesDessins-Lettres_b',
+		'[k]' : 'PhonemesDessins-Lettres_k',
+		'[ch]' : 'PhonemesDessins-Lettres_ch',
+		'[d]' : 'PhonemesDessins-Lettres_d',
+		'[f]' : 'PhonemesDessins-Lettres_f',
+		'[g]' : 'PhonemesDessins-Lettres_g',
+		'[gn]' : 'PhonemesDessins-Lettres_gn',
+		'[j]' : 'PhonemesDessins-Lettres_j',
+		'[l]' : 'PhonemesDessins-Lettres_l',
+		'[m]' : 'PhonemesDessins-Lettres_m',
+		'[n]' : 'PhonemesDessins-Lettres_n',
+		'[p]' : 'PhonemesDessins-Lettres_p',
+		'[r]' : 'PhonemesDessins-Lettres_r',
+		'[s]' : 'PhonemesDessins-Lettres_s',
+		'[t]' : 'PhonemesDessins-Lettres_t',
+		'[v]' : 'PhonemesDessins-Lettres_v',
+		'[x]' : 'PhonemesDessins-Lettres_x',
+		'[z]' : 'PhonemesDessins-Lettres_z',
+
 		'[b][ai][l]'	: 'PhonemesDessins-TraitMimi3_BehBelle',
 		'[k][a][r]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
 		'[b][u]'	: 'PhonemesDessins-TraitMimi3_BusCar3D',
@@ -181,7 +206,31 @@ var WORDS_INFO = (function() {
 		'[r][on]' : 'Rond',
 		'[eu][i]' : 'Oeil',
 		'[p][l][u][m]' : 'Plume',
-		'[ai][s][p][a][s]' : 'Espace'
+		'[ai][s][p][a][s]' : 'Espace',
+
+		'[a]' : 'a',
+		'[i]' : 'i',
+		'[u]' : 'u',
+		'[on]' : 'on',
+		'[an]' : 'an',
+		'[b]' : 'b',
+		'[k]' : 'k',
+		'[ch]' : 'ch',
+		'[d]' : 'd',
+		'[f]' : 'f',
+		'[g]' : 'g',
+		'[gn]' : 'gn',
+		'[j]' : 'j',
+		'[l]' : 'l',
+		'[m]' : 'm',
+		'[n]' : 'n',
+		'[p]' : 'p',
+		'[r]' : 'r',
+		'[s]' : 's',
+		'[t]' : 't',
+		'[v]' : 'v',
+		'[x]' : 'x',
+		'[z]' : 'z'
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -198,7 +247,7 @@ var WORDS_INFO = (function() {
 	};
 })();
 
-var NB_PICS = 72;
+var NB_PICS = 95;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;

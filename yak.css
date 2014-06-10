@@ -488,12 +488,12 @@ button:hover {
 }
 
 .reloadLevel {
-	BACKGROUND-IMAGE: url("sysPics/ArrowSubmit.svg");
+	BACKGROUND-IMAGE: url("sysPics/RandomArrow.svg");
 	margin-left: 40px;
 }
 
 .allLevels {
-	BACKGROUND-IMAGE: url("sysPics/ArrowSubmit.svg");
+	BACKGROUND-IMAGE: url("sysPics/Mosaique.svg");
 	margin-left: 100px;
 }
 

@@ -453,6 +453,20 @@ button:hover {
 	height: 5%;
 }
 
+.correct {
+	BACKGROUND-IMAGE: url("sysPics/TickValidation.svg");
+	left: 65%;
+	width: 10%;
+	height: 10%;
+}
+
+.incorrect {
+	BACKGROUND-IMAGE: url("sysPics/CrossInvalid.svg");
+	left: 65%;
+	width: 10%;
+	height: 10%;
+}
+
 .submitLevel:hover {
 	border-color: rgba(0, 0, 0, 0);
 }

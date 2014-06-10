@@ -18,6 +18,24 @@ var LEVELS = (function() {
 	};
 })();
 
+$.checkLevel = function(level) {
+	var answer = document.getElementById("wordForm").value;
+	answer = answer.toLowerCase();
+	if (answer == LEVELS.get(level)) {
+		var d = document.getElementById('wordLabel');
+		d.innerHTML = 'Correct!';
+		var d = document.getElementById('answerButton');
+		d.setAttribute('class', 'submitLevel correct');
+	}
+	else {
+		var d = document.getElementById('wordLabel');
+		d.innerHTML = 'Incorrect!';
+		var d = document.getElementById('answerButton');
+		d.setAttribute('class', 'submitLevel incorrect');
+	}
+	$.resizeWindow();
+}
+
 $.showVignettes = function() {
 	var d = document.getElementsByClassName('allLevelsBg');
 	for (var i=0;i<d.length;++i) {

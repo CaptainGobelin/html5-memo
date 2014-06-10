@@ -1,7 +1,7 @@
 $.loadForm = function(level) {
 	$form = $("p.centerInput");
 	$form.empty();
-	var s = '<input class="submitLevel" type="button" name="generateButton" onClick="$.checkLevel(\''+level+'\')"/>';
+	var s = '<input id="answerButton" class="submitLevel" type="button" name="generateButton" onClick="$.checkLevel(\''+level+'\')"/>';
 	s += '<label id="wordLabel" for="wordForm" class="wordLabel">Quel est le mot encrypté dans ces dessins?</label>';
 	s += '<input id="wordForm" onkeyup="$.checkLevel(\''+level+'\');" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>';
 	s += '<input type="button" class="buttonLevel reloadLevel" onClick="$.loadRandomLevel()"/>';

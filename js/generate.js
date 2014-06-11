@@ -62,7 +62,7 @@ var WORDS = (function() {
 		'[t][r][ou][a]'	: 'PhonemesDessins-TraitMimi3_Troie',
 		'[in]'	: 'PhonemesDessins-TraitMimi3_Un',
 		'[s][in][k]' : 'PhonemesDessins-TraitMimi3_Cinq',
-		'[n][eu][f]' : 'PhonemesDessins-TraitMimi3_Neuf',
+		'[eu][f]' : 'PhonemesDessins-TraitMimi3_Oeuf',
 		'[k][a][t][r]' : 'PhonemesDessins-TraitMimi3_Quatre',
 		'[ai][m]' : 'PhonemesDessins-TraitMimi3_Aime',
 		'[t][ai]' : 'PhonemesDessins-TraitMimi3_The',
@@ -214,7 +214,6 @@ var WORDS_INFO = (function() {
 		'[eu][i]' : 'Oeil',
 		'[p][l][u][m]' : 'Plume',
 		'[ai][s][p][a][s]' : 'Espace',
-		'[i][a][k]' : 'Yak',
 
 		'[a]' : 'a',
 		'[i]' : 'i',
@@ -238,13 +237,7 @@ var WORDS_INFO = (function() {
 		'[t]' : 't',
 		'[v]' : 'v',
 		'[x]' : 'x',
-		'[z]' : 'z',
-		'[ai][r]' : 'R',
-		'[k][a]' : 'K',
-		'[p][ai]' : 'P',
-		'[s][ai]' : 'C',
-		'[v][ai]' : 'V',
-		'[i][a]' : 'ya'
+		'[z]' : 'z'
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -261,7 +254,7 @@ var WORDS_INFO = (function() {
 	};
 })();
 
-var NB_PICS = 102;
+var NB_PICS = 95;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;
@@ -329,8 +322,6 @@ $.loadListPics = function(index) {
 		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
 		s += '.svg';
 		d.setAttribute("src", s);
-		d.setAttribute("index", 1+(index+i)%NB_PICS);
-		d.setAttribute("style", '');;
 		d = document.getElementById('label_'+i);
 		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
 		d.innerHTML = s;
@@ -338,40 +329,8 @@ $.loadListPics = function(index) {
 		if (p < 2)
 			p = NB_PICS - p;
 		d = document.getElementById('prevPics');
-		d.setAttribute('onClick', '$.loadListPics('+p+');$.resizeWindow();');
+		d.setAttribute('onClick', '$.loadListPics('+p+');');
 		d = document.getElementById('nextPics');
-		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');$.resizeWindow();');
+		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');');
 	}
-}
-
-$.newPic = function() {
-	/*var d = document.getElementsByClassName('shadow pic');
-	for (var i=d.length-1;i>=0;--i) {
-		var item = d[i];
-		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone();');
-	}
-	d = document.getElementsByClassName('toPlace');
-	for (var i=d.length-1;i>=0;--i) {
-		var item = d[i];
-		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone();');
-	}*/
-	$.resizeWindow();
-}
-
-$.newPicDone = function() {
-	var d = document.getElementsByClassName('newPic');
-	for (var i=d.length-1;i>=0;--i) {
-		var item = d[i];
-		if (item.getAttribute("src") == null) {
-			item.setAttribute("class",'toPlace');
-			item.setAttribute("style",'');
-		}
-		else {
-			item.setAttribute("class",'shadow pic');
-		}
-		item.setAttribute("onClick", "");
-	}
-	$.resizeWindow();
 }

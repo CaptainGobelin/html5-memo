@@ -33,7 +33,6 @@ $.checkLevel = function(level) {
 		var d = document.getElementById('answerButton');
 		d.setAttribute('class', 'submitLevel incorrect');
 	}
-	$.resizeWindow();
 }
 
 $.showVignettes = function() {

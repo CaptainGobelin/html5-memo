@@ -334,3 +334,35 @@ $.loadListPics = function(index) {
 		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');');
 	}
 }
+
+$.newPic = function() {
+	var d = document.getElementsByClassName('shadow pic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		item.setAttribute("class",'newPic');
+		item.setAttribute("onClick", '$.newPicDone();');
+	}
+	d = document.getElementsByClassName('toPlace');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		item.setAttribute("class",'newPic');
+		item.setAttribute("onClick", '$.newPicDone();');
+	}
+	$.resizeWindow();
+}
+
+$.newPicDone = function() {
+	var d = document.getElementsByClassName('newPic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		if (item.getAttribute("src") == null) {
+			item.setAttribute("class",'toPlace');
+			item.setAttribute("style",'');
+		}
+		else {
+			item.setAttribute("class",'shadow pic');
+		}
+		item.setAttribute("onClick", "");
+	}
+	$.resizeWindow();
+}

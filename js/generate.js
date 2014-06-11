@@ -330,6 +330,7 @@ $.loadListPics = function(index) {
 		s += '.svg';
 		d.setAttribute("src", s);
 		d.setAttribute("index", 1+(index+i)%NB_PICS);
+		d.setAttribute("style", '');;
 		d = document.getElementById('label_'+i);
 		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
 		d.innerHTML = s;
@@ -344,7 +345,7 @@ $.loadListPics = function(index) {
 }
 
 $.newPic = function() {
-	var d = document.getElementsByClassName('shadow pic');
+	/*var d = document.getElementsByClassName('shadow pic');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
@@ -355,7 +356,7 @@ $.newPic = function() {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
 		item.setAttribute("onClick", '$.newPicDone();');
-	}
+	}*/
 	$.resizeWindow();
 }
 

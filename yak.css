@@ -125,6 +125,16 @@ button:hover {
 	text-align: center; 
 }
 
+.centerLogo {
+	font-size:100%;
+	margin: 0%;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	height: auto;
+	text-align: center; 
+}
+
 .picsDiv {
 	height: 50%;
 }
@@ -162,8 +172,6 @@ button:hover {
 }
 
 .shadow {
-	width: 100px;
-	height: 100px;
 	-webkit-filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
 			filter: drop-shadow( 0px 0px 1px rgba(0,0,0,0.4) );
 }
@@ -498,7 +506,7 @@ button:hover {
 }
 
 .logoMenu {
-	width: 90%;
+	width: 95%;
 }
 
 .menuButtons {
@@ -729,6 +737,7 @@ th {
 	border-radius: 15px;
 	padding: 0%;
 	padding-top: 1%;
+	text-align:center;
 }
 
 .chooseLabel {
@@ -741,11 +750,6 @@ th {
 	margin: 0%;
 	height: 1%;
 	text-align: center;
-}
-
-.listPic {
-	width:9.4%;
-	height: 80%;
 }
 
 .listLabel {

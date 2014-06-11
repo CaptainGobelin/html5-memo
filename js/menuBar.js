@@ -30,7 +30,7 @@ $.openMenuBar = function() {
 	doc.setAttribute('onClick', '');
 	$menuBar = $("p.leftMenuOpen");
     $menuBar.empty();
-    var s = '<p class="center"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="margin-top:20%;width:100%;"></p>';
+    var s = '<p class="centerLogo"><img class="logoMenu" src="sysPics/LogoSerrure.svg" style="margin-top:20%;width:100%;"></p>';
     var page = window.location.toString().split(new RegExp("[/]+", "g"));
     s += '<p class="menuButtons">';
     s += '<p class="centerMenu lessMargin">';

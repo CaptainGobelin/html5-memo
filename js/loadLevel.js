@@ -95,7 +95,7 @@ $.loadLevel4 = function () {
 	$picsDiv.empty();
 	var s = '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Geai.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Un.svg">';
-	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-Lettres_ve.svg">';
+	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-Lettres_vai.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-Lettres_l.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Eau.svg">';
 	s+= '<img id="img_0" class="shadow pic" src="pics/PhonemesDessins-TraitMimi3_Haie.svg">';

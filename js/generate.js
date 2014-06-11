@@ -214,6 +214,7 @@ var WORDS_INFO = (function() {
 		'[eu][i]' : 'Oeil',
 		'[p][l][u][m]' : 'Plume',
 		'[ai][s][p][a][s]' : 'Espace',
+		'[i][a][k]' : 'Yak',
 
 		'[a]' : 'a',
 		'[i]' : 'i',
@@ -237,7 +238,13 @@ var WORDS_INFO = (function() {
 		'[t]' : 't',
 		'[v]' : 'v',
 		'[x]' : 'x',
-		'[z]' : 'z'
+		'[z]' : 'z',
+		'[ai][r]' : 'R',
+		'[k][a]' : 'K',
+		'[p][ai]' : 'P',
+		'[s][ai]' : 'C',
+		'[v][ai]' : 'V',
+		'[i][a]' : 'ya'
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -254,7 +261,7 @@ var WORDS_INFO = (function() {
 	};
 })();
 
-var NB_PICS = 95;
+var NB_PICS = 102;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;
@@ -322,6 +329,7 @@ $.loadListPics = function(index) {
 		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
 		s += '.svg';
 		d.setAttribute("src", s);
+		d.setAttribute("index", 1+(index+i)%NB_PICS);
 		d = document.getElementById('label_'+i);
 		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
 		d.innerHTML = s;
@@ -333,4 +341,36 @@ $.loadListPics = function(index) {
 		d = document.getElementById('nextPics');
 		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');');
 	}
+}
+
+$.newPic = function() {
+	var d = document.getElementsByClassName('shadow pic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		item.setAttribute("class",'newPic');
+		item.setAttribute("onClick", '$.newPicDone();');
+	}
+	d = document.getElementsByClassName('toPlace');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		item.setAttribute("class",'newPic');
+		item.setAttribute("onClick", '$.newPicDone();');
+	}
+	$.resizeWindow();
+}
+
+$.newPicDone = function() {
+	var d = document.getElementsByClassName('newPic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		if (item.getAttribute("src") == null) {
+			item.setAttribute("class",'toPlace');
+			item.setAttribute("style",'');
+		}
+		else {
+			item.setAttribute("class",'shadow pic');
+		}
+		item.setAttribute("onClick", "");
+	}
+	$.resizeWindow();
 }

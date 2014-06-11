@@ -10,7 +10,7 @@ $.loadCleofeeAbout = function(pwd) {
 	s += '• <a class="underlined" onClick="$.loadVersus1();">Créer un mot de passe fort : sécurité versus facilité</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadRebus1();">Le rébus comme moyen mnémotechnique</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadSecure1();">Déclaration de sécurité de vos données</a><br/>';
-	s += '• <a class="underlined" onClick="$.loadAuthors1();">À propos de auteurs et remerciements</a><br/>';
+	s += '• <a class="underlined" onClick="$.loadAuthors1();">À propos des auteurs et remerciements</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadLinks1();">Bibliographie et liens</a><br/>';
 	s += '</p>';
 	$cleoDiv.append(s);

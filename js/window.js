@@ -45,11 +45,6 @@ $.resizeWindow = function() {
 		item.setAttribute("style", 'width:'+myH+'px !IMPORTANT;border-radius:'+myH/3+'px;');
 	}
 	var w2 = $(window).width();
-	/*d = document.getElementsByClassName('tabVignettes');
-	for (var i=0;i<d.length;++i) {
-		var item = d[i];
-		item.setAttribute("style", 'max-height:'+(h2*0.88)+'px;');
-	}*/
 	d = document.getElementsByClassName('pic');
 	var n = 0;
 	var t = d.length;
@@ -68,7 +63,29 @@ $.resizeWindow = function() {
 	var newS = Math.min(newW, newH);
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];
-		item.setAttribute("style",'width:auto;height:'+newS+'px;test:'+n+','+t+','+newH+';');
+		item.setAttribute("style",'width:'+newS+'px;height:'+newS+'px;test:'+n+','+t+','+newH+';');
+	}
+	d = document.getElementsByClassName('newPic');
+	if (d[0] != undefined) {
+		n = 0;
+		t = (d.length-1)/2;
+		suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
+		act = 0;
+		r = 16/9;
+		do {
+			n++;
+			act = suiv;
+			suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
+		} while (Math.abs(suiv-r) < Math.abs(act-r));
+		if (t%n == 1)
+			n++;
+		newH = Math.floor(0.5*h2/(Math.floor(0.99+(t/n))));
+		newW = Math.floor((8/9)*h2/n);
+		newS = Math.min(newW, newH);
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style",'width:'+(newS*(t-1)/(2*t)-4)+'px;height:'+(newS*(t-1)/(2*t)-4)+'px;margin-top:'+(newS/2)+'px;margin-right:'+4+'px;');
+		}
 	}
 	d = document.getElementsByClassName('picsDiv');
 	for (var i=0;i<d.length;++i) {

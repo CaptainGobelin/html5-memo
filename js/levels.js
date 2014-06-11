@@ -9,7 +9,7 @@ var LEVELS = (function() {
 		'7' 		: 'mais où est donc or ni car',
 		'8' 		: 'dîner aux chandelles',
 		'9' 		: 'réel',
-		'10' 		: 'n\'y comptez pas',
+		'10' 		: 'n\'y compte pas',
 		'11' 		: 'papier rigolo',
 		'12' 		: 'rébus'
 	};

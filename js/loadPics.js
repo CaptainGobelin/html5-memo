@@ -24,10 +24,12 @@ $.picsWithPhon = function () {
 function privateGetPics() {
     $picsDiv = $("div.picsDiv");
     $picsDiv.empty();
+    $s = '<img class="toPlace">';
+    $picsDiv.append($s);
     for (var i=0;i<$splits.length-1;i++) {
         if ($splits[i] != "mute") {
             $s = '<img id="img_'+i+'" class="shadow pic" src="pics/' + $splits[i];
-            $s += '.svg" style="height:200px;width:200px;" onClick="$.showPicsList('+i+')">';
+            $s += '.svg" style="height:200px;width:200px;" onClick="$.showPicsList('+i+')"><img class="toPlace">';
             $picsDiv.append($s);
         }
     }

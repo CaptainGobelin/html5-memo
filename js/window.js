@@ -12,6 +12,11 @@ $.resizeWindow = function() {
 	}
 	var h2 = $(window).height();
 	var w = Math.max($(window).height(),$(window).width());
+	d = document.getElementsByClassName('listPic');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'padding-top:'+(3*h2/100)+'px;');
+	}
 	d = document.getElementsByClassName('inputIntro');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  

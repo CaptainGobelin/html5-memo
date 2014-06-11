@@ -756,7 +756,7 @@ th {
 
 .listPic {
 	width:9.4%;
-	max-height: 80%;
+	height: auto;
 }
 
 .listLabel {

@@ -338,9 +338,9 @@ $.loadListPics = function(index) {
 		if (p < 2)
 			p = NB_PICS - p;
 		d = document.getElementById('prevPics');
-		d.setAttribute('onClick', '$.loadListPics('+p+');');
+		d.setAttribute('onClick', '$.loadListPics('+p+');$.resizeWindow();');
 		d = document.getElementById('nextPics');
-		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');');
+		d.setAttribute('onClick', '$.loadListPics('+(index+9)%NB_PICS+');$.resizeWindow();');
 	}
 }
 

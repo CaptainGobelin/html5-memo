@@ -1,4 +1,8 @@
 $.resizeWindow = function() {
+	$(document).ready(privateResizeWindow());
+}
+
+function privateResizeWindow() {
 	var h = Math.min($(window).height(),$(window).width());
 	var d = document.getElementsByClassName('center');
 	for (var i=0;i<d.length;++i) {

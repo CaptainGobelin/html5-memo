@@ -345,7 +345,7 @@ $.loadListPics = function(index) {
 }
 
 $.newPic = function() {
-	/*var d = document.getElementsByClassName('shadow pic');
+	var d = document.getElementsByClassName('shadow pic');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
@@ -356,7 +356,7 @@ $.newPic = function() {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
 		item.setAttribute("onClick", '$.newPicDone();');
-	}*/
+	}
 	$.resizeWindow();
 }
 

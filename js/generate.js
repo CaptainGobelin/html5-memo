@@ -325,9 +325,9 @@ $.getPhonSplits = function(word) {
 $.loadListPics = function(index) {
 	for (var i=0;i<10;i++) {
 		var d = document.getElementById('list_'+i);
-		var s = 'pics/TraitMimiPNG/';
+		var s = 'pics/';
 		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
-		s += '.png';
+		s += '.svg';
 		d.setAttribute("src", s);
 		d.setAttribute("index", 1+(index+i)%NB_PICS);
 		d.setAttribute("style", '');;

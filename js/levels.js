@@ -43,18 +43,18 @@ $.showVignettes = function() {
 	}
 	$vignettes = $("p.allLevelsBg");
 	$vignettes.empty();
-	var s = '<table class="tabVignettes" style="width:100%;height:100%;"><tr><th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_Mario.svg\' onClick="$.hideVignettes();$.loadLevel1();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_EtoileDesCieux.svg\' onClick="$.hideVignettes();$.loadLevel2();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_HTML5.svg\' onClick="$.hideVignettes();$.loadLevel3();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_JaiUnVeloEtPasToi.svg\' onClick="$.hideVignettes();$.loadLevel4();"></th></tr>';
-	s += '<tr><th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_LaVieEstBelle.svg\' onClick="$.hideVignettes();$.loadLevel5();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_LeRoseauPlieMaisNeRomptPas.svg\' onClick="$.hideVignettes();$.loadLevel6();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_MaisOuEtDoncOrNiCar.svg\' onClick="$.hideVignettes();$.loadLevel7();"></th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_DinerAuxChandelles.svg\' onClick="$.hideVignettes();$.loadLevel8();"></th></tr>';
-	s += '<tr><th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_Reel.svg\' onClick="$.hideVignettes();$.loadLevel9();"</th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_NyComptePas.svg\' onClick="$.hideVignettes();$.loadLevel10();"</th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_PapierRigolo.svg\' onClick="$.hideVignettes();$.loadLevel11();"</th>';
-	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesJouer/RebusLevelDesign_Rebus.svg\' onClick="$.hideVignettes();$.loadLevel12();"</th></tr></table>';
+	var s = '<table class="tabVignettes" style="width:100%;height:100%;"><tr><th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_Mario.png\' onClick="$.hideVignettes();$.loadLevel1();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_EtoileDesCieux.png\' onClick="$.hideVignettes();$.loadLevel2();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_HTML5.png\' onClick="$.hideVignettes();$.loadLevel3();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_JaiUnVeloEtPasToi.png\' onClick="$.hideVignettes();$.loadLevel4();"></th></tr>';
+	s += '<tr><th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_LaVieEstBelle.png\' onClick="$.hideVignettes();$.loadLevel5();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_LeRoseauPlieMaisNeRomptPas.png\' onClick="$.hideVignettes();$.loadLevel6();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_MaisOuEtDoncOrNiCar.png\' onClick="$.hideVignettes();$.loadLevel7();"></th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_DinerAuxChandelles.png\' onClick="$.hideVignettes();$.loadLevel8();"></th></tr>';
+	s += '<tr><th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_Reel.png\' onClick="$.hideVignettes();$.loadLevel9();"</th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_NyComptePas.png\' onClick="$.hideVignettes();$.loadLevel10();"</th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_PapierRigolo.png\' onClick="$.hideVignettes();$.loadLevel11();"</th>';
+	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_Rebus.png\' onClick="$.hideVignettes();$.loadLevel12();"</th></tr></table>';
 	var t = window.setInterval(function() {
 		$vignettes.append(s);
 		$.resizeWindow();

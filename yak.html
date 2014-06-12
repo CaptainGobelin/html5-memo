@@ -93,7 +93,6 @@
 			  	drop: function(event, ui) {
 			  		ui.helper.data('dropped', true);
 			  		var old = $.findPic(window.event.clientX, window.event.clientY);
-			  		alert(old);
 			        $.newPicDone(old[0], old[1]);
 			        $.resizePics();
 			    },

@@ -322,6 +322,7 @@ $.loadListPics = function(index) {
 		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
 		s += '.svg';
 		d.setAttribute("src", s);
+		d.setAttribute("onClick", '$.newPic('+(3+(index+i)%NB_PICS)+');');
 		d = document.getElementById('label_'+i);
 		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
 		d.innerHTML = s;
@@ -335,27 +336,41 @@ $.loadListPics = function(index) {
 	}
 }
 
-$.newPic = function() {
+$.newPic = function(index) {
+	var k = 1;
 	var d = document.getElementsByClassName('shadow pic');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone();');
+		item.setAttribute("onClick", '$.newPicDone('+k+','+index+');');
+		k+=2;
 	}
+	k = 0;
 	d = document.getElementsByClassName('toPlace');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone();');
+		item.setAttribute("onClick", '$.newPicDone('+k+','+index+');');
+		k+=2;
 	}
 	$.resizeWindow();
 }
 
-$.newPicDone = function() {
+$.newPicDone = function(id, index) {
+	var k = 0;
 	var d = document.getElementsByClassName('newPic');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
-		if (item.getAttribute("src") == null) {
+		if (id == k) {
+			if (item.getAttribute("src") == null)
+				item.innerHTML = "<img class=toPlace>";
+			var s = 'pics/';
+			s += WORDS.getFromIndex(index);
+			s += '.svg';
+			item.setAttribute("class",'shadow pic');
+			item.setAttribute("src", s);
+		}
+		else if (item.getAttribute("src") == null) {
 			item.setAttribute("class",'toPlace');
 			item.setAttribute("style",'');
 		}
@@ -363,6 +378,7 @@ $.newPicDone = function() {
 			item.setAttribute("class",'shadow pic');
 		}
 		item.setAttribute("onClick", "");
+		k++;
 	}
 	$.resizeWindow();
 }

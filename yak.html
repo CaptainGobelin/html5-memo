@@ -75,18 +75,33 @@
 			$(document).ready(function() {
 			  // sets the draggable
 			  $('#chooseImage .drg').draggable({
-			  	start: function() {
+			  	start: function(event, ui) {
+			  		ui.helper.data('dropped', false);
 			        $.newPic($(this).attr('myIndex'));
 			        $.resizePics();
+			    },
+			    stop: function(event, ui) {
+			    	if (ui.helper.data('dropped') == false) {
+			    		$.newPicDoneDef();
+			        	$.resizePics();
+			        }
 			    },
 			  	revert: true, helper: "clone", containement: '#menuSuccess', scroll:false,
 			  	cursorAt:{top:56,left:56}
 			  });
 			  $('#picsDiv').droppable({
 			  	drop: function(event, ui) {
+			  		ui.helper.data('dropped', true);
 			  		var old = $.findPic(window.event.clientX, window.event.clientY);
+			  		alert(old);
 			        $.newPicDone(old[0], old[1]);
 			        $.resizePics();
+			    },
+			    out: function() {
+			    	ui.helper.data('dropped', false);
+			    },
+			    over: function() {
+			    	ui.helper.data('dropped', true);
 			    }
 			  });
 			});

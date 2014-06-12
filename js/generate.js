@@ -357,6 +357,27 @@ $.newPic = function(index) {
 	}
 }
 
+$.newPicDoneDef = function() {
+	var k = 0;
+	var d = document.getElementsByClassName('newPic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		if (item.getAttribute("src") == null) {
+			item.parentNode.removeChild(item);
+		}
+		else {
+			item.setAttribute("class",'shadow pic');
+		}
+		item.setAttribute("onClick", "");
+		k++;
+	}
+	$(".pic").before('<img class="toPlace">');
+	$picsDiv = $("div.picsDiv");
+    $s = '<img class="toPlace">';
+    $picsDiv.append($s);
+	$.resizeWindow();
+}
+
 $.newPicDone = function(id, index) {
 	var k = 0;
 	var d = document.getElementsByClassName('newPic');
@@ -391,13 +412,13 @@ $.findPic = function(x,y) {
 	var dist = 10000000;
 	var id = [0,0];
 	var d = document.getElementsByClassName('newPic');
-	for (var i=d.length-1;i>=0;--i) {
+	for (var i=0;i<d.length;++i) {
 		var rect = d[i].getBoundingClientRect();
-		var dX = Math.abs(x-(rect.right-rect.left)/2);
-		var dY = Math.abs(y-(rect.top-rect.bottom)/2);
-		var localDist = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
+		var dX = Math.pow(x-(rect.right+rect.left)/2,2);
+		var dY = Math.pow(y-(rect.top+rect.bottom)/2,2);
+		var localDist = Math.sqrt(dX+dY);
 		if (localDist < dist) {
-			id[0] = i;
+			id[0] = d[i].getAttribute("myId");
 			id[1] = d[i].getAttribute("myIndex");
 			dist = localDist;
 		}

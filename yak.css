@@ -125,6 +125,14 @@ button:hover {
 	text-align: center; 
 }
 
+.picsDiv {
+	pointer-events:none;
+}
+
+#myNewPic {
+	pointer-events:auto;
+}
+
 .centerLogo {
 	font-size:100%;
 	margin: 0%;
@@ -761,7 +769,7 @@ th {
 
 .listLabel {
 	display: inline-block;
-	height:20%;
+	height:15%;
 	width: 8.8%;
 	padding-right: 0.6%;
 	font-size: 80%;
@@ -804,3 +812,7 @@ th {
 .newPic:hover {
 	-webkit-animation: myAnim 1s infinite;
 }
+
+ #myNewPic {
+ 	display: inline;
+ }

@@ -44,16 +44,16 @@
 			<div id="chooseImage" class="chooseImage">
 				<input type="button" id="prevPics" class="arrowButton" onClick="$.loadListPics(1);$.resizeWindow();"/>
 				<input type="button" id="nextPics" class="arrowButton" onClick="$.loadListPics(19);$.resizeWindow();"/>
-				<img id="list_0" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Mat.png">
-				<img id="list_1" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_2" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_3" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_4" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_5" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_6" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_7" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_8" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_9" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_0" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Mat.png">
+				<img id="list_1" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_2" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_3" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_4" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_5" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_6" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_7" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_8" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_9" class="listPic drg" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
 				<br/>
 				<a id="label_0" class="listLabel">Test</a>
 				<a id="label_1" class="listLabel">Test</a>
@@ -67,25 +67,27 @@
 				<a id="label_9" class="listLabel">Test</a>
 			</div>
 		</div>
-		<p class="" id="menuContainer">
-			<p class="leftMenuClose mainBar" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
+		<p class="leftMenuClose mainBar" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
 			<img class="logoMenu" src="sysPics/Serrure.svg" style="margin-top:70%;width:40%;">
 		</p>
-			<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
-		</p>
+		<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
 		 <script type="text/javascript">
 			$(document).ready(function() {
 			  // sets the draggable
 			  $('#chooseImage .drg').draggable({
 			  	start: function() {
-			        $.newPic();
+			        $.newPic($(this).attr('myIndex'));
 			        $.resizePics();
 			    },
-			    stop: function() {
-			        $.newPicDone();
+			  	revert: true, helper: "clone", containement: '#menuSuccess', scroll:false,
+			  	cursorAt:{top:56,left:56}
+			  });
+			  $('#picsDiv').droppable({
+			  	drop: function(event, ui) {
+			  		var old = $.findPic(window.event.clientX, window.event.clientY);
+			        $.newPicDone(old[0], old[1]);
 			        $.resizePics();
-			    },
-			  	revert: true, helper: "clone"
+			    }
 			  });
 			});
   		</script>

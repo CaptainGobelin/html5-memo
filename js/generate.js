@@ -322,7 +322,7 @@ $.loadListPics = function(index) {
 		s += WORDS.getFromIndex(3+(index+i)%NB_PICS);
 		s += '.svg';
 		d.setAttribute("src", s);
-		d.setAttribute("onClick", '$.newPic('+(3+(index+i)%NB_PICS)+');');
+		d.setAttribute("myIndex", (3+(index+i)%NB_PICS));
 		d = document.getElementById('label_'+i);
 		s = WORDS_INFO.getFromIndex(1+(index+i)%NB_PICS);
 		d.innerHTML = s;
@@ -342,7 +342,8 @@ $.newPic = function(index) {
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone('+k+','+index+');');
+		item.setAttribute("myIndex", index);
+		item.setAttribute("myId", k);
 		k+=2;
 	}
 	k = 0;
@@ -350,7 +351,8 @@ $.newPic = function(index) {
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
-		item.setAttribute("onClick", '$.newPicDone('+k+','+index+');');
+		item.setAttribute("myIndex", index);
+		item.setAttribute("myId", k);
 		k+=2;
 	}
 }
@@ -383,4 +385,22 @@ $.newPicDone = function(id, index) {
     $s = '<img class="toPlace">';
     $picsDiv.append($s);
 	$.resizeWindow();
+}
+
+$.findPic = function(x,y) {
+	var dist = 10000000;
+	var id = [0,0];
+	var d = document.getElementsByClassName('newPic');
+	for (var i=d.length-1;i>=0;--i) {
+		var rect = d[i].getBoundingClientRect();
+		var dX = Math.abs(x-(rect.right-rect.left)/2);
+		var dY = Math.abs(y-(rect.top-rect.bottom)/2);
+		var localDist = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
+		if (localDist < dist) {
+			id[0] = i;
+			id[1] = d[i].getAttribute("myIndex");
+			dist = localDist;
+		}
+	}
+	return id;
 }

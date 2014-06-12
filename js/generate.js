@@ -353,7 +353,6 @@ $.newPic = function(index) {
 		item.setAttribute("onClick", '$.newPicDone('+k+','+index+');');
 		k+=2;
 	}
-	$.resizeWindow();
 }
 
 $.newPicDone = function(id, index) {
@@ -362,8 +361,8 @@ $.newPicDone = function(id, index) {
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		if (id == k) {
-			if (item.getAttribute("src") == null)
-				item.innerHTML = "<img class=toPlace>";
+			/*if (item.getAttribute("src") == null)
+				item.innerHTML = "<img class=toPlace>";*/
 			var s = 'pics/';
 			s += WORDS.getFromIndex(index);
 			s += '.svg';
@@ -371,8 +370,7 @@ $.newPicDone = function(id, index) {
 			item.setAttribute("src", s);
 		}
 		else if (item.getAttribute("src") == null) {
-			item.setAttribute("class",'toPlace');
-			item.setAttribute("style",'');
+			item.parentNode.removeChild(item);
 		}
 		else {
 			item.setAttribute("class",'shadow pic');
@@ -380,5 +378,9 @@ $.newPicDone = function(id, index) {
 		item.setAttribute("onClick", "");
 		k++;
 	}
+	$(".pic").before('<img class="toPlace">');
+	$picsDiv = $("div.picsDiv");
+    $s = '<img class="toPlace">';
+    $picsDiv.append($s);
 	$.resizeWindow();
 }

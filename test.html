@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery Drag and Drop</title>
+
+    <script type="text/javascript" src="jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
+<script type="text/javascript"><!--
+$(document).ready(function() {
+  // sets the draggable
+  $('#drag .drg').draggable({
+    cursor: 'move',          // sets the cursor apperance
+    revert: 'valid'
+  });
+});
+--></script>
+</head>
+<body>
+<div id="drag">
+ Drag these images:<br />
+ <img src="pics/PhonemesDessins-TraitMimi3_Mat.svg" alt="circle" width="45" height="45" class="drg" />
+ <img src="pics/PhonemesDessins-TraitMimi3_Mat.svg" alt="triangle" width="65" height="55" class="drg" />
+ <img src="pics/PhonemesDessins-TraitMimi3_Mat.svg" alt="rhomb" width="70" height="55" class="drg" />
+ <div class="drg">DIV with some content. Click and drag</div>
+</div>
+</body>
+</html>

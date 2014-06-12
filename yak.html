@@ -11,8 +11,9 @@
 
 		<link rel="stylesheet" href="yak.css" />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
 
-		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/cookies.js"></script>
 		<script type="text/javascript" src="js/window.js"></script>
 		<script type="text/javascript" src="js/menuBar.js"></script>
@@ -39,19 +40,19 @@
 			<p class="centerInput chooseLabel">
 				<label style="font-style:italic;">Bibliothèque de dessins:</label>
 			</p>
-			<p id="chooseImage" class="chooseImage">
+			<div id="chooseImage" class="chooseImage">
 				<input type="button" id="prevPics" class="arrowButton" onClick="$.loadListPics(1);$.resizeWindow();"/>
 				<input type="button" id="nextPics" class="arrowButton" onClick="$.loadListPics(19);$.resizeWindow();"/>
-				<img id="list_0" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Mat.png">
-				<img id="list_1" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_2" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_3" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_4" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_5" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_6" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_7" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_8" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
-				<img id="list_9" class="shadow listPic" onClick="$.newPic();" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_0" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Mat.png">
+				<img id="list_1" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_2" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_3" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_4" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_5" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_6" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_7" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_8" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
+				<img id="list_9" class="listPic drg" onClick="" src="pics/TraitMimiPNG/PhonemesDessins-TraitMimi3_Riz.png">
 				<br/>
 				<a id="label_0" class="listLabel">Test</a>
 				<a id="label_1" class="listLabel">Test</a>
@@ -63,7 +64,7 @@
 				<a id="label_7" class="listLabel">Test</a>
 				<a id="label_8" class="listLabel">Test</a>
 				<a id="label_9" class="listLabel">Test</a>
-			</p>
+			</div>
 		</div>
 		<p class="" id="menuContainer">
 			<p class="leftMenuClose mainBar" id="menuBar" onClick="$.openMenuBar();$.openMenuBg();">
@@ -71,6 +72,22 @@
 		</p>
 			<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
 		</p>
+		 <script type="text/javascript">
+			$(document).ready(function() {
+			  // sets the draggable
+			  $('#chooseImage .drg').draggable({
+			  	start: function() {
+			        $.newPic();
+			        $.resizePics();
+			    },
+			    stop: function() {
+			        $.newPicDone();
+			        $.resizePics();
+			    },
+			  	revert: true, helper: "clone"
+			  });
+			});
+  		</script>
     	<script type="text/javascript">
     		$.resizeWindow();
     		$.loadListPics(10);

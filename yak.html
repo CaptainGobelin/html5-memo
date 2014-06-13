@@ -90,6 +90,7 @@
 			  	cursorAt:{top:56,left:56}
 			  });
 			  $('#picsDiv').droppable({
+			  	accept: "#chooseImage .drg",
 			  	drop: function(event, ui) {
 			  		ui.helper.data('dropped', true);
 			  		var old = $.findPic(window.event.clientX, window.event.clientY);
@@ -101,6 +102,16 @@
 			    },
 			    over: function() {
 			    	ui.helper.data('dropped', true);
+			    }
+			  });
+			  $('#chooseImage').droppable({
+			  	accept: "#picsDiv .pic",
+			  	drop: function(event, ui) {
+			        $(ui.draggable).remove();
+			        $.newPic(0);
+			        $.newPicDoneDef();
+			        $.removeLast();
+			        $.resizePics();
 			    }
 			  });
 			});

@@ -125,10 +125,6 @@ button:hover {
 	text-align: center; 
 }
 
-.picsDiv {
-	pointer-events:none;
-}
-
 #myNewPic {
 	pointer-events:auto;
 }
@@ -806,6 +802,7 @@ th {
 }
 
 .pic {
+	z-index: 31;
 	-webkit-transition: 0.6s ease-out;
 }
 

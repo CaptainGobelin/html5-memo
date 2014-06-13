@@ -338,7 +338,7 @@ $.loadListPics = function(index) {
 
 $.newPic = function(index) {
 	var k = 1;
-	var d = document.getElementsByClassName('shadow pic');
+	var d = document.getElementsByClassName('pic');
 	for (var i=d.length-1;i>=0;--i) {
 		var item = d[i];
 		item.setAttribute("class",'newPic');
@@ -366,7 +366,7 @@ $.newPicDoneDef = function() {
 			item.parentNode.removeChild(item);
 		}
 		else {
-			item.setAttribute("class",'shadow pic');
+			item.setAttribute("class",'pic');
 		}
 		item.setAttribute("onClick", "");
 		k++;
@@ -389,14 +389,14 @@ $.newPicDone = function(id, index) {
 			var s = 'pics/';
 			s += WORDS.getFromIndex(index);
 			s += '.svg';
-			item.setAttribute("class",'shadow pic');
+			item.setAttribute("class",'pic');
 			item.setAttribute("src", s);
 		}
 		else if (item.getAttribute("src") == null) {
 			item.parentNode.removeChild(item);
 		}
 		else {
-			item.setAttribute("class",'shadow pic');
+			item.setAttribute("class",'pic');
 		}
 		item.setAttribute("onClick", "");
 		k++;
@@ -405,6 +405,7 @@ $.newPicDone = function(id, index) {
 	$picsDiv = $("div.picsDiv");
     $s = '<img class="toPlace">';
     $picsDiv.append($s);
+    $('#picsDiv .pic').draggable({revert: true, helper: "clone", containement: '#menuSuccess', scroll:false});
 	$.resizeWindow();
 }
 
@@ -424,4 +425,9 @@ $.findPic = function(x,y) {
 		}
 	}
 	return id;
+}
+
+$.removeLast = function() {
+	d = document.getElementsByClassName('toPlace');
+	d[d.length-1].parentNode.removeChild(d[d.length-1]);
 }

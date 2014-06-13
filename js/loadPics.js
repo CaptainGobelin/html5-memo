@@ -28,12 +28,12 @@ function privateGetPics() {
     $picsDiv.append($s);
     for (var i=0;i<$splits.length-1;i++) {
         if ($splits[i] != "mute") {
-            $s = '<img id="img_'+i+'" class="shadow pic" src="pics/' + $splits[i];
-            $s += '.svg" style="height:200px;width:200px;" ><img class="toPlace">';
+            var myS = $('<img class="pic" src="pics/'+$splits[i]+'.svg"></img>');
+            $picsDiv.append(myS);
             $picsDiv.append($s);
         }
-    }
-    $.hidePicsList();
+    };
+    $('#picsDiv .pic').draggable({revert: true, helper: "clone", containement: '#menuSuccess', scroll:false});
 }
 
 $.showPhon = function(phonned) {

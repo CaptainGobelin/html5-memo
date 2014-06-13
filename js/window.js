@@ -64,7 +64,7 @@ $.privateResizeWindow = function() {
 	d = document.getElementsByClassName('leftMenu');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
-		item.setAttribute("style", 'height:'+(0.85*h2/20)+'px;font-size: '+(0.64*5*h2/100)+'px;');
+		item.setAttribute("style", 'height:'+(0.85*h2/20)+'px;font-size: '+(0.60*5*h2/100)+'px;');
 	}
 	var w = Math.max($(window).height(),$(window).width());
 	d = document.getElementsByClassName('listPic');

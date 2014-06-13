@@ -100,6 +100,12 @@ $.privateResizeWindow = function() {
 		item.setAttribute("style", 'width:'+myH+'px !IMPORTANT;border-radius:'+myH/3+'px;');
 	}
 	var w2 = $(window).width();
+	d = document.getElementsByClassName('cleoTip');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		var myH = item.offsetHeight;
+		item.setAttribute("style", 'font-size:'+w2/48+'px;');
+	}
 	d = document.getElementsByClassName('pic');
 	var n = 0;
 	var t = d.length;

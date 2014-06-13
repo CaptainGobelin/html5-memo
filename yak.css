@@ -86,35 +86,11 @@ label {
 	max-width: 100%;
 }
 
-input:hover, textarea:hover,
-input:focus, textarea:focus { 
-	/*border-color: #222222; 
-	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;*/
-}
-
 .form label { 
 	margin-left: 10px; 
 	color: #898989; 
 	display: block;
 	font-size: 64%;
-}
-
-button {
-	/*font-family: 'Ubuntu', sans-serif;
-	font-size:100%;
-	color: #da620b;
-	border:1px solid #d5d5d5;
-	background-color:white;
-	text-align:center;
-	background: #FFFFFF url('bg_form.png') left top repeat-x;
-	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
-	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;*/
-}
-
-button:hover {
-	/*background-color:#da620b;
-	color:white;*/
 }
 
 .picsDiv, .phonDiv, .listDiv, .center, .centerMenu,.centerInput {
@@ -637,7 +613,7 @@ button:hover {
 	position: absolute;
 	top: 15%;
 	left: 0%;
-	width: 60%;
+	width: 66%;
 	min-height: 12%;
 	color: black;
 	border: solid 2.5px #000000;
@@ -647,7 +623,7 @@ button:hover {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 	font-size: 19px;
-	padding-right: 8%;
+	padding-right: 2%;
 	padding-left: 2%;
 	text-align: left;
 	padding-top: 2%;
@@ -701,7 +677,8 @@ button:hover {
 }
 
 .underlined {
-	text-decoration:underline
+	text-decoration:underline;
+	cursor:  pointer;
 }
 
 .allLevelsBg {

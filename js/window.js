@@ -61,6 +61,11 @@ $.privateResizeWindow = function() {
 		item.setAttribute("style", 'height:'+(9*h/100)+'px;font-size: '+(7*h/100)+'px;');
 	}
 	var h2 = $(window).height();
+	d = document.getElementsByClassName('leftMenu');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		item.setAttribute("style", 'height:'+(0.85*h2/20)+'px;font-size: '+(0.64*5*h2/100)+'px;');
+	}
 	var w = Math.max($(window).height(),$(window).width());
 	d = document.getElementsByClassName('listPic');
 	for (var i=0;i<d.length;++i) {
@@ -87,11 +92,6 @@ $.privateResizeWindow = function() {
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		item.setAttribute("style", 'height:'+(2*h/10)+'px;font-size: '+(20*h/100)+'px;');
-	}
-	d = document.getElementsByClassName('leftMenu');
-	for (var i=0;i<d.length;++i) {
-		var item = d[i];  
-		item.setAttribute("style", 'height:'+(0.65*2*h/10)+'px;font-size: '+(0.64*20*h/100)+'px;');
 	}
 	d = document.getElementsByClassName('colorButton');
 	for (var i=0;i<d.length;++i) {

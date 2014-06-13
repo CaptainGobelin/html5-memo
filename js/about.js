@@ -188,8 +188,8 @@ $.loadVersus10 = function() {
 	$cleoSpeech.empty();
 	var s = 'Imaginez que quelqu’un essaye de forcer votre mot de<br/>';
 	s += 'passe: s’il est mal choisi, sa <a class="toColor">complexité implique plusieurs<br/>';
-	s += 'mois de tentatives</a>, mais s’il est fort, il faudrait <a class="toColor">des miliers<br/>';
-	s += 'd’années</a>!<br/> S’il est plutôt simple et donc rapide à découvrir, il<br/>';
+	s += 'mois de tentatives</a>, mais s’il est fort, il faudrait <a class="toColor">des milliers<br/>';
+	s += 'd’années</a>! S’il est plutôt simple et donc rapide à découvrir, il<br/>';
 	s += 'suffit de le changer régulièrement pour être tranquille.<br/>';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -240,7 +240,7 @@ $.loadVersus13 = function() {
 	$cleoSpeech.empty();
 	var s = 'Mais se rappeler de son mot de passe, c’est comme<br/>';
 	s += 'avoir son <a class="toColor">trousseau de clé en poche plutôt qu’au fond<br/>';
-	s += 'de son sac</a>!<br/> On ne perd pas de temps tout en s’épargnant<br/>';
+	s += 'de son sac</a>! On ne perd pas de temps tout en s’épargnant<br/>';
 	s += 'cette pointe d’angoisse lorsqu’on commence à craindre<br/>';
 	s += 'd’avoir perdu son sésame!';
 	$cleoSpeech.append(s);
@@ -442,7 +442,7 @@ $.loadSecure4 = function() {
 	$cleoSpeech.empty();
 	var s = 'Si vous avez été <a class="toColor">victime de vol de mot de passe</a>,<br/>';
 	s += 'voici les gestes de <a class="toColor">premiers secours</a>:<br/><br/>';
-	s += '• Accéder à votre/vos compte/s et <a class="toColor">changer immédiatement le mot de passe</a>.<br/>';
+	s += '• Accéder à votre/vos compte/s et <a class="toColor">changer<br/> immédiatement le mot de passe</a>.<br/>';
 	s += '• <a class="toColor">Contacter l’administrateur</a> ou le support<br/>';
 	s += 'des détenteurs de l’application pour reporter la fraude.<br/>';
 	s += '• Si vos comptes ont été volés car l’appareil qui les<br/>';
@@ -514,7 +514,7 @@ $.loadAuthors3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = '<a class="toColor">Jérémy Morel</a> a fait chauffer ses méninges pour réaliser<br/>';
-	s += 'les caprices de Camille, en <a class="toColor">programmant</a> haut la main l’intégralité<br/>';
+	s += 'les caprices de Camille, en <a class="toColor">programmant</a> haut la main<br/> l’intégralité ';
 	s += 'des <a class="toColor">fonctionnalités</a> de Mémo de passe.<br/>';
 	s += 'Grâce à lui, cette application web s’adapte à tous<br/>';
 	s += 'les formats d’écran et transforme tout ce que vous écrivez en rébus!';
@@ -531,7 +531,7 @@ $.loadAuthors3 = function() {
 $.loadAuthors4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Nous avons beaucoup apprécié cette <a class="toColor">collaboration</a> enrichissante<br/>';
+	var s = 'Nous avons beaucoup apprécié cette <a class="toColor">collaboration</a><br/>enrichissante ';
 	s += 'd’échanges entre nos deux formations, qui sont on ne peut plus <a class="toColor">complémentaires</a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -546,8 +546,8 @@ $.loadAuthors4 = function() {
 $.loadAuthors5 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Nous <a class="toColor">remercions</a> chaleureusement les <a class="toColor">directions</a> de nos deux<br/>';
-	s += 'filières de nous avoir permis de mener ce travail ensemble ainsi<br/>';
+	var s = 'Nous <a class="toColor">remercions</a> chaleureusement les <a class="toColor">directions</a> de nos <br/>deux ';
+	s += 'filières de nous avoir permis de mener ce travail <br/>ensemble ainsi ';
 	s += 'que le <a class="toColor">jury</a> d’examen.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -563,10 +563,10 @@ $.loadAuthors6 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous <a class="toColor">remercions</a> également nos <a class="toColor">professeurs</a>, nos <a class="toColor">familles</a><br/>';
-	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">soutenus</a> tout au long de ce projet,<br/>';
-	s += 'qui ont enduré des heures de <a class="toColor">beta testing</a> pour nous, donné<br/>';
-	s += 'leurs <a class="toColor">avis</a>, exprimé leurs <a class="toColor">interrogations</a> et proposé<br/>';
-	s += 'leurs <a class="toColor">idées</a>, et même été sources d’<a class="toColor">inspiration</a> à leur insu!';
+	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">soutenus</a> tout au long de ce <br/>projet, ';
+	s += 'qui ont enduré des heures de <a class="toColor">beta testing</a> pour <br/>nous, donné ';
+	s += 'leurs <a class="toColor">avis</a>, exprimé leurs <a class="toColor">inter-<br/>rogations</a> et proposé ';
+	s += 'leurs <a class="toColor">idées</a>, et même été sources <br/>d’<a class="toColor">inspiration</a> à leur insu!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();

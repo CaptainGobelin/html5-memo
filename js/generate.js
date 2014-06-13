@@ -405,7 +405,7 @@ $.newPicDone = function(id, index) {
 	$picsDiv = $("div.picsDiv");
     $s = '<img class="toPlace">';
     $picsDiv.append($s);
-    $('#picsDiv .pic').draggable({revert: true, helper: "clone", containement: '#menuSuccess', scroll:false});
+    $('#picsDiv .pic').draggable({cursorAt:{bottom:56,left:56},revert: true, helper: "clone", containement: '#menuSuccess', scroll:false});
 	$.resizeWindow();
 }
 

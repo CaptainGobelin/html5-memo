@@ -803,7 +803,6 @@ th {
 
 .pic {
 	z-index: 31;
-	-webkit-transition: 0.6s ease-out;
 }
 
 .newPic:hover {

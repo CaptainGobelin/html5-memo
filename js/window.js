@@ -25,9 +25,9 @@ $.resizePics = function () {
 		item.setAttribute("style",'width:'+newS+'px;height:'+newS+'px;test:'+n+','+t+','+newH+';');
 	}
 	d = document.getElementsByClassName('newPic');
-	if (d[0] != undefined) {
+	if (d.length > 0) {
 		n = 0;
-		t = (d.length-1)/2;
+		t = Math.max(2,(d.length-1)/2);
 		suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
 		act = 0;
 		r = 16/9;
@@ -121,9 +121,9 @@ $.privateResizeWindow = function() {
 		item.setAttribute("style",'width:'+newS+'px;height:'+newS+'px;test:'+n+','+t+','+newH+';');
 	}
 	d = document.getElementsByClassName('newPic');
-	if (d[0] != undefined) {
+	if (d.length > 0) {
 		n = 0;
-		t = (d.length-1)/2;
+		t = Math.max((d.length-1)/2,1);
 		suiv = (n+1)/Math.floor(0.99+(t/(n+1)));
 		act = 0;
 		r = 16/9;

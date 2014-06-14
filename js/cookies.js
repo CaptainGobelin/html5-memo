@@ -19,5 +19,6 @@ $.getCookie = function(cname) {
 $.deleteCookies = function() {
 	document.cookie = 'color =; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	document.cookie = 'intro =; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	document.cookie = 'intro2 =; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	document.cookie = 'hidePwd =; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }

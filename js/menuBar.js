@@ -88,10 +88,10 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Aide de Cléofée:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone button1" id="buttonSelected" onClick=\'$.setCookie("intro","false",1);$.isSelected();\'/> oui';
+	s += '<input type="button" value=" " class="colorButton colorNone button1" id="buttonSelected" onClick=\'$.setCookie("intro","false",1);$.setCookie("intro2","false",1);$.isSelected();\'/> oui';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone button2" onClick=\'$.setCookie("intro","true",1);$.isSelected();\'/> non';
+	s += '<input type="button" value=" " class="colorButton colorNone button2" onClick=\'$.setCookie("intro","true",1);$.setCookie("intro2","true",1);$.isSelected();\'/> non';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';

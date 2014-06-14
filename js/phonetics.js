@@ -1,13 +1,13 @@
 var phon = [
 ['[a]','a','Oi','aNN','','à','â','aILL','','','','','','','','','','','',''],
-['[eu]','e','eu','~oeu','oe!N','ILLe&[','uM[','','','','','','','','','','','','',''],
+['[eu]','e','eu','~oeu','oe§N','ILLe&[','uM[','','','','','','','','','','','','',''],
 ['[i]','i','y','ill','iNN_','î','ï','EIll','','','','','','','','','','','',''],
-['[in]','in!_','un!_','ain!_','ein!_','umB','umP','imB','imP','*en&[','*IenT[','yn!_','','','','','','','',''],
+['[in]','in§_','un§_','ain§_','ein§_','umB','umP','imB','imP','¤en&[','¤IenT[','yn§_','','','','','','','',''],
 ['[o]','o','au','eau','oNN','ô','ö','oo','','','','','','','','','','','',''],
 ['[u]','u','ù','Uë','ü','','','','','','','','','','','','','','',''],
-['[on]','on!_','omP','omB','','','','','','','','','','','','','','','',''],
+['[on]','on§_','omP','omB','','','','','','','','','','','','','','','',''],
 ['[ou]','ou','oI','oY','où','CooKIE','','','','','','','','','','','','','',''],
-['[an]','an!_','en!_','amB','amP','emB','emP','','','','','','','','','','','','',''],
+['[an]','an§_','en§_','amB','amP','emB','emP','','','','','','','','','','','','',''],
 ['[ai]','ai','[esT[','e~~','[~eS[','er&[','é','è','ê','ë','ed&[','aî','ez[','eL[','eF&[','[eX','et&[','ei','eM&[',''],
 ['[b]','b','be&[','bb','[b[','','','','','','','','','','','','','','',''],
 ['[k]','c','k','q','qu','ch~','cc','ck','[c[','','','','','','','','','','',''],
@@ -27,7 +27,7 @@ var phon = [
 ['[v]','v','w','','','','','','','','','','','','','','','','',''],
 ['[x]','x','[x[','','','','','','','','','','','','','','','','',''],
 ['[z]','z','_s_','_s[_','_x[_','','','','','','','','','','','','','','',''],
-['-','d&[','h','p&[','t&[','[ESt[!_','s[','x[','![*e&[','g&[','MAIs[','$[','','Mpt[','','','','','',''],
+['-','d&[','h','p&[','t&[','[ESt[§_','s[','x[','§[¤e&[','g&[','MAIs[','$[','','Mpt[','','','','','',''],
 ['[p]#[ou]#[in]','.','','','','','','','','','','','','','','','','','',''],
 ['[d]#[o]#[l]#[a]#[r]','$','','','','','','','','','','','','','','','','','',''],
 ['[star]','*','','','','','','','','','','','','','','','','','',''],
@@ -54,9 +54,9 @@ var phon = [
 _ : isVowel
 ~ : is Consonnant
 [ : stop word
-* : any letter
+¤ : any letter
 & : skip plural "s"
-! : negative cond
+§ : negative cond
 A-Z : check letter
 < : same letter
 1 : any a form
@@ -115,7 +115,7 @@ $.strCompare = function(rule, word, pos, len) {
 	var shift = 0;
 	var negative = false;
 	for (var i=0;i<ruleSize[0];i++) {
-		if (rule[i] == '!') {
+		if (rule[i] == '§') {
 			negative = true;
 			i++;
 		}
@@ -131,7 +131,7 @@ $.strCompare = function(rule, word, pos, len) {
 		else if (rule[i] == '[') {
 			test = test && ($.endChar(word, pos-ruleSize[0]+i)!=negative);
 		}
-		else if (rule[i] == '*') {
+		else if (rule[i] == '¤') {
 			test = test && ($.isLetter(word, pos-ruleSize[0]+i)!=negative);
 		}
 		/*else if (rule[i] == '1') {
@@ -167,7 +167,7 @@ $.strCompare = function(rule, word, pos, len) {
 	shift = ruleSize[0] + ruleSize[1];
 	var tempShift = 0;
 	for (var i=0;i<ruleSize[2];i++) {
-		if (rule[i+shift] == '!') {
+		if (rule[i+shift] == '§') {
 			negative = true;
 			i++;
 			tempShift++;;
@@ -184,7 +184,7 @@ $.strCompare = function(rule, word, pos, len) {
 		else if (rule[i+shift] == '[') {
 			test = test && ($.endChar(word, pos+i+ruleSize[1]-tempShift)!=negative);
 		}
-		else if (rule[i+shift] == '*') {
+		else if (rule[i+shift] == '¤') {
 			test = test && ($.isLetter(word, pos+i+ruleSize[1]-tempShift)!=negative);
 		}
 		/*else if (rule[i+shift] == '1') {

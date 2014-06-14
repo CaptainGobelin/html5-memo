@@ -96,10 +96,10 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("hidePwd","false",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("hidePwd","false",1);$.isSelected();$.showPwd();\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("hidePwd","true",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("hidePwd","true",1);$.isSelected();$.showPwd();\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Quitter si inactivité:</p>';

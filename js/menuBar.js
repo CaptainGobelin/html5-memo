@@ -96,10 +96,10 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Menu création:</p>';
 	s += '<p class="leftMenu">';
-	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("showPwd","true",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button3" onClick=\'$.setCookie("hidePwd","false",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe masqué (●●●●●)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu">'
-	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("showPwd","false",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
+	s += '<input type="button" value=" " class="colorButton colorNone button4" onClick=\'$.setCookie("hidePwd","true",1);$.isSelected();\'/><a style="font-size:70%;"> mot de passe visible (salut)</a>';
 	s += '</p>';
 	s += '<p class="leftMenu"></p>';
 	s += '<p class="leftMenu">Quitter si inactivité:</p>';
@@ -162,13 +162,13 @@ $.isSelected = function() {
 		var d = document.getElementsByClassName('button1')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
-	var show = $.getCookie("showPwd");
+	var show = $.getCookie("hidePwd");
 	if (show == "true") {
-		var d = document.getElementsByClassName('button3')[0];
+		var d = document.getElementsByClassName('button4')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	else {
-		var d = document.getElementsByClassName('button4')[0];
+		var d = document.getElementsByClassName('button3')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
 	var stop = $.getCookie("stopTimer");

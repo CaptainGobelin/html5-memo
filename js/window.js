@@ -174,6 +174,7 @@ $.privateResizeWindow = function() {
 	}
 	$.resizeTipPanel();
 	$.menuColor();
+	$.showPwd();
 }
 
 $.resizeTipPanel = function() {
@@ -221,5 +222,16 @@ $.menuColor = function() {
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		item.setAttribute('style', 'color:'+color+';');
+	}
+}
+
+$.showPwd = function() {
+	var d = document.getElementsByClassName('leftMenuClose');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		if ($.getCookie("hidePwd") == "true")
+			item.setAttribute('type', 'password');
+		else
+			item.setAttribute('type', 'text');
 	}
 }

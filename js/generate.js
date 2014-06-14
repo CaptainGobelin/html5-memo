@@ -35,7 +35,7 @@ var WORDS = (function() {
 		'[a][ch]'	: 'PhonemesDessins-TraitMimi3_Hache',
 		'[ai]'	: 'PhonemesDessins-TraitMimi3_Haie',
 		'[ou]'	: 'PhonemesDessins-TraitMimi3_Houx',
-		'[u][i][t]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
+		'[u][i][t][r]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
 		'[l][a][r]'	: 'PhonemesDessins-TraitMimi3_Lard',
 		'[l][a][v]'	: 'PhonemesDessins-TraitMimi3_Lave',
 		'[m][ai]'	: 'PhonemesDessins-TraitMimi3_Mai',
@@ -75,6 +75,16 @@ var WORDS = (function() {
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
 		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace',
 		'[i][a][k]' : 'PhonemesDessins-TraitMimi3_Yak',
+		'[z][o][r][o]'	: 'PhonemesDessins-TraitMimi3_ZorroZero',
+
+		'[star]' : 'PhonemesDessins-TraitMimi3_Etoile',
+		'[plus]' : 'PhonemesDessins-TraitMimi3_Plus',
+		'[pInterro]' : 'PhonemesDessins-TraitMimi3_PoingInterro',
+		'[pExcla]' : 'PhonemesDessins-TraitMimi3_PoingExcla',
+		'[pVirgule]' : 'PhonemesDessins-TraitMimi3_PoingVirgule',
+		'[slash]' : 'PhonemesDessins-TraitMimi3_Slash',
+		'[bSlash]' : 'PhonemesDessins-TraitMimi3_BackSlash',
+		'[tiret]' : 'PhonemesDessins-TraitMimi3_Tiret',
 
 		'[a]' : 'PhonemesDessins-Lettres_a',
 		'[i]' : 'PhonemesDessins-Lettres_i',
@@ -123,7 +133,9 @@ var WORDS = (function() {
 		'[s][ai][r][k][l]' : 'PhonemesDessins-TraitMimi3_Rond',
 		'[p][l][u][m][eu]' : 'PhonemesDessins-TraitMimi3_Plume',
 		'[dos]'	: 'PhonemesDessins-TraitMimi3_Dos',
-		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure'
+		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure',
+		'[huit]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
+		'[zero]'	: 'PhonemesDessins-TraitMimi3_ZorroZero'
 	};
 	return {
 		get: function(name) { return private[name]; },
@@ -214,6 +226,17 @@ var WORDS_INFO = (function() {
 		'[eu][i]' : 'Oeil',
 		'[p][l][u][m]' : 'Plume',
 		'[ai][s][p][a][s]' : 'Espace',
+		'[i][a][k]' : 'Yak',
+		'[z][o][r][o]'	: 'Zorro/Zéro',
+
+		'[star]' : 'Etoile',
+		'[plus]' : 'Plus',
+		'[pInterro]' : 'Point Interro',
+		'[pExcla]' : 'Point Excla',
+		'[pVirgule]' : 'Point Virgule',
+		'[slash]' : 'Slash',
+		'[bSlash]' : 'Backslash',
+		'[tiret]' : 'Tiret',
 
 		'[a]' : 'a',
 		'[i]' : 'i',
@@ -254,7 +277,7 @@ var WORDS_INFO = (function() {
 	};
 })();
 
-var NB_PICS = 95;
+var NB_PICS = 104;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;

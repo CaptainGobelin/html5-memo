@@ -14,8 +14,16 @@ $.ruleLength = function(rule) {
 }
 
 $.isLetter = function(word, pos) {
-    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç.$';
-    for (var i=0;i<41;i++)
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç.$*/\\?!;+-0123456789';
+    for (var i=0;i<letters.length;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isLetterB = function(word, pos) {
+    var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç$';
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -25,7 +33,7 @@ $.isVowel = function(word, pos) {
     if (word.length <= pos)
         return false;
     var letters = 'aeiouyéèêëàâîïôöùü';
-    for (var i=0;i<18;i++)
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -35,7 +43,7 @@ $.isConsonant = function(word, pos) {
     if (word.length <= pos)
         return false;
     var consonant = "bcdfghjklmnpqrstvwxzç";
-    for (var i=0;i<21;i++)
+    for (var i=0;i<consonant.length;i++)
         if (word[pos] == consonant[i])
             return true;
     return false;
@@ -62,7 +70,7 @@ $.doubleLetter = function(word, pos) {
 $.endChar = function(word, pos) {
     if (pos >= word.length)
         return true;
-    if (!$.isLetter(word, pos))
+    if (!$.isLetterB(word, pos))
         return true;
     return false;
 }
@@ -81,7 +89,7 @@ $.isAccE = function(word, pos) {
     if (word.length <= pos)
         return false;
     var letters = 'eéèêë';
-    for (var i=0;i<5;i++)
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -91,7 +99,7 @@ $.isAccI = function(word, pos) {
     if (word.length <= pos)
         return false;
     var letters = 'iîï';
-    for (var i=0;i<3;i++)
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -101,7 +109,7 @@ $.isAccO = function(word, pos) {
     if (word.length <= pos)
         return false;
     var letters = 'oôö';
-    for (var i=0;i<3;i++)
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;
@@ -111,7 +119,7 @@ $.isAccU = function(word, pos) {
     if (word.length <= pos)
         return false;
     var letters = 'uùü';
-    for (var i=0;i<3;i++)
+    for (var i=0;i<letters.length;i++)
         if (word[pos] == letters[i])
             return true;
     return false;

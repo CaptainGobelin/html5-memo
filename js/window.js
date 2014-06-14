@@ -226,7 +226,7 @@ $.menuColor = function() {
 }
 
 $.showPwd = function() {
-	var d = document.getElementsByClassName('leftMenuClose');
+	var d = document.getElementsByClassName('creationInput');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		if ($.getCookie("hidePwd") == "true")

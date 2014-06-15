@@ -1,4 +1,5 @@
-$.checkPassword = function(pwd) {
+$.checkPassword = function() {
+	var pwd = document.getElementById('wordForm').value;
 	var reg = [
 		new RegExp("[A-Z]"),
 		new RegExp("[a-z]"),
@@ -7,8 +8,36 @@ $.checkPassword = function(pwd) {
 	var test = true;
 	for (var i=0;i<reg.length;i++)
 		test = test && reg[i].test(pwd);
-	test = test && (pwd.length > 9);
-	return test;
+	test = test;
+	if (pwd.length < 7)
+		test = false;
+	if (pwd.length > 19)
+		test = true;
+	var d = document.getElementById('checkButton');
+	if (test) {
+		d.setAttribute("class", "checkPwdButton firstLineButton validPwd");
+		d.setAttribute("onClick", "");
+		d = document.getElementById('pwdTip');
+		d.setAttribute('class', 'pwdTip pwdTipClose');
+	}
+	else {
+		d.setAttribute("class", "checkPwdButton firstLineButton invalidPwd");
+		d.setAttribute("onClick", "$.showPwdTip();");
+	}
+}
+
+$.showPwdTip = function() {
+	var d = document.getElementById('pwdTip');
+	d.setAttribute('class', 'pwdTip pwdTipOpen');
+	d = document.getElementById('checkButton');
+	d.setAttribute("onClick", "$.hidePwdTip();");
+}
+
+$.hidePwdTip = function() {
+	var d = document.getElementById('pwdTip');
+	d.setAttribute('class', 'pwdTip pwdTipClose');
+	d = document.getElementById('checkButton');
+	d.setAttribute("onClick", "$.showPwdTip();");
 }
 
 $.checkSecurity = function() {

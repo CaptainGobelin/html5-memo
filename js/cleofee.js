@@ -240,8 +240,17 @@ $.loadCreation = function() {
 	var s = '		<div class="centerInput">';
 	s +=	'			<label id="login_avs" for="word" style="font-style:italic;">Transcription du rébus:</label>';
 	s +=	'			<input class="hideButton firstLineButton" type="button"/>';
-	s +=	'			<input class="checkPwdButton firstLineButton" type="button"/>';
-	s +=	'			<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
+	s +=	'			<input id="checkButton" class="checkPwdButton firstLineButton" type="button"/>';
+	s +=	'			<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();$.checkPassword();}" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
+	s +=	'		</div>';
+	s +=	'		<div id="pwdTip" class="pwdTip pwdTipClose">';
+	s +=	'		<a class="toColor">Attention:</a><br/>';
+	s +=	'		Votre mot de passe est<br/>';
+	s +=	'		trop simple! Pensez à ajouter<br/>';
+	s +=	'		des <a class="toColor">chiffres</a> et des <a class="toColor">caractères</a><br/>';
+	s +=	'		<a class="toColor">spéciaux</a>, ou alors à le<br/>';
+	s +=	'		<a class="toColor">rallonger</a> par exemple en choi-<br/>';
+	s +=	'		sissant une phrase entière.<br/>';
 	s +=	'		</div>';
 	s +=	'		<p style="height:3%;margin:0%;"></p>';
 	s +=	'		<div id="picsDiv" class="picsDiv"><img class="toPlace"></div>';
@@ -301,11 +310,12 @@ $.initCreationScripts = function() {
 			var old = $.findPic(window.event.clientX, window.event.clientY);
 			$.newPicDone(old[0], old[1]);
 			$.resizePics();
+			$.wordFromPics();
 		},
-		out: function() {
+		out: function(event, ui) {
 			ui.helper.data('dropped', false);
 		},
-		over: function() {
+		over: function(event, ui) {
 			ui.helper.data('dropped', true);
 		}
 	});
@@ -317,6 +327,7 @@ $.initCreationScripts = function() {
 			$.newPicDoneDef();
 			$.removeLast();
 			$.resizePics();
+			$.wordFromPics();
 		}
   });
 }

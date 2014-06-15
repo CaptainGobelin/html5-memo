@@ -6,7 +6,7 @@ var LEVELS = (function() {
 		'4' 		: 'j\'ai un vélo et pas toi',
 		'5' 		: 'la vie est belle',
 		'6' 		: 'le roseau plie mais ne rompt pas',
-		'7' 		: 'mais où est donc or ni car',
+		'7' 		: 'mais où et donc or ni car',
 		'8' 		: 'dîner aux chandelles',
 		'9' 		: 'réel',
 		'10' 		: 'n\'y compte pas',

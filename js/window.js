@@ -106,6 +106,12 @@ $.privateResizeWindow = function() {
 		var myH = item.offsetHeight;
 		item.setAttribute("style", 'font-size:'+w2/48+'px;');
 	}
+	d = document.getElementsByClassName('pwdTip');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		var myH = item.offsetHeight;
+		item.setAttribute("style", 'font-size:'+w2/56+'px;');
+	}
 	d = document.getElementsByClassName('firstLineButton');
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];

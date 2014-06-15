@@ -631,6 +631,42 @@ label {
 	z-index: 20;
 }
 
+.pwdTipClose {
+	opacity: 0;
+	pointer-events:none;
+	position: absolute;
+	top: 15%;
+	left: 70%;
+	width: 25%;
+	height: 0%;
+	-webkit-transition: 0.8s ease;
+}
+
+.pwdTipOpen {
+	pointer-events:default;
+	opacity: 1;
+	position: absolute;
+	top: 15%;
+	left: 70%;
+	width: 25%;
+	min-height: 12%;
+	color: black;
+	border: solid 2.5px #000000;
+	background-color: #e5e1d3;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 15px;
+	font-size: 19px;
+	padding-right: 1%;
+	padding-left: 1%;
+	text-align: left;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	z-index: 20;
+	-webkit-transition: 0.8s ease;
+}
+
 .cleoButton {
 	z-index: 10;
 	top: 6%;
@@ -810,12 +846,20 @@ th {
 
   .checkPwdButton {
  	position: absolute;
- 	height: 5%;
- 	width: 5%;
+ 	height: 8%;
+ 	width: 8%;
  	left:75%;
  	background-color: rgba(0, 0, 0, 0);
 	border-color: rgba(0, 0, 0, 0);
 	background-repeat: no-repeat;
  	background-size: 100% 100%;
  	z-index: 31;
+ }
+
+ .validPwd {
+ 	BACKGROUND-IMAGE: url("sysPics/TickValidation.svg");
+ }
+
+ .invalidPwd {
+ 	BACKGROUND-IMAGE: url("sysPics/CrossInvalid.svg");
  }

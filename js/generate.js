@@ -75,7 +75,8 @@ var WORDS = (function() {
 		'[p][l][u][m]' : 'PhonemesDessins-TraitMimi3_Plume',
 		'[ai][s][p][a][s]' : 'PhonemesDessins-TraitMimi3_Espace',
 		'[i][a][k]' : 'PhonemesDessins-TraitMimi3_Yak',
-		'[z][o][r][o]'	: 'PhonemesDessins-TraitMimi3_ZorroZero',
+		'[zero]'	: 'PhonemesDessins-TraitMimi3_ZorroZero',
+		
 
 		'[star]' : 'PhonemesDessins-TraitMimi3_Etoile',
 		'[plus]' : 'PhonemesDessins-TraitMimi3_Plus',
@@ -135,19 +136,26 @@ var WORDS = (function() {
 		'[dos]'	: 'PhonemesDessins-TraitMimi3_Dos',
 		'[o][r][l][o][j]' : 'PhonemesDessins-TraitMimi3_Heure',
 		'[huit]'	: 'PhonemesDessins-TraitMimi3_HuitHuitre',
-		'[zero]'	: 'PhonemesDessins-TraitMimi3_ZorroZero'
+		'[z][o][r][o]'	: 'PhonemesDessins-TraitMimi3_ZorroZero'
 	};
 	return {
 		get: function(name) { return private[name]; },
 		all: function() { return private; },
 		getFromIndex: function(index) {
-			var k = 0;;
+			var k = 0;
 			for (var e in private) {
 				k++;
 				if (k == index)
 					return private[e];
 			}
 			return private['|'];
+		},
+		getPhon: function(img) {
+			for (var e in private) {
+				if (private[e] == img)
+					return e;
+			}
+			return '';
 		}
 	};
 })();
@@ -453,4 +461,84 @@ $.findPic = function(x,y) {
 $.removeLast = function() {
 	d = document.getElementsByClassName('toPlace');
 	d[d.length-1].parentNode.removeChild(d[d.length-1]);
+}
+
+$.wordFromPics = function() {
+	var result = "";
+	var d = document.getElementsByClassName('pic');
+	for (var i=d.length-1;i>=0;--i) {
+		var item = d[i];
+		var s = item.getAttribute('src');
+		s = s.substring(5,s.length-4);
+		result = WORDS.getPhon(s) + result;
+	}
+	result = parsePhon(result);
+	d = document.getElementById("wordForm");
+	d.defaultValue = result;
+	d.value = d.defaultValue;
+}
+
+function parsePhon(phon) {
+	var reg = new RegExp("[\[]+", "g");
+	var result = "";
+	var splits = phon.split(reg);
+	for (var i=0;i<splits.length-1;i++) {
+		var temp = splits[i].substring(0,splits[i].length-1);
+		temp = translatePhon(temp);
+		if ((temp == "an") || (temp == "in")) {
+			if ($.isVowel(splits[i+1],0))
+				temp += 'h';
+		}
+		if (temp == "s") {
+			if ($.isVowel(splits[i+1],0))
+				temp += 's';
+		}
+		result += temp;
+	}
+	result += translatePhon(splits[i].substring(0,splits[splits.length-1].length-1));
+	return result;
+}
+
+function translatePhon(phon) {
+	if (phon == "tiret")
+		return '-';
+	if (phon == "zero")
+		return '0';
+	if (phon == "un")
+		return '1';
+	if (phon == "deux")
+		return '2';
+	if (phon == "trois")
+		return '3';
+	if (phon == "quatre")
+		return '4';
+	if (phon == "cinq")
+		return '5';
+	if (phon == "six")
+		return '6';
+	if (phon == "sept")
+		return '7';
+	if (phon == "huit")
+		return '8';
+	if (phon == "neuf")
+		return '9';
+	if (phon == "dix")
+		return '10';
+	if (phon == "star")
+		return '*';
+	if (phon == "plus")
+		return '+';
+	if (phon == "pInterro")
+		return '?';
+	if (phon == "pExcla")
+		return '!';
+	if (phon == "pVirgule")
+		return ';';
+	if (phon == "slash")
+		return '/';
+	if (phon == "bSlash")
+		return '\\';
+	if (phon == "eu")
+		return 'e';
+	return phon;
 }

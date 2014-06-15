@@ -245,11 +245,11 @@ $.showPwd = function() {
 	for (var i=0;i<d.length;++i) {
 		var item = d[i];  
 		if ($.getCookie("hidePwd") == "true") {
-			item.setAttribute('class', 'hideButton hideChecked');
+			item.setAttribute('class', 'hideButton hideChecked firstLineButton');
 			item.setAttribute('onClick', '$.setCookie("hidePwd","false",1);$.showPwd();')
 		}
 		else {
-			item.setAttribute('class', 'hideButton');
+			item.setAttribute('class', 'hideButton firstLineButton');
 			item.setAttribute('onClick', '$.setCookie("hidePwd","true",1);$.showPwd();')
 		}
 	}

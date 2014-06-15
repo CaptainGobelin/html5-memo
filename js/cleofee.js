@@ -120,7 +120,8 @@ $.loadSpeech6 = function(pwd) {
 
 $.loadCleofeeCreation = function() {
 	var c = $.getCookie("intro2");
-	if (c == "true") {
+	//if (c == "true") {
+	if (true) {
 		$.loadCreation();
 		$.initCreationScripts();
 		return;
@@ -236,10 +237,12 @@ $.loadSpeechCreation5 = function() {
 $.loadCreation = function() {
 	$mainDiv = $("div#menuSuccess");
 	$mainDiv.empty();
-	var s = '<p class="centerInput">';
+	var s = '		<div class="centerInput">';
 	s +=	'			<label id="login_avs" for="word" style="font-style:italic;">Transcription du rébus:</label>';
+	s +=	'			<input class="hideButton firstLineButton" type="button"/>';
+	s +=	'			<input class="checkPwdButton firstLineButton" type="button"/>';
 	s +=	'			<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();}" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
-	s +=	'		</p>';
+	s +=	'		</div>';
 	s +=	'		<p style="height:3%;margin:0%;"></p>';
 	s +=	'		<div id="picsDiv" class="picsDiv"><img class="toPlace"></div>';
 	s +=	'		<p class="centerInput chooseLabel">';

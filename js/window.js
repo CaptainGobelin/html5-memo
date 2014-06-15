@@ -106,6 +106,13 @@ $.privateResizeWindow = function() {
 		var myH = item.offsetHeight;
 		item.setAttribute("style", 'font-size:'+w2/48+'px;');
 	}
+	d = document.getElementsByClassName('firstLineButton');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];
+		var e = document.getElementById('wordForm');
+		var myH = e.getBoundingClientRect().top + (e.offsetHeight-item.offsetHeight)/2;
+		item.setAttribute("style", 'top:'+myH+'px;');
+	}
 	d = document.getElementsByClassName('pic');
 	var n = 0;
 	var t = d.length;
@@ -233,5 +240,17 @@ $.showPwd = function() {
 			item.setAttribute('type', 'password');
 		else
 			item.setAttribute('type', 'text');
+	}
+	d = document.getElementsByClassName('hideButton');
+	for (var i=0;i<d.length;++i) {
+		var item = d[i];  
+		if ($.getCookie("hidePwd") == "true") {
+			item.setAttribute('class', 'hideButton hideChecked');
+			item.setAttribute('onClick', '$.setCookie("hidePwd","false",1);$.showPwd();')
+		}
+		else {
+			item.setAttribute('class', 'hideButton');
+			item.setAttribute('onClick', '$.setCookie("hidePwd","true",1);$.showPwd();')
+		}
 	}
 }

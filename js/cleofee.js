@@ -17,7 +17,7 @@ $.loadCleofee = function(pwd) {
 	s += '<input type="button" id="prev" class="arrowButton cleoButton" onClick="document.location = \'index.html\';"/>';
 	s += '<input type="button" id="next" class="arrowButton cleoButton" onClick="$.loadSpeech1(\''+pwd+'\');"/>';
 	$cleoInput.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech1 = function(pwd) {
@@ -28,14 +28,14 @@ $.loadSpeech1 = function(pwd) {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Je vois que vous avez <a class="toColor">deviné</a> mon mot de passe !<br/>';
-	if ($.checkPassword(pwd) == false) {
+	if ($.checkPasswordSecure(pwd) == false) {
 		s += 'Je l\'ai choisi simple exprès, comme <a class="toColor">contre-exemple</a>.';
 	}
 	else {
 		s += 'Portant je l\' avais choisi <a class="toColor">compliqué</a>, vous êtes <a class="toColor">chanceux</a> !';
 	}
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech2 = function(pwd) {
@@ -46,7 +46,7 @@ $.loadSpeech2 = function(pwd) {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = '';
-	if ($.checkPassword(pwd) == false) {
+	if ($.checkPasswordSecure(pwd) == false) {
 		s += 'Pour compliquer la tâche d’un pirate, mon mot de ';
 		s += 'passe devrait comporter au moins <a class="toColor">8 caractères</a> de ';
 		s += '<a class="toColor">types différents</a> : minuscules, majuscules, chiffres, symboles…';
@@ -57,7 +57,7 @@ $.loadSpeech2 = function(pwd) {
 		s += '<a class="toColor">types différents</a>: minuscules, majuscules, chiffres, symboles…';
 	}
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech3 = function(pwd) {
@@ -71,7 +71,7 @@ $.loadSpeech3 = function(pwd) {
 	s += '20 caractères, il garantit une bonne sécurité, ';
 	s += 'les variations de types ne sont plus indispensables.';
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech4 = function(pwd) {
@@ -87,7 +87,7 @@ $.loadSpeech4 = function(pwd) {
 	s += 'sur un clavier revient à tourner une clé dans la serrure ';
 	s += 'd’un coffre fort.';
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech5 = function(pwd) {
@@ -101,7 +101,7 @@ $.loadSpeech5 = function(pwd) {
 	s += 'pas perdre. Vous allez devoir les mémoriser. Pour cela, ';
 	s += 'je vais vous donner des <a class="toColor">clés mnémotechniques</a> !';
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadSpeech6 = function(pwd) {
@@ -115,13 +115,12 @@ $.loadSpeech6 = function(pwd) {
 	s += 'je dois le <a class="toColor">changer</a>. Pendant ce temps, je vous laisse ';
 	s += 'découvrir la suite…';
 	$cleoSpeech.append(s);
-	$.menuColor();
+	$.resizeWindow();
 }
 
 $.loadCleofeeCreation = function() {
 	var c = $.getCookie("intro2");
-	//if (c == "true") {
-	if (true) {
+	if (c == "true") {
 		$.loadCreation();
 		$.initCreationScripts();
 		return;
@@ -240,8 +239,8 @@ $.loadCreation = function() {
 	var s = '		<div class="centerInput">';
 	s +=	'			<label id="login_avs" for="word" style="font-style:italic;">Transcription du rébus:</label>';
 	s +=	'			<input class="hideButton firstLineButton" type="button"/>';
-	s +=	'			<input id="checkButton" class="checkPwdButton firstLineButton" type="button"/>';
-	s +=	'			<input id="wordForm" onkeydown="if (event.keyCode == 13) {$.wordWithPics();$.checkPassword();}" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
+	s +=	'			<input id="checkButton" class="checkPwdButton firstLineButton" onClick="$.showPwdTip();$.menuColor();" type="button"/>';
+	s +=	'			<input id="wordForm" onkeyup="$.wordWithPics();$.checkPassword();" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
 	s +=	'		</div>';
 	s +=	'		<div id="pwdTip" class="pwdTip pwdTipClose">';
 	s +=	'		<a class="toColor">Attention:</a><br/>';

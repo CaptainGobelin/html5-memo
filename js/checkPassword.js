@@ -1,3 +1,20 @@
+$.checkPasswordSecure = function(pwd) {
+	var reg = [
+		new RegExp("[A-Z]"),
+		new RegExp("[a-z]"),
+		new RegExp("[0-9]|[äâàéèêëôöùûüç]|[().-?!/$]")
+	];
+	var test = true;
+	for (var i=0;i<reg.length;i++)
+		test = test && reg[i].test(pwd);
+	test = test;
+	if (pwd.length < 7)
+		test = false;
+	if (pwd.length > 19)
+		test = true;
+	return test;
+}
+
 $.checkPassword = function() {
 	var pwd = document.getElementById('wordForm').value;
 	var reg = [
@@ -16,13 +33,23 @@ $.checkPassword = function() {
 	var d = document.getElementById('checkButton');
 	if (test) {
 		d.setAttribute("class", "checkPwdButton firstLineButton validPwd");
-		d.setAttribute("onClick", "");
-		d = document.getElementById('pwdTip');
-		d.setAttribute('class', 'pwdTip pwdTipClose');
+		var s =	'Bravo, ce mot de passe<br/>est très solide!';
+		$pwdTipDiv = $('div#pwdTip');
+		$pwdTipDiv.empty();
+		$pwdTipDiv.append(s);
 	}
 	else {
 		d.setAttribute("class", "checkPwdButton firstLineButton invalidPwd");
-		d.setAttribute("onClick", "$.showPwdTip();");
+		var s =	'		<a class="toColor">Attention:</a><br/>';
+		s +=	'		Votre mot de passe est<br/>';
+		s +=	'		trop simple! Pensez à ajouter<br/>';
+		s +=	'		des <a class="toColor">chiffres</a> et des <a class="toColor">caractères</a><br/>';
+		s +=	'		<a class="toColor">spéciaux</a>, ou alors à le<br/>';
+		s +=	'		<a class="toColor">rallonger</a> par exemple en choi-<br/>';
+		s +=	'		sissant une phrase entière.<br/>';
+		$pwdTipDiv = $('div#pwdTip');
+		$pwdTipDiv.empty();
+		$pwdTipDiv.append(s);
 	}
 }
 

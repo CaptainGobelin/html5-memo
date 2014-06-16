@@ -189,7 +189,7 @@ $.isSelected = function() {
 		var d = document.getElementsByClassName('colorOrange')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}
-	else if (color == "#ffd318") {
+	else if (color == "#cbac6c") {
 		var d = document.getElementsByClassName('colorYellow')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}

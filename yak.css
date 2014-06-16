@@ -529,7 +529,7 @@ label {
 }
 
 .colorYellow {
-	background-color: #ffd318;
+	background-color: #cbac6c;
 }
 
 .colorGreen {
@@ -649,7 +649,6 @@ label {
 	top: 15%;
 	left: 70%;
 	width: 25%;
-	min-height: 12%;
 	color: black;
 	border: solid 2.5px #000000;
 	background-color: #e5e1d3;

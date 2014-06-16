@@ -79,7 +79,7 @@ $.openOptionsBar = function() {
 	s += '<p class="leftMenu">';
 	s += '<input type="button" value=" " class="colorButton colorRed" id="buttonSelected" onClick=\'$.setCookie("color","#aa2d22",1);$.resizeWindow();$.isSelected();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorOrange" onClick=\'$.setCookie("color","#f06025",1);$.resizeWindow();$.isSelected();\'/>';
-	s += '<input type="button" value=" " class="colorButton colorYellow" onClick=\'$.setCookie("color","#ffd318",1);$.resizeWindow();$.isSelected();\'/>';
+	s += '<input type="button" value=" " class="colorButton colorYellow" onClick=\'$.setCookie("color","#cbac6c",1);$.resizeWindow();$.isSelected();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorGreen" onClick=\'$.setCookie("color","#348b5d",1);$.resizeWindow();$.isSelected();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorBlue" onClick=\'$.setCookie("color","#2167a7",1);$.resizeWindow();$.isSelected();\'/>';
 	s += '<input type="button" value=" " class="colorButton colorPurple" onClick=\'$.setCookie("color","#6a347f",1);$.resizeWindow();$.isSelected();\'/>';

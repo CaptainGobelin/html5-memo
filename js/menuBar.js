@@ -53,7 +53,7 @@ $.openMenuBar = function() {
     $menuBar.append(s);
     $.addBlur();
     $.resizeWindow();
-    doc = document.getElementById('menuSuccess');
+    doc = document.getElementById('opacityFilter');
     doc.setAttribute('onClick', '$.closeOptionsBar();$.closeMenuBar();$.closeMenuBg();');
 }
 
@@ -66,7 +66,7 @@ $.closeMenuBar = function() {
     var s = '<img class="logoMenu" src="sysPics/Serrure.svg" style="margin-top:70%;width:40%;">';
     $menuBar.append(s);
     $.clearBlur();
-    doc = document.getElementById('menuSuccess');
+    doc = document.getElementById('opacityFilter');
     doc.setAttribute('onClick', '');
 }
 

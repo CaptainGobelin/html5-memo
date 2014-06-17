@@ -5,9 +5,9 @@ $.loadCleofeeAbout = function(pwd) {
 	s += '<img id="cleoEye" src="sysPics/OeilOuvertCleofee.svg">';
 	s += '<img id="littleArrow" src="sysPics/FlecheBulle.svg">';
 	s += '<p class="cleoTip">';
-	s += 'Je vois que vous apprécieriez d’en apprendre plus!<br/>';
-	s += '<a class="toColor">Quel sujet vous intéresse?</a><br/><br/>';
-	s += '• <a class="underlined" onClick="$.loadVersus1();">Créer un mot de passe fort : sécurité versus facilité</a><br/>';
+	s += 'Je vois que vous apprécieriez d’en apprendre plus<a class="space"> </a>!<br/>';
+	s += '<a class="toColor">Quel sujet vous intéresse<a class="space"> </a>?</a><br/><br/>';
+	s += '• <a class="underlined" onClick="$.loadVersus1();">Créer un mot de passe fort: sécurité versus facilité</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadRebus1();">Le rébus comme moyen mnémotechnique</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadSecure1();">Déclaration de sécurité de vos données</a><br/>';
 	s += '• <a class="underlined" onClick="$.loadAuthors1();">À propos des auteurs et remerciements</a><br/>';
@@ -43,7 +43,7 @@ $.loadVersus2 = function() {
 	var s = '<a class="toColor">La solution de facilité?</a> Utiliser partout le même identifiant<br/>';
 	s += 'et le même mot de passe, si possible simple<br/>';
 	s += 'à retenir et rapide à écrire.<br/><br/>';
-	s += '<a class="toColor">La solution de sécurité?</a> Faire le <a class="toColor">contraire</a>!';
+	s += '<a class="toColor">La solution de sécurité?</a> Faire le <a class="toColor">contraire</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -77,9 +77,9 @@ $.loadVersus3 = function() {
 $.loadVersus4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Autre possibilité, si votre mot de passe dépasse les <a class="toColor">20<br/>';
-	s += 'caractères</a>, il devient moins important de les diversifier, on<br/>';
-	s += 'peut donc par exemple omettre les chiffres et faire <a class="toColor">une<br/>';
+	var s = 'Autre possibilité, si votre mot de passe dépasse les <a class="toColor">vingt<br/>';
+	s += 'caractères</a>, il devient moins important de les diversifier,<br/>on ';
+	s += 'peut donc par exemple omettre les chiffres et faire <a class="toColor"><br/>une ';
 	s += 'vraie phrase</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -94,12 +94,12 @@ $.loadVersus4 = function() {
 $.loadVersus5 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = '<a class="toColor">Attention</a> cependant, les attaques les plus courantes se<br/>';
+	var s = '<a class="toColor">Attention</a> cependant, les attaques les plus courantes<br/>se ';
 	s += 'font par <a class="toColor">dictionnaire</a>, le pirate teste d’abord des mots<br/>';
 	s += 'existants afin d’avoir une chance de trouver <a class="toColor">plusieurs<br/>';
-	s += 'lettres justes d’un coup</a> (dans ces cas là, une phrase<br/>';
+	s += 'lettres justes d’un coup</a> (<a class="space"> </a>dans ces cas là, une phrase<br/>';
 	s += 'de 3 mots a pratiquement la même solidité qu’un seul mot<br/>';
-	s += 'de 3 lettres!).';
+	s += 'de 3 lettres<a class="space"> </a>!<a class="space"> </a>).';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -113,13 +113,13 @@ $.loadVersus5 = function() {
 $.loadVersus6 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Une fois que vous avez choisi un bon mot de passe qui vous<br/>';
-	s += 'plaît, le travail ne s’arrête pas là! En effet, <a class="toColor">il ne faut<br/>';
-	s += 'surtout pas utiliser le même pour toutes vos<br/>';
-	s += 'applications</a>. Car même si votre mot de passe est fort,<br/>';
-	s += 'la sécurité n’est pas de votre seul ressort, il arrive aussi<br/>';
-	s += 'parfois que les pirates les plus habiles parviennent<br/>';
-	s += 'à voler le mot de passe directement à la société qui détient<br/>';
+	var s = 'Une fois que vous avez choisi un bon mot de passe<br/>qui vous ';
+	s += 'plaît, le travail ne s’arrête pas là<a class="space"> </a>! En effet, <a class="toColor">il ne faut<br/>';
+	s += 'surtout pas utiliser le même pour toutes vos ';
+	s += 'applications</a>.<br/>Car même si votre mot de passe est fort, ';
+	s += 'la sécurité<br/>n’est pas de votre seul ressort, il arrive aussi ';
+	s += 'parfois que<br/>les pirates les plus habiles parviennent ';
+	s += 'à voler le mot<br/>de passe directement à la société qui détient ';
 	s += 'l’application correspondante.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -136,10 +136,10 @@ $.loadVersus7 = function() {
 	$cleoSpeech.empty();
 	var s = 'Ces cas de piratage sont rares, mais très graves,<br/>';
 	s += 'des millions de mots de passe peuvent être volés d’un<br/>';
-	s += 'coup. Si vous avez le malheur de vous faire voler un mot de<br/>';
+	s += 'coup. Si vous avez le malheur de vous faire voler un mot<br/>de ';
 	s += 'passe à cause d’une faille sur telle application,<br/>';
 	s += 'et de l’avoir <a class="toColor">utilisé partout</a> ailleurs, ce sont <a class="toColor">tous vos<br/>';
-	s += 'comptes</a> qui sont en <a class="toColor">danger</a>!';
+	s += 'comptes</a> qui sont en <a class="toColor">danger</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -153,9 +153,9 @@ $.loadVersus7 = function() {
 $.loadVersus8 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'En résumé, mieux vaut faire <a class="toColor">long</a>, <a class="toColor">compliqué</a> et <a class="toColor">varié</a>!<br/>';
+	var s = 'En résumé, mieux vaut faire <a class="toColor">long</a>, <a class="toColor">compliqué</a> et <a class="toColor">varié</a><a class="space"> </a>!<br/>';
 	s += 'Cerise sur le gâteau: vous devez <a class="toColor">vous rappeler</a> de tous vos<br/>';
-	s += 'mots de passe!';
+	s += 'mots de passe<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -170,9 +170,9 @@ $.loadVersus9 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'La <a class="toColor">variété</a> peut être un obstacle à la mémorisation,<br/>';
-	s += 'd’autant plus qu’il est recommandé de <a class="toColor">changer de mot de<br/>';
-	s += 'passe régulièrement</a> (selon les services, entre <a class="toColor">trois mois</a><br/>';
-	s += 'et <a class="toColor">une année</a> maximum).';
+	s += 'd’autant plus qu’il est recommandé de <a class="toColor">changer de mot<br/>de ';
+	s += 'passe régulièrement</a> (<a class="space"> </a>selon les services, entre <a class="toColor">trois mois</a><br/>';
+	s += 'et <a class="toColor">une année</a> maximum<a class="space"> </a>).';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -186,11 +186,11 @@ $.loadVersus9 = function() {
 $.loadVersus10 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Imaginez que quelqu’un essaye de forcer votre mot de<br/>';
-	s += 'passe: s’il est mal choisi, sa <a class="toColor">complexité implique plusieurs<br/>';
-	s += 'mois de tentatives</a>, mais s’il est fort, il faudrait <a class="toColor">des milliers<br/>';
-	s += 'd’années</a>! S’il est plutôt simple et donc rapide à découvrir, il<br/>';
-	s += 'suffit de le changer régulièrement pour être tranquille.<br/>';
+	var s = 'Imaginez que quelqu’un essaye de forcer votre mot<br/>de ';
+	s += 'passe<a class="space"> </a>: s’il est mal choisi, sa <a class="toColor">complexité implique<br/>plusieurs ';
+	s += 'mois de tentatives</a>, mais s’il est fort, il faudrait<br/><a class="toColor">des milliers ';
+	s += 'd’années</a><a class="space"> </a>! S’il est plutôt simple et donc rapide<br/>à découvrir, il ';
+	s += 'suffit de le changer régulièrement pour<br/>être tranquille.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -204,9 +204,9 @@ $.loadVersus10 = function() {
 $.loadVersus11 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'C’est pourquoi il est recommandé de s’<a class="toColor">inventer un<br/>';
-	s += 'système de création</a> de mots de passe, de semer des<br/>';
-	s += '<a class="toColor">indices</a> dans votre mémoire, afin d’être capable de le<br/>';
+	var s = 'C’est pourquoi il est recommandé de s’<a class="toColor">inventer<br/>un ';
+	s += 'système de création</a> de mots de passe, de semer<br/>des ';
+	s += '<a class="toColor">indices</a> dans votre mémoire, afin d’être capable<br/>de le ';
 	s += '<a class="toColor">reconstituer</a> si jamais vous l’avez oublié.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -222,7 +222,7 @@ $.loadVersus12 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Certes, la plupart des applications bien pensées<br/>';
-	s += 'ont un <a class="toColor">système de récupération</a> de mots de passe.<br/>';
+	s += 'ont un <a class="toColor">système de récupération</a> de mots de passe.<br/><br/>';
 	s += 'Il existe aussi des <a class="toColor">logiciels de gestion</a> des mots<br/>';
 	s += 'de passe dans  les cas où vous en accumulez des dizaines...';
 	$cleoSpeech.append(s);
@@ -240,9 +240,9 @@ $.loadVersus13 = function() {
 	$cleoSpeech.empty();
 	var s = 'Mais se rappeler de son mot de passe, c’est comme<br/>';
 	s += 'avoir son <a class="toColor">trousseau de clé en poche plutôt qu’au fond<br/>';
-	s += 'de son sac</a>! On ne perd pas de temps tout en s’épargnant<br/>';
+	s += 'de son sac</a><a class="space"> </a>! On ne perd pas de temps tout en s’épargnant<br/>';
 	s += 'cette pointe d’angoisse lorsqu’on commence à craindre<br/>';
-	s += 'd’avoir perdu son sésame!';
+	s += 'd’avoir perdu son sésame<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -256,9 +256,9 @@ $.loadRebus1 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Les avantages de <a class="toColor">mémoriser ses mots de passe</a><br/>';
-	s += 'ne sont pas négligeables: <a class="toColor">instantanéité</a> d’accès, <a class="toColor">sécurité</a><br/>';
+	s += 'ne sont pas négligeables<a class="space"> </a>: <a class="toColor">instantanéité</a> d’accès, <a class="toColor">sécurité</a><br/>';
 	s += 'de stockage, et <a class="toColor">sérénité</a> car ils ne pourront<br/>';
-	s += 'ni être perdus ni volés!';
+	s += 'ni être perdus ni volés<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -271,10 +271,10 @@ $.loadRebus1 = function() {
 $.loadRebus2 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Malheureusement, nous manquons d’entraînement.<br/>';
+	var s = 'Malheureusement, nous manquons d’entraînement.<br/><br/>';
 	s += 'De nos jours, nous ne sommes plus conscients des capacités<br/>';
-	s += 'de <a class="toColor">notre mémoire</a> à long terme, à tel point<br/>';
-	s += 'que nous n’osons plus <a class="toColor">lui faire confiance</a>!';
+	s += 'de <a class="toColor">notre mémoire</a> à long terme, à tel point ';
+	s += 'que<br/>nous n’osons plus <a class="toColor">lui faire confiance</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -288,10 +288,10 @@ $.loadRebus2 = function() {
 $.loadRebus3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Mais comment faire pour créer des mots de passe variés, au<br/>';
-	s += 'niveau de complexité suffisant, et de surcroît s’en rappeler?<br/>';
-	s += 'Mémo de passe est une application qui vous propose de<br/>';
-	s += 'vous aider dans le travail de mémorisation avec une<br/>';
+	var s = 'Mais comment faire pour créer des mots de passe variés,<br/>au ';
+	s += 'niveau de complexité suffisant, et de surcroît<br/>s’en rappeler<a class="space"> </a>?<br/><br/>';
+	s += 'Mémo de passe est une application qui vous propose<br/>de ';
+	s += 'vous aider dans le travail de mémorisation avec<br/>une ';
 	s += '<a class="toColor">solution mnémotechnique basée sur le rébus</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -307,8 +307,8 @@ $.loadRebus4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Le rébus est un bon moyen d’<a class="toColor">exercer votre mémoire</a><br/>';
-	s += 'autour d’un mot de passe. En effet, la mémorisation<br/>';
-	s += 'a deux temps: une <a class="toColor">phase de création</a> où l’on associe les<br/>';
+	s += 'autour d’un mot de passe. En effet, la mémorisation ';
+	s += 'a deux<br/>temps<a class="space"> </a>: une <a class="toColor">phase de création</a> où l’on associe<br/>les ';
 	s += 'idées entre elles pour les consolider, puis une <a class="toColor">phase<br/>';
 	s += 'd’appropriation</a> où l’on visualise et on répète.';
 	$cleoSpeech.append(s);
@@ -377,10 +377,10 @@ $.loadRebus8 = function() {
 	var s = 'La difficulté qui réside dans le fait de <a class="toColor">devoir retenir<br/>';
 	s += 'différents mots de passe</a> (un pour chaque compte) est<br/>';
 	s += 'donc celle que Mémo de passe va vous permettre<br/>';
-	s += 'de surmonter! La <a class="toColor">décomposition sous forme de rébus</a><br/>';
+	s += 'de surmonter<a class="space"> </a>! La <a class="toColor">décomposition sous forme de rébus</a><br/>';
 	s += 'peut vous permettre de concevoir un <a class="toColor">système de création</a><br/>';
-	s += 'de nouveaux mots de passe qui vous<br/>';
-	s += 'correspond et vous <a class="toColor">aide à mémoriser</a>.';
+	s += 'de nouveaux mots de passe qui vous ';
+	s += 'correspond<br/>et vous <a class="toColor">aide à mémoriser</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -393,7 +393,7 @@ $.loadRebus8 = function() {
 $.loadSecure1 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'L’<a class="toColor">application web</a> Mémo de passe est accessible en<br/>';
+	var s = 'L’<a class="toColor">application web</a> Mémo de passe est accessible<br/>en ';
 	s += 'ligne <a class="toColor">depuis un navigateur</a> sur la plupart des supports numériques.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -407,9 +407,9 @@ $.loadSecure1 = function() {
 $.loadSecure2 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Cependant, la totalité de l’application est chargée sur votre<br/>';
+	var s = 'Cependant, la totalité de l’application est chargée<br/>sur votre ';
 	s += 'ordinateur. Lorsque vous écrivez un mot de passe,<br/>';
-	s += 'il est traité en local. <a class="toColor">Aucune donnée n’est envoyée au serveur</a>.';
+	s += 'il est traité en local. <a class="toColor">Aucune donnée n’est envoyée<br/>au serveur</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -423,9 +423,9 @@ $.loadSecure2 = function() {
 $.loadSecure3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Nous garantissons qu’<a class="toColor">aucune donnée personnelle</a> ne<br/>';
-	s += 'pourra être interceptée via cette application.<br/><br/>';
-	s += 'L’<a class="toColor">utilisation des cookies</a> sert uniquement à ne pas rejouer<br/>';
+	var s = 'Nous garantissons qu’<a class="toColor">aucune donnée personnelle</a> ne ';
+	s += 'pourra<br/>être interceptée via cette application.<br/><br/>';
+	s += 'L’<a class="toColor">utilisation des cookies</a> sert uniquement à ne pas<br/>rejouer ';
 	s += 'les explications lorsque vous avez déjà visité le site une première fois.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -441,12 +441,12 @@ $.loadSecure4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Si vous avez été <a class="toColor">victime de vol de mot de passe</a>,<br/>';
-	s += 'voici les gestes de <a class="toColor">premiers secours</a>:<br/><br/>';
+	s += 'voici les gestes de <a class="toColor">premiers secours</a><a class="space"> </a>:<br/><br/>';
 	s += '• Accéder à votre/vos compte/s et <a class="toColor">changer<br/> immédiatement le mot de passe</a>.<br/>';
 	s += '• <a class="toColor">Contacter l’administrateur</a> ou le support<br/>';
 	s += 'des détenteurs de l’application pour reporter la fraude.<br/>';
-	s += '• Si vos comptes ont été volés car l’appareil qui les<br/>';
-	s += 'avait enregistrés a lui-même été volé, demander à <a class="toColor">faire<br/>';
+	s += '• Si vos comptes ont été volés car l’appareil<br/>qui les ';
+	s += 'avait enregistrés a lui-même été volé, demander<br/>à <a class="toColor">faire ';
 	s += 'bloquer l’appareil</a> dans la mesure du possible.<br/>';
 	s += 'Dans tous les cas, changez tous vos mots de passe.';
 	$cleoSpeech.append(s);
@@ -464,7 +464,7 @@ $.loadSecure5 = function() {
 	$cleoSpeech.empty();
 	var s = 'Nous vous remercions de votre <a class="toColor">confiance</a>, et de votre<br/>';
 	s += '<a class="toColor">méfiance</a> en choisissant des <a class="toColor">mots de passe forts</a> pour<br/>';
-	s += 'chacune de vos applications!';
+	s += 'chacune de vos applications<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -477,10 +477,10 @@ $.loadSecure5 = function() {
 $.loadAuthors1 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Cette application est le travail de diplôme de<br/>';
+	var s = 'Cette application est le travail de diplôme<br/>de ';
 	s += '<a class="toColor">Camille Rattoni</a> pour son Bachelor en Communication<br/>';
-	s += 'Visuelle à la <a class="toColor">HEAD – Genève</a> et de <a class="toColor">Jérémy Morel</a><br/>';
-	s += 'pour son Bachelor en Informatique à la<br/>';
+	s += 'Visuelle à la <a class="toColor">HEAD – Genève</a><br/>et de <a class="toColor">Jérémy Morel</a> ';
+	s += 'pour son Bachelor en Informatique<br/>à la ';
 	s += '<a class="toColor">Faculté des Sciences de l’Université de Genève</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -494,12 +494,12 @@ $.loadAuthors1 = function() {
 $.loadAuthors2 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = '<a class="toColor">Camille Rattoni</a> a fourni le travail de recherche pour la<br/>';
-	s += 'création du <a class="toColor">concept</a> de cette application, puis a imaginé son<br/>';
-	s += 'fonctionnement et établi son <a class="toColor">aspect graphique</a>.<br/>';
-	s += 'C’est elle qui a chargé Cléofée d’accueillir les visiteurs avec<br/>';
-	s += 'son savoir, et dessiné des centaines de pictogrammes pour<br/>';
-	s += 'transcrire vos mots de passe!';
+	var s = '<a class="toColor">Camille Rattoni</a> a fourni le travail de recherche pour<br/>la ';
+	s += 'création du <a class="toColor">concept</a> de cette application, puis a imaginé<br/>son ';
+	s += 'fonctionnement et établi son <a class="toColor">aspect graphique</a>.<br/><br/>';
+	s += 'C’est elle qui a chargé Cléofée d’accueillir les visiteurs<br/>avec ';
+	s += 'son savoir, et dessiné des centaines de pictogrammes<br/>pour ';
+	s += 'transcrire vos mots de passe<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -515,9 +515,9 @@ $.loadAuthors3 = function() {
 	$cleoSpeech.empty();
 	var s = '<a class="toColor">Jérémy Morel</a> a fait chauffer ses méninges pour réaliser<br/>';
 	s += 'les caprices de Camille, en <a class="toColor">programmant</a> haut la main<br/> l’intégralité ';
-	s += 'des <a class="toColor">fonctionnalités</a> de Mémo de passe.<br/>';
+	s += 'des <a class="toColor">fonctionnalités</a> de Mémo de passe.<br/><br/>';
 	s += 'Grâce à lui, cette application web s’adapte à tous<br/>';
-	s += 'les formats d’écran et transforme tout ce que vous écrivez en rébus!';
+	s += 'les formats d’écran et transforme tout ce que vous écrivez<br/>en rébus<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -532,7 +532,7 @@ $.loadAuthors4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous avons beaucoup apprécié cette <a class="toColor">collaboration</a><br/>enrichissante ';
-	s += 'd’échanges entre nos deux formations, qui sont on ne peut plus <a class="toColor">complémentaires</a>!';
+	s += 'd’échanges entre nos deux formations, qui sont on ne peut plus <a class="toColor">complémentaires</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -546,7 +546,7 @@ $.loadAuthors4 = function() {
 $.loadAuthors5 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Nous <a class="toColor">remercions</a> chaleureusement les <a class="toColor">directions</a> de nos <br/>deux ';
+	var s = 'Nous <a class="toColor">remercions</a> chaleureusement les <a class="toColor">directions</a><br/>de nos deux ';
 	s += 'filières de nous avoir permis de mener ce travail <br/>ensemble ainsi ';
 	s += 'que le <a class="toColor">jury</a> d’examen.';
 	$cleoSpeech.append(s);
@@ -563,10 +563,10 @@ $.loadAuthors6 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'Nous <a class="toColor">remercions</a> également nos <a class="toColor">professeurs</a>, nos <a class="toColor">familles</a><br/>';
-	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">soutenus</a> tout au long de ce <br/>projet, ';
-	s += 'qui ont enduré des heures de <a class="toColor">beta testing</a> pour <br/>nous, donné ';
-	s += 'leurs <a class="toColor">avis</a>, exprimé leurs <a class="toColor">inter-<br/>rogations</a> et proposé ';
-	s += 'leurs <a class="toColor">idées</a>, et même été sources <br/>d’<a class="toColor">inspiration</a> à leur insu!';
+	s += 'et nos <a class="toColor">amis</a> qui nous ont <a class="toColor">soutenus</a> tout au long<br/>de ce projet, ';
+	s += 'qui ont enduré des heures de <a class="toColor">beta testing</a><br/>pour nous, donné ';
+	s += 'leurs <a class="toColor">avis</a>, exprimé leurs <a class="toColor">interrogations</a><br/>et proposé ';
+	s += 'leurs <a class="toColor">idées</a>, et même été sources d’<a class="toColor">inspiration</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -616,8 +616,8 @@ $.loadLinks2 = function() {
 $.loadLinks3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = '•   CARR, Nicholas, 2011. <a class="italic">Internet rend-il bête ? : réapprendre<br/>';
-	s += 'à lire et à penser dans un monde fragmenté</a>. Paris: R. Laffont.<br/>';
+	var s = '•   CARR, Nicholas, 2011. <a class="italic">Internet rend-il bête? : réapprendre<br/>';
+	s += 'à lire et à penser dans un monde fragmenté</a>. Paris<a class="space"> </a>: R. Laffont.<br/>';
 	s += 'ISBN: 9782221124437.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -672,7 +672,7 @@ $.loadLinks6 = function() {
 	var s = '•  CONFOLANT, Anne, 2013. <a class="italic">Sécurité IT: les internautes français<br/>';
 	s += 'encore trop laxistes dans la gestion de leurs mots de passe</a>.<br/>';
 	s += 'IT espresso.fr [en ligne]. 27.03.2013. [Consulté le  05.02.2014].';
-	s += 'Disponible à l’adresse:<br/>';
+	s += 'Disponible à l’adresse<a class="space"> </a>:<br/>';
 	s += '<a class="link" href="http://www.itespresso.fr/securite-it-internautes-francais-encore-trop-laxistes-gestion-mots-passe-63229.html">';
 	s += 'http://www.itespresso.fr/securite-it-internautes-francais-encore-trop-laxistes-gestion-mots-passe-63229.html';
 	$cleoSpeech.append(s);
@@ -690,7 +690,7 @@ $.loadLinks7 = function() {
 	$cleoSpeech.empty();
 	var s = '•  DASHLANE, 2013. <a class="italic">Baromètre Dashlane';
 	s += '</a>. Rumeur Publique [en ligne]. 01.12.2013. [Consulté le 05.02.2014].';
-	s += 'Disponible à l’adresse:<br/>';
+	s += 'Disponible à l’adresse<a class="space"> </a>:<br/>';
 	s += '<a class="link" href="http://www.rumeurpublique.fr/online/dashlane/Table.htm">';
 	s += 'http://www.rumeurpublique.fr/online/dashlane/Table.htm';
 	$cleoSpeech.append(s);
@@ -707,7 +707,7 @@ $.loadLinks8 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = '•  INTEL CORPORATION, 2013. <a class="italic">Password Day 2014';
-	s += '</a>. [en ligne]. [Consulté le 23.05.2014]. Disponible à l’adresse:<br/>';
+	s += '</a>. [en ligne]. [Consulté le 23.05.2014]. Disponible à l’adresse<a class="space"> </a>:<br/>';
 	s += '<a class="link" href="https://passwordday.org/fr">';
 	s += 'https://passwordday.org/fr';
 	$cleoSpeech.append(s);
@@ -726,7 +726,7 @@ $.loadLinks9 = function() {
 	var s = '<a class="toColor">Site web à propos de la mémoire:</a><br/><br/>';
 	s += '•  FLORIZEL [Pseudonyme], 2012. <a class="italic">Construire un palais de la mémoire';
 	s += '</a>. Le Divan Fumoir Bohémien [en ligne]. 07.10.2012. [Consulté le 05.02.2014].<br/>';
-	s += 'Disponible à l’adresse:<br/>';
+	s += 'Disponible à l’adresse<a class="space"> </a>:<br/>';
 	s += '<a class="link" href="http://florizel.canalblog.com/archives/2012/10/07/25259666.html">';
 	s += 'http://florizel.canalblog.com/archives/2012/10/07/25259666.html';
 	$cleoSpeech.append(s);
@@ -745,7 +745,7 @@ $.loadLinks10 = function() {
 	var s = '<a class="toColor">Site web de l’auteur:</a><br/><br/>';
 	s += '•  RATTONI, Camille, 2011. <a class="italic">Koya, portfolio';
 	s += '</a>. [Dernière mise à jour  le 05.04.2014].<br/>';
-	s += 'Disponible à l’adresse:<br/>';
+	s += 'Disponible à l’adresse<a class="space"> </a>:<br/>';
 	s += '<a class="link" href="http://www.koya.li">';
 	s += 'http://www.koya.li';
 	$cleoSpeech.append(s);

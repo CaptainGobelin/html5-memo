@@ -463,10 +463,13 @@ $.removeLast = function() {
 	d[d.length-1].parentNode.removeChild(d[d.length-1]);
 }
 
-$.wordFromPics = function() {
+$.wordFromPics = function(last) {
 	var result = "";
 	var d = document.getElementsByClassName('pic');
-	for (var i=d.length-1;i>=0;--i) {
+	var l = d.length-1;
+	if (!last)
+		l--;
+	for (var i=l;i>=0;--i) {
 		var item = d[i];
 		var s = item.getAttribute('src');
 		s = s.substring(5,s.length-4);

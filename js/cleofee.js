@@ -27,7 +27,7 @@ $.loadSpeech1 = function(pwd) {
 	d.setAttribute('onClick', '$.loadSpeech2(\''+pwd+'\');');
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Je vois que vous avez <a class="toColor">deviné</a> mon mot de passe !<br/>';
+	var s = 'Je vois que vous avez <a class="toColor">deviné</a> mon mot de passe<a class="space"> </a>!<br/>';
 	if ($.checkPasswordSecure(pwd) == false) {
 		s += 'Je l\'ai choisi simple exprès, comme <a class="toColor">contre-exemple</a>.';
 	}
@@ -47,14 +47,14 @@ $.loadSpeech2 = function(pwd) {
 	$cleoSpeech.empty();
 	var s = '';
 	if ($.checkPasswordSecure(pwd) == false) {
-		s += 'Pour compliquer la tâche d’un pirate, mon mot de ';
-		s += 'passe devrait comporter au moins <a class="toColor">8 caractères</a> de ';
-		s += '<a class="toColor">types différents</a> : minuscules, majuscules, chiffres, symboles…';
+		s += 'Pour compliquer la tâche d’un pirate, mon mot de<br/>';
+		s += 'passe devrait comporter au moins <a class="toColor">8 caractères</a> de<br/>';
+		s += '<a class="toColor">types différents</a><a class="space"> </a>: minuscules, majuscules, chiffres, symboles…';
 	}
 	else {
-		s += 'Pour rendre la tâche plus difficile à un pirate, ';
-		s += 'mon mot de passe comporte plus de <a class="toColor">8 caractères</a> de ';
-		s += '<a class="toColor">types différents</a>: minuscules, majuscules, chiffres, symboles…';
+		s += 'Pour rendre la tâche plus difficile à un pirate,<br/>';
+		s += 'mon mot de passe comporte plus de <a class="toColor">8 caractères</a> de<br/>';
+		s += '<a class="toColor">types différents</a><a class="space"> </a>: minuscules, majuscules, chiffres, symboles…';
 	}
 	$cleoSpeech.append(s);
 	$.resizeWindow();
@@ -67,8 +67,8 @@ $.loadSpeech3 = function(pwd) {
 	d.setAttribute('onClick', '$.loadSpeech4(\''+pwd+'\');');
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'La <a class="toColor">longueur</a> est la clé d’un mot de passe fort : à partir de ';
-	s += '20 caractères, il garantit une bonne sécurité, ';
+	var s = 'La <a class="toColor">longueur</a> est la clé d’un mot de passe fort<a class="space"> </a>:<br/>';
+	s += 'à partir de 20 caractères, il garantit une bonne sécurité,<br/>';
 	s += 'les variations de types ne sont plus indispensables.';
 	$cleoSpeech.append(s);
 	$.resizeWindow();
@@ -82,9 +82,9 @@ $.loadSpeech4 = function(pwd) {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'On parle d’un <a class="toColor">trousseau de mots</a> de passe.</br></br>';
-	s += 'En effet, clé et clavier ont une racine commune: ';
-	s += '« clavis » en latin. Écrire un mot de passe ';
-	s += 'sur un clavier revient à tourner une clé dans la serrure ';
+	s += 'En effet, clé et clavier ont une racine commune<a class="space"> </a>:<br/>';
+	s += '«<a class="space"> </a>clavis<a class="space"> </a>» en latin. Écrire un mot de passe<br/>';
+	s += 'sur un clavier revient à tourner une clé dans la serrure<br/>';
 	s += 'd’un coffre fort.';
 	$cleoSpeech.append(s);
 	$.resizeWindow();
@@ -97,9 +97,9 @@ $.loadSpeech5 = function(pwd) {
 	d.setAttribute('onClick', '$.loadSpeech6(\''+pwd+'\');');
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Dans un trousseau, il y a plusieurs clés, qu’il ne faut';
-	s += 'pas perdre. Vous allez devoir les mémoriser. Pour cela, ';
-	s += 'je vais vous donner des <a class="toColor">clés mnémotechniques</a> !';
+	var s = 'Dans un trousseau, il y a plusieurs clés, qu’il ne faut<br/>';
+	s += 'pas perdre. Vous allez devoir les mémoriser. Pour cela,<br/>';
+	s += 'je vais vous donner des <a class="toColor">clés mnémotechniques</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$.resizeWindow();
 }
@@ -111,9 +111,10 @@ $.loadSpeech6 = function(pwd) {
 	d.setAttribute('onClick', '$.setCookie("intro", "true", 1);document.location = \'levels.html\';');
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Comme vous avez deviné mon mot de passe, ';
-	s += 'je dois le <a class="toColor">changer</a>. Pendant ce temps, je vous laisse ';
-	s += 'découvrir la suite…';
+	var s = 'Comme vous avez deviné mon mot de passe,<br/>';
+	s += 'je dois le <a class="toColor">changer</a>. Pendant ce temps, je vous laisse<br/>';
+	s += '<a class="toColor">découvrir les rébus</a> et vous entraîner à les lire.<br/><br/>';
+	s += 'N\'oubliez pas de me retrouver dans la <a class="toColor">partie Créer</a> ensuite<a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$.resizeWindow();
 }
@@ -132,8 +133,8 @@ $.loadCleofeeCreation = function() {
 	s += '<img id="littleArrow" src="sysPics/FlecheBulle.svg">';
 	s += '<p class="cleoTip">';
 	s += 'Je vois que la lecture des rébus n\'a plus de secrets<br/>';
-	s += 'pour vous!<br/></br>';
-	s += 'Que diriez-vous de <a class="toColor">créer les vôtres</a>?';
+	s += 'pour vous<a class="space"> </a>!<br/></br>';
+	s += 'Que diriez-vous de <a class="toColor">créer les vôtres</a><a class="space"> </a>?';
 	s += '</p>';
 	$cleoDiv.append(s);
 	$cleoInput = $("div.cleoInput");
@@ -182,7 +183,7 @@ $.loadSpeechCreation3 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
 	var s = 'La difficulté réside dans le fait de <a class="toColor">devoir retenir</a><br/>';
-	s += '<a class="toColor">différents mots de passe</a> (un pour chaque compte),<br/>';
+	s += '<a class="toColor">différents mots de passe</a> (<a class="space"> </a>un pour chaque compte<a class="space"> </a>),<br/>';
 	s += 'la décomposition sous forme de rébus peut donc vous<br/>';
 	s += 'permettre de concevoir un <a class"toColor">système de création</a> de<br/>';
 	s += 'nouveaux mots de passe qui vous correspond et vous aide<br/>';
@@ -200,13 +201,11 @@ $.loadSpeechCreation3 = function() {
 $.loadSpeechCreation4 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Quelle est votre forme préférée de mémorisation?<br/>';
-	s += 'Allez-vous <a class="toColor">créer des variantes</a> phonétiques, visuelles,<br/>';
-	s += 'ou littéraires?<br/><br/>';
-	s += '<a class"toColor">Changez une partie</a> de votre mot de passe ou<br/>';
-	s += '<a class="toColor">remplacez l\'une des images</a> par une autre de votre<br/>';
-	s += 'choix dans la bibliothèque simplement en la<br/>';
-	s += 'sélectionnant!';
+	var s = 'Votre mot de passe sera <a class="toColor">composé en texte et en rébus</a><br/>';
+	s += 'simultanément<a class="space"> </a>: <a class="toColor">modifiez</a> le texte dans le champ en haut<br/>';
+	s += 'et les dessins selon vos envies, simplement ';
+	s += 'en les<br/><a class="toColor">glissant sur l’espace central</a> ';
+	s += 'ou pour les <a class="toColor">remettre</a><br/><a class="toColor">dans la bibliothèque</a>.';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
@@ -220,14 +219,14 @@ $.loadSpeechCreation4 = function() {
 $.loadSpeechCreation5 = function() {
 	$cleoSpeech = $("p.cleoTip");
 	$cleoSpeech.empty();
-	var s = 'Quelle est votre forme préférée de mémorisation?<br/>';
-	s += 'Retrouvez moi dans la section "À propos" pour des conseils<br/>';
-	s += 'pertinents afin de <a class"toColor">choisir un bon mot de passe</a>!';
+	var s = 'Quelle est votre forme préférée de mémorisation<a class="space"> </a>?<br/>';
+	s += 'Retrouvez moi dans la section «<a class="space"> </a>À Propos<a class="space"> </a>» pour des conseils<br/>';
+	s += 'pertinents afin de <a class="toColor">choisir un bon mot de passe</a><a class="space"> </a>!';
 	$cleoSpeech.append(s);
 	$cleoInput = $("div.cleoInput");
 	$cleoInput.empty();
 	s = '<input type="button" id="dismiss" class="arrowButton cleoButton" onClick="$.setCookie(\'intro2\', \'true\', 1);document.location = \'yak.html\';"/>';
-	s += '<input type="button" id="prev" class="arrowButton cleoButton" onClick="$.loadSpeechCreation3();"/>';
+	s += '<input type="button" id="prev" class="arrowButton cleoButton" onClick="$.loadSpeechCreation4();"/>';
 	s += '<input type="button" id="next" class="arrowButton cleoButton" onClick="$.setCookie(\'intro2\', \'true\', 1);$.loadCreation();$.initCreationScripts();"/>';
 	$cleoInput.append(s);
 	$.resizeWindow();
@@ -254,7 +253,7 @@ $.loadCreation = function() {
 	s +=	'		<p style="height:3%;margin:0%;"></p>';
 	s +=	'		<div id="picsDiv" class="picsDiv"><img class="toPlace"></div>';
 	s +=	'		<p class="centerInput chooseLabel">';
-	s +=	'			<label style="font-style:italic;">Bibliothèque de dessins (glissez-déposez les dessins pour les ajouter):</label>';
+	s +=	'			<label style="font-style:italic;">Bibliothèque de dessins (glissez-déposez les dessins pour les ajouter ou les ranger):</label>';
 	s +=	'		</p>';
 	s +=	'<div id="chooseImage" class="chooseImage">';
 	s +=	'			<input type="button" id="prevPics" class="arrowButton" onClick="$.loadListPics(1);$.resizeWindow();"/>';
@@ -309,7 +308,7 @@ $.initCreationScripts = function() {
 			var old = $.findPic(window.event.clientX, window.event.clientY);
 			$.newPicDone(old[0], old[1]);
 			$.resizePics();
-			$.wordFromPics();
+			$.wordFromPics(true);
 		},
 		out: function(event, ui) {
 			ui.helper.data('dropped', false);
@@ -326,7 +325,7 @@ $.initCreationScripts = function() {
 			$.newPicDoneDef();
 			$.removeLast();
 			$.resizePics();
-			$.wordFromPics();
+			$.wordFromPics(false);
 		}
   });
 }

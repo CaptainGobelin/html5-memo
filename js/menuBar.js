@@ -40,7 +40,7 @@ $.openMenuBar = function() {
     s += '<p class="centerMenu lessMargin">';
     if (page[page.length-1] == 'yak.html')
     	s+= '<img id="current" src="sysPics/ClefCurrentPage.svg" style="width:20%;height:auto;">';
-    s += '<input class="menuInput" type="submit" value="Création" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
+    s += '<input class="menuInput" type="submit" value="Créer" name="menuCreateButton" onClick=\'document.location = "yak.html";\'/></p>';
     s += '<p class="centerMenu lessMargin"></p>';
     s += '<p class="centerMenu lessMargin"><input class="menuInput" id="Options" type="submit" value="Options" name="menuCreateButton" onClick="$.openOptionsBar();"/></p>';
     s += '<p class="centerMenu lessMargin">';
@@ -153,8 +153,8 @@ $.isSelected = function() {
 		if (doc != null)
 			doc.setAttribute('id', '');
 	}
-	var intro = $.getCookie("intro");
-	if (intro == "true") {
+	var intro = $.getCookie("intro")+$.getCookie("intro2");
+	if (intro == "truetrue") {
 		var d = document.getElementsByClassName('button2')[0];
 		d.setAttribute('id', 'buttonSelected');
 	}

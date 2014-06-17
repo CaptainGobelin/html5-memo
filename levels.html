@@ -23,12 +23,15 @@
 		<script type="text/javascript" src="js/loadPics.js"></script>
 		<script type="text/javascript" src="js/loadLevel.js"></script>
 		<script type="text/javascript" src="js/levels.js"></script>
+		<script type="text/javascript" src="js/cleofee.js"></script>
 		<script type="text/javascript" src="js/intro.js"></script>
 	</head>
  
 	<body onresize="$.resizeWindow()">
-		<div id='opacityFilter'></div>
+		<div id='opacityFilter' onClick='$.hideVignettes();'></div>
 		<div class="" id="menuSuccess">
+			<div class="cleoDiv"></div>
+			<div class="cleoInput"></div>
 			<p class="center"></p>
 			<div class="picsDiv"></div>
 			<p class="centerInput"></p>
@@ -41,8 +44,15 @@
 			<p class="leftMenuClose indexOptions" id="optionsBar" style='z-index:10;'></p>
 		</p>
 		<script type="text/javascript">
-			$.loadForm();
-			$.loadRandomLevel();
+			var c = $.getCookie("intro");
+			//TODO invert true/false
+			if (c == "true") {
+				$.loadForm();
+				$.loadRandomLevel();
+			}
+			else {
+				$.loadCleofee("truc");
+			}
 			$.resizeWindow();
 			$.loadCacheVignettes();
 			idleTime = 0;

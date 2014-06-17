@@ -182,7 +182,12 @@ $.privateResizeWindow = function() {
 		d = document.getElementsByClassName('buttonLevel');
 		for (var i=0;i<d.length;++i) {
 			var item = d[i];
-			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;');
+			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;width:'+item.offsetHeight+'px;margin-left:'+(10+item.offsetHeight)+'px;');
+		}
+		d = document.getElementsByClassName('allLevels');
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;width:'+item.offsetHeight+'px;margin-left:'+(15+2*item.offsetHeight)+'px;');
 		}
 	}
 	$.resizeTipPanel();

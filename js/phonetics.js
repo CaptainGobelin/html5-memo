@@ -2,7 +2,7 @@ var phon = [
 ['[a]','a','Oi','aNN','','à','â','aILL','','','','','','','','','','','',''],
 ['[eu]','e','eu','~oeu','oe§N','ILLe&[','uM[','','','','','','','','','','','','',''],
 ['[i]','i','y','ill','iNN_','î','ï','EIll','','','','','','','','','','','',''],
-['[in]','in§_','un§_','ain§_','ein§_','umB','umP','imB','imP','¤en&[','¤IenT[','yn§_','','','','','','','',''],
+['[in]','in§_','un§_','ain§_','ein§_','umB','umP','imB','imP','¤en&[','¤IenT[','yn§_','aim§_','','','','','','',''],
 ['[o]','o','au','eau','oNN','ô','ö','oo','','','','','','','','','','','',''],
 ['[u]','u','ù','Uë','ü','','','','','','','','','','','','','','',''],
 ['[on]','on§_','omP','omB','','','','','','','','','','','','','','','',''],
@@ -22,7 +22,7 @@ var phon = [
 ['[n]','n','nn','mnE[','','','','','','','','','','','','','','','',''],
 ['[p]','p','pp','p[_','[p[','','','','','','','','','','','','','','',''],
 ['[r]','r','rr','','','','','','','','','','','','','','','','',''],
-['[s]','s','ss','tION','sCA','c2','sc_','c3','ç','[c[','$_','[s[','','','','','','','',''],
+['[s]','s','ss','tION','sCA','c£','sc_','cµ','ç','[c[','$_','[s[','$$','','','','','','',''],
 ['[t]','t','tt','ESt_','ptE[','ESt[_','[t[','','','','','','','','','','','','',''],
 ['[v]','v','w','','','','','','','','','','','','','','','','',''],
 ['[x]','x','[x[','','','','','','','','','','','','','','','','',''],
@@ -60,8 +60,8 @@ _ : isVowel
 A-Z : check letter
 < : same letter
 1 : any a form
-2 : any e form
-3 : any i form
+£ : any e form
+µ : any i form
 4 : any o form
 5 : any u form
 */
@@ -136,14 +136,14 @@ $.strCompare = function(rule, word, pos, len) {
 		}
 		/*else if (rule[i] == '1') {
 			test = test && ($.isAccA(word, pos-ruleSize[0]+i)!=negative);
-		}
-		else if (rule[i] == '2') {
+		}*/
+		else if (rule[i] == '£') {
 			test = test && ($.isAccE(word, pos-ruleSize[0]+i)!=negative);
 		}
-		else if (rule[i] == '3') {
+		else if (rule[i] == 'µ') {
 			test = test && ($.isAccI(word, pos-ruleSize[0]+i)!=negative);
 		}
-		else if (rule[i] == '4') {
+		/*else if (rule[i] == '4') {
 			test = test && ($.isAccO(word, pos-ruleSize[0]+i)!=negative);
 		}
 		else if (rule[i] == '5') {
@@ -189,14 +189,14 @@ $.strCompare = function(rule, word, pos, len) {
 		}
 		/*else if (rule[i+shift] == '1') {
 			test = test && ($.isAccA(word, pos+i+ruleSize[1]-tempShift)!=negative);
-		}
-		else if (rule[i+shift] == '2') {
+		}*/
+		else if (rule[i+shift] == '£') {
 			test = test && ($.isAccE(word, pos+i+ruleSize[1]-tempShift)!=negative);
 		}
-		else if (rule[i+shift] == '3') {
+		else if (rule[i+shift] == 'µ') {
 			test = test && ($.isAccI(word, pos+i+ruleSize[1]-tempShift)!=negative);
 		}
-		else if (rule[i+shift] == '4') {
+		/*else if (rule[i+shift] == '4') {
 			test = test && ($.isAccO(word, pos+i+ruleSize[1]-tempShift)!=negative);
 		}
 		else if (rule[i+shift] == '5') {

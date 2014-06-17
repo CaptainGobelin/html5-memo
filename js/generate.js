@@ -109,6 +109,7 @@ var WORDS = (function() {
 		'[v][in]'	: 'PhonemesDessins-TraitMimi3_Vin',
 		'[v][ou][a][l]'	: 'PhonemesDessins-TraitMimi3_Voile',
 
+		'[zero]'	: 'PhonemesDessins-TraitMimi3_ZorroZero',
 		'[star]' : 'PhonemesDessins-TraitMimi3_Etoile',
 		'[plus]' : 'PhonemesDessins-TraitMimi3_Plus',
 		'[pInterro]' : 'PhonemesDessins-TraitMimi3_PoingInterro',
@@ -141,7 +142,6 @@ var WORDS = (function() {
 		'[v]' : 'PhonemesDessins-Lettres_v',
 		'[x]' : 'PhonemesDessins-Lettres_x',
 		'[z]' : 'PhonemesDessins-Lettres_z',
-		'[ai][r]' : 'PhonemesDessins-Lettres_er',
 		'[k][a]' : 'PhonemesDessins-Lettres_ka',
 		'[p][ai]' : 'PhonemesDessins-Lettres_pai',
 		'[s][ai]' : 'PhonemesDessins-Lettres_sai',
@@ -349,7 +349,7 @@ var WORDS_INFO = (function() {
 	};
 })();
 
-var NB_PICS = 137;
+var NB_PICS = 136;
 
 $.generatePics = function(){
 	word = document.getElementById("wordForm").value;

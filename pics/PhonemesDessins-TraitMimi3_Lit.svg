@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="566.93px" height="566.93px" viewBox="0 0 566.93 566.93" enable-background="new 0 0 566.93 566.93" xml:space="preserve">
+<g id="fond" display="none">
+	
+		<rect x="-8643.873" y="-7908" display="inline" fill-rule="evenodd" clip-rule="evenodd" fill="#58595B" width="16654.492" height="16572.797"/>
+</g>
+<g id="en_cours">
+</g>
+<g id="fini">
+	<g>
+		
+			<rect x="70.621" y="432.921" fill="#564432" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="26.178" height="58.173"/>
+		
+			<rect x="328.045" y="432.921" fill="#564432" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="26.178" height="58.173"/>
+		
+			<rect x="488.018" y="233.469" fill="#564432" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="26.178" height="58.172"/>
+		
+			<path fill="#E5E2D3" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M510.187,262.152l-26.935,42.2v-62.098l-15.124,22.467l-6.293-11.86L221.99,241.777l49.946-45.343
+			c16.107-14.107,26.166-24.564,72.403-24.564h137.548c41.029,0,41.999,14.304,41.999,31.545c0,8.726,0,12.603,0,16.481
+			C523.887,240.256,518.748,246.995,510.187,262.152z"/>
+		
+			<path fill="#AB2E23" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M318.581,471.703L70.526,470.04c-15.174,0-27.476-12.297-27.483-27.469v-0.014v-5.513v-27.484h0.214
+			c0.813-4.225,4.086-9.228,9.943-14.547l164.841-149.652c0.003-0.002,0.006-0.005,0.01-0.008l3.939-3.577l239.845,11.083
+			l6.293,11.86l-3.223,4.788v63.589l-65.017,101.864C386.21,456.467,365.85,471.703,318.581,471.703z"/>
+		
+			<path fill="#FFFFFF" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M483.216,240.065c0.532-6.27-6.512-10.767-18.311-11.094c-0.457-0.012-0.92-0.02-1.392-0.02H264.81
+			c-15.846,0-36.665,7.237-46.769,16.41l-25.008,22.704h271.872v65.033l18.347-28.746v-64.265L483.216,240.065z"/>
+		<path fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M440.681,305.494l-60.26,89.52c-9.883,14.682-35.17,27-56.133,27H61.419c-20.964,0-24.39-12.318-8.219-27"/>
+		
+			<path fill="#FFFFFF" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M439.647,212.276c-3.505,4.057-12.929,7.391-20.996,7.391H304.848c-8.07,0-10.854-3.334-6.278-7.391l26.656-23.646
+			c4.117-3.653,13.502-6.576,21.012-6.576h105.926c7.511,0,11.073,2.923,7.917,6.576L439.647,212.276z"/>
+	</g>
+</g>
+</svg>

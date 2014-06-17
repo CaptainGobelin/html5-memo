@@ -239,7 +239,7 @@ $.loadCreation = function() {
 	s +=	'			<label id="login_avs" for="word" style="font-style:italic;">Transcription du rébus:</label>';
 	s +=	'			<input class="hideButton firstLineButton" type="button"/>';
 	s +=	'			<input id="checkButton" class="checkPwdButton firstLineButton" onClick="$.showPwdTip();$.menuColor();" type="button"/>';
-	s +=	'			<input id="wordForm" onkeyup="$.wordWithPics();$.checkPassword();" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
+	s +=	'			<input id="wordForm" onkeyup="if (event.keyCode == 13){$.wordWithPics();$.checkPassword();}" class="wordForm inputDefault creationInput" type="text" name="id" value="" size="16"/>';
 	s +=	'		</div>';
 	s +=	'		<div id="pwdTip" class="pwdTip pwdTipClose">';
 	s +=	'		<a class="toColor">Attention:</a><br/>';

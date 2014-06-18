@@ -55,6 +55,8 @@ $.showVignettes = function() {
 	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_NyComptePas.png\' onClick="$.hideVignettes();$.loadLevel10();"</th>';
 	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_PapierRigolo.png\' onClick="$.hideVignettes();$.loadLevel11();"</th>';
 	s += '<th><img class="vignette" type="button" src=\'sysPics/VignettesPNG/RebusLevelDesign_Rebus.png\' onClick="$.hideVignettes();$.loadLevel12();"</th></tr></table>';
+	d = document.getElementById('opacityFilter');
+	d.setAttribute('style', 'pointer-events:auto;');
 	var t = window.setInterval(function() {
 		$vignettes.append(s);
 		$.resizeWindow();
@@ -68,6 +70,8 @@ $.hideVignettes = function() {
 		var item = d[i];
 		item.setAttribute("style", 'width:0%;height:0%;opacity:0;');
 	}
+	d = document.getElementById('opacityFilter');
+	d.setAttribute('style', '');
 	var t = window.setInterval(function() {
 		$vignettes = $("p.allLevelsBg");
 		$vignettes.empty();

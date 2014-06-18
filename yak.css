@@ -239,6 +239,7 @@ label {
 	opacity: 0;
 	z-index: 9;
 	-webkit-transition: opacity 0.5s ease-in-out;
+	pointer-events:none;
 }
 
 .popUpContent {

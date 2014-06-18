@@ -7,7 +7,7 @@ $.addBlur = function() {
 	var doc = document.getElementById('opacityFilter');
 	if (doc != null) {
 		doc.setAttribute("class", "menuBg");
-		doc.setAttribute("style", 'opacity:0.2;');
+		doc.setAttribute("style", 'opacity:0.2;pointer-events:auto;');
 	}
 }
 

@@ -242,6 +242,18 @@ label {
 	pointer-events:none;
 }
 
+#clickFilter {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background-color: black;
+	opacity: 0;
+	z-index: 8;
+	pointer-events:none;
+}
+
 .popUpContent {
 	font-family: 'Ubuntu', sans-serif;
 	font-size:16pt;

@@ -1,3 +1,10 @@
+$.triggerResize = function() {
+	var t1 = window.setInterval(function() {
+		$.resizeWindow();
+		clearInterval(t1);
+	}, 400);
+}
+
 $.resizeWindow = function() {
 	$(document).ready($.privateResizeWindow());
 }

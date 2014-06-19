@@ -329,7 +329,7 @@ label {
 }
 
 .leftMenuOpen {
-	position: fixed;
+	position: absolute;
 	margin: 0px;
 	height: 100%;
 	width: 15%;
@@ -343,7 +343,7 @@ label {
 }
 
 .optionsBarOpen {
-	position: fixed;
+	position: absolute;
 	margin: 0px;
 	height: 100%;
 	width: 30%;

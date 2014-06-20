@@ -609,3 +609,15 @@ function translatePhon(phon) {
 		return 'e';
 	return phon;
 }
+
+$.deleteMute = function(splits) {
+	var result = '';
+	var reg = new RegExp("[#]+", "g");
+	splits = splits.split(reg);
+	for (var i=0;i<splits.length;i++) {
+		if ((splits[i] != '-') && (splits[i][0] != '?')) {
+			result += splits[i];
+		}
+	}
+	return result;
+}

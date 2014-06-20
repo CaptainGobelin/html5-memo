@@ -18,10 +18,16 @@ var LEVELS = (function() {
 	};
 })();
 
+$.showAnswer = function(level) {
+	var d = document.getElementById("wordForm");
+	d.defaultValue = LEVELS.get(level);
+	d.value = d.defaultValue;
+}
+
 $.checkLevel = function(level) {
 	var answer = document.getElementById("wordForm").value;
-	answer = answer.toLowerCase();
-	if (answer == LEVELS.get(level)) {
+	answer = $.deleteMute($.generatePhon(answer.toLowerCase()));
+	if (answer == $.deleteMute($.generatePhon(LEVELS.get(level)))) {
 		var d = document.getElementById('wordLabel');
 		d.innerHTML = 'Correct!';
 		var d = document.getElementById('answerChecker');

@@ -477,6 +477,10 @@ label {
 	height: 5%;
 }
 
+.showAnswer {
+	BACKGROUND-IMAGE: url("sysPics/Answer.svg");
+}
+
 .correct {
 	BACKGROUND-IMAGE: url("sysPics/TickValidation.svg");
 	left: 72%;

@@ -188,6 +188,11 @@ $.privateResizeWindow = function() {
 			var item = d[i];
 			item.setAttribute("style", 'top:'+((h.top+h.bottom)/2-item.offsetHeight/2)+'px;left:'+(10+h.right)+'px;');
 		}
+		d = document.getElementsByClassName('showAnswer');
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style", 'top:'+((h.top+h.bottom)/2-item.offsetHeight/2)+'px;left:'+(h.left-item.offsetWidth-10)+'px;');
+		}
 		d = document.getElementById('wordForm');
 		h = d.getBoundingClientRect();
 		h2 =(d.offsetHeight/2);

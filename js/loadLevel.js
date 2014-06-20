@@ -6,6 +6,7 @@ $.loadForm = function(level) {
 	s += '<input id="wordForm" onfocus="$.resizeWindow();" onblur="$.resizeWindow();" onkeyup="if (event.keyCode == 13){$.checkLevel(\''+level+'\');$.resizeWindow();}" class="wordForm inputDefault" type="text" name="id" value="" size="16"/>';
 	s += '<input type="button" class="buttonLevel reloadLevel" onClick="$.loadRandomLevel()"/>';
 	s += '<input type="button" class="buttonLevel allLevels" onClick="$.showVignettes()"/>';
+	s += '<input type="button" class="checkAnswer showAnswer" onClick="$.showAnswer(\''+level+'\')"/>';
 	s += '<span class="checkAnswer" id="answerChecker"></span>';
 	$form.append(s);
 }

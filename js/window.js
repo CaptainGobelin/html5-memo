@@ -183,18 +183,23 @@ $.privateResizeWindow = function() {
 			var item = d[i];
 			item.setAttribute("style", 'top:'+(h.top-item.offsetHeight/2)+'px;');
 		}
+		d = document.getElementsByClassName('checkAnswer');
+		for (var i=0;i<d.length;++i) {
+			var item = d[i];
+			item.setAttribute("style", 'top:'+((h.top+h.bottom)/2-item.offsetHeight/2)+'px;left:'+(10+h.right)+'px;');
+		}
 		d = document.getElementById('wordForm');
 		h = d.getBoundingClientRect();
 		h2 =(d.offsetHeight/2);
 		d = document.getElementsByClassName('buttonLevel');
 		for (var i=0;i<d.length;++i) {
 			var item = d[i];
-			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;width:'+item.offsetHeight+'px;margin-left:'+(10+item.offsetHeight)+'px;');
+			item.setAttribute("style", 'top:'+(h.top+h2*3-item.offsetHeight/2)+'px;'/*width:'+item.offsetHeight+'px;margin-left:'+(10+item.offsetHeight)+'px;'*/);
 		}
 		d = document.getElementsByClassName('allLevels');
 		for (var i=0;i<d.length;++i) {
 			var item = d[i];
-			item.setAttribute("style", 'top:'+(h.top+h2-item.offsetHeight/2)+'px;width:'+item.offsetHeight+'px;margin-left:'+(15+2*item.offsetHeight)+'px;');
+			item.setAttribute("style", 'top:'+(h.top+h2*3-item.offsetHeight/2)+'px;'/*width:'+item.offsetHeight+'px;margin-left:'+(15+2*item.offsetHeight)+'px;'*/);
 		}
 	}
 	$.resizeTipPanel();

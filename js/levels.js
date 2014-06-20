@@ -24,14 +24,14 @@ $.checkLevel = function(level) {
 	if (answer == LEVELS.get(level)) {
 		var d = document.getElementById('wordLabel');
 		d.innerHTML = 'Correct!';
-		var d = document.getElementById('answerButton');
-		d.setAttribute('class', 'submitLevel correct');
+		var d = document.getElementById('answerChecker');
+		d.setAttribute('class', 'checkAnswer correct');
 	}
 	else {
 		var d = document.getElementById('wordLabel');
 		d.innerHTML = 'Incorrect!';
-		var d = document.getElementById('answerButton');
-		d.setAttribute('class', 'submitLevel incorrect');
+		var d = document.getElementById('answerChecker');
+		d.setAttribute('class', 'checkAnswer incorrect');
 	}
 }
 

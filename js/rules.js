@@ -21,6 +21,22 @@ $.isLetter = function(word, pos) {
     return false;
 }
 
+$.isDigit = function(word, pos) {
+    var letters = '0123456789';
+    for (var i=0;i<letters.length;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
+$.isDigitStrict = function(word, pos) {
+    var letters = '123456789';
+    for (var i=0;i<letters.length;i++)
+        if (word[pos] == letters[i])
+            return true;
+    return false;
+}
+
 $.isLetterB = function(word, pos) {
     var letters = 'abcdefghijklmnopqrstuvwxyzéèêëàâîïôöùüç$';
     for (var i=0;i<letters.length;i++)

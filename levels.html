@@ -47,15 +47,14 @@
 		</p>
 		<script type="text/javascript">
 			var c = $.getCookie("intro");
-			//TODO decomment if
-			//if (c == "true") {
+			if (c == "true") {
 				$.loadForm();
 				$.loadRandomLevel();
-			/*}
+			}
 			else {
 				$.loadCleofee("truc");
 				$.loadSpeech6();
-			}*/
+			}
 			$.resizeWindow();
 			$.loadCacheVignettes();
 			idleTime = 0;

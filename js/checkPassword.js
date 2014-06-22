@@ -8,7 +8,7 @@ $.checkPasswordSecure = function(pwd) {
 	for (var i=0;i<reg.length;i++)
 		test = test && reg[i].test(pwd);
 	test = test;
-	if (pwd.length < 7)
+	if (pwd.length < 10)
 		test = false;
 	if (pwd.length > 19)
 		test = true;
@@ -26,7 +26,7 @@ $.checkPassword = function() {
 	for (var i=0;i<reg.length;i++)
 		test = test && reg[i].test(pwd);
 	test = test;
-	if (pwd.length < 7)
+	if (pwd.length < 10)
 		test = false;
 	if (pwd.length > 19)
 		test = true;

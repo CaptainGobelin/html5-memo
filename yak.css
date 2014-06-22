@@ -483,16 +483,16 @@ label {
 
 .correct {
 	BACKGROUND-IMAGE: url("sysPics/TickValidation.svg");
-	left: 72%;
-	width: 10%;
-	height: 10%;
+	left: 74%;
+	width: 8%;
+	height: 8%;
 }
 
 .incorrect {
 	BACKGROUND-IMAGE: url("sysPics/CrossInvalid.svg");
-	left: 72%;
-	width: 10%;
-	height: 10%;
+	left: 74%;
+	width: 8%;
+	height: 8%;
 }
 
 .submitLevel:hover {
